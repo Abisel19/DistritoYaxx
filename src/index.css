@@ -1,0 +1,71 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+  --color-black: #000000;
+  --color-gray: #9B9B9B;
+  --color-brown: #2D2926;
+}
+
+/* ocultar scroll header */
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* fonts */
+@font-face {
+  font-family: primary-font;
+  src: url(/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: secondary-font;
+  src: url(/fonts/NeuePowerTrial-Regular.otf);
+}
+@font-face {
+  font-family: tertiary-font;
+  src: url(/fonts/NeuePowerTrial-Medium.otf);
+}
+@font-face {
+  font-family: quaternary-font;
+  src: url(/fonts/Eina01-Regular.ttf);
+}
+@font-face {
+  font-family: quinary-font;
+  src: url(/fonts/Eina01-SemiBold.ttf);
+}
+
+.primary {
+  font-family: primary-font !important;
+}
+.secondary {
+  font-family: secondary-font !important;
+}
+.tertiary {
+  font-family: tertiary-font !important;
+}
+.quaternary {
+  font-family: quaternary-font !important;
+}
+.quinary {
+  font-family: quinary-font !important;
+}
+
+/* text-color */
+.text-black {
+  color: var(--color-black);
+}
+.text-gray {
+  color: var(--color-gray);
+}
+.text-brown{
+  color: var(--color-brown)
+}
+
+.bg-home{
+  background-image: url('img/bg-home.png');
+  background-size: 100%;
+  height:85vh;
+  width: auto;
+  background-repeat: no-repeat;
+}
