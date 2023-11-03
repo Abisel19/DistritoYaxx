@@ -3,12 +3,11 @@ import React from 'react';
 function Home() {
   return (
     <>
-      <div className='bg-home'>
+      <section className='bg-home'>
+      </section>
 
-      </div>
-
-      <div className='container mx-auto px-10'>
-        <div className='flex py-5 md:py-10 xl:py-24'>
+      <section className='container mx-auto px-10'>
+        <div className='flex py-5 md:py-20 xl:py-24'>
             <div className='w-full md:w-1/3 xl:w-1/3'>
                 <div className="flex items-center justify-center">
                     <div className="text-black text-2xl md:text-5xl xl:text-[55px] tracking-wider mt-0 md:mt-2 ml-0 md:-ml-10">
@@ -25,7 +24,39 @@ function Home() {
                 </div>
             </div>
         </div>
-      </div>
+      </section>
+
+      <section className='flex'>
+        <div className='w-full md:w-4/12 bg-black-1 py-2 md:py-6 mx-auto'>
+            <div className='text-center'>
+                <h3 className='primary text-white text-base md:text-[22px] leading-3 md:leading-7 tracking-normal md:tracking-wide'>CONSTRUCCIÓN <br/><a className='sextary'>SOSTENIBLE</a></h3>
+            </div>
+        </div>
+
+        <div className='w-full md:w-4/12 bg-gray-1 py-2 md:py-6 mx-auto'>
+            <div className='text-center'>
+                <h3 className='primary text-white text-base md:text-[22px] leading-3 md:leading-7 tracking-normal md:tracking-wide'>PRIMER PROYECTO <br/><a className='sextary'>SMART CITY EN CANCÚN</a></h3>
+            </div>
+        </div>
+
+        <div className='w-full md:w-4/12 bg-black-1 py-2 md:py-6 mx-auto'>
+            <div className='text-center'>
+                <h3 className='primary text-white text-base md:text-[22px] leading-3 md:leading-7 tracking-normal md:tracking-wide'>60% DE <br/><a className='sextary'>ÁREAS VERDES</a></h3>
+            </div>
+        </div>
+      </section>
+
+      <section className='flex py-5 md:py-10'>
+        <div className='w-full md:w-3/5'>
+            <img src="/img/vista-laguna.png" alt="vista-a-la-laguna" />
+        </div>
+
+        <div className='w-full md:w-2/5 py-4'>
+            {/* <h2>VISTAS A <br/>LA LAGUNA</h2> */}
+        </div>
+
+      </section>
+
     </>
   );
 }

@@ -69,6 +69,16 @@
   color: var(--color-brown)
 }
 
+.bg-black-1 {
+  background-color: var(--color-black);
+}
+.bg-gray-1 {
+  background-color: var(--color-gray);
+}
+.bg-brown-1 {
+  background-color: var(--color-brown)
+}
+
 .bg-home{
   background-image: url('img/bg-home.png');
   background-size: 100%;
