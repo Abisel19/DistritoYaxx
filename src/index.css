@@ -16,7 +16,7 @@
 /* fonts */
 @font-face {
   font-family: primary-font;
-  src: url(/fonts/Poppins-Regular.ttf);
+  src: url(/fonts/Poppins-Light.ttf);
 }
 @font-face {
   font-family: secondary-font;
@@ -34,6 +34,10 @@
   font-family: quinary-font;
   src: url(/fonts/Eina01-SemiBold.ttf);
 }
+@font-face {
+  font-family: sextary-font;
+  src: url(/fonts/Poppins-SemiBold.ttf);
+}
 
 .primary {
   font-family: primary-font !important;
@@ -49,6 +53,9 @@
 }
 .quinary {
   font-family: quinary-font !important;
+}
+.sextary {
+  font-family: sextary-font !important;
 }
 
 /* text-color */
