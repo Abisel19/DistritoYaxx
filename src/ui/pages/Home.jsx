@@ -53,6 +53,7 @@ function Home() {
 
         <div className='w-full md:w-2/5 py-4'>
             {/* <h2>VISTAS A <br/>LA LAGUNA</h2> */}
+            
         </div>
 
       </section>
