@@ -59,16 +59,55 @@ function Home() {
         </div>
 
         <div className='w-full md:w-2/5 py-0 md:py-10 pl-0 md:pl-12'>
-            <h2 className='secondary text-black text-base md:text-6xl tracking-normal md:tracking-wide xl:leading-[68px]'>VISTAS A <br/>LA LAGUNA</h2>
-            <p className='quaternary mt-0 md:mt-8 text-base md:text-2xl'>Lorem ipsum lorem ipsum lorem ipsum </p>
-            <p className='quaternary mt-0 md:mt-1 text-base md:text-2xl'>Lorem ipsum lorem ipsum lorem ipsum </p>
-            <p className='quaternary mt-0 md:mt-10 text-base md:text-2xl'>Lorem ipsum lorem ipsum lorem ipsum </p>
-            <p className='quaternary mt-0 md:mt-1 text-base md:text-2xl'>Lorem ipsum lorem ipsum lorem ipsum </p>
+            <h2 className='secondary text-brown text-base md:text-6xl tracking-normal md:tracking-wide xl:leading-[68px]'>VISTAS A <br/>LA LAGUNA</h2>
+            <p className='quaternary text-brown mt-0 md:mt-8 text-base md:text-2xl'>Lorem ipsum lorem ipsum lorem ipsum </p>
+            <p className='quaternary text-brown mt-0 md:mt-1 text-base md:text-2xl'>Lorem ipsum lorem ipsum lorem ipsum </p>
+            <p className='quaternary text-brown mt-0 md:mt-10 text-base md:text-2xl'>Lorem ipsum lorem ipsum lorem ipsum </p>
+            <p className='quaternary text-brown mt-0 md:mt-1 text-base md:text-2xl'>Lorem ipsum lorem ipsum lorem ipsum </p>
         </div>
 
       </section>
 
       <section className='bg-torres'></section>
+
+      <section className='md:py-20'>
+        <h2 className='secondary text-brown text-center mx-auto text-lg md:text-7xl pb-20'>TIPOLOGÍAS</h2>
+
+        <div className='flex'>
+        <Swiper
+        modules={[Autoplay]}
+        spaceBetween={0}
+        slidesPerView={3}
+        autoplay={{ delay: 5000}}
+        >
+        <SwiperSlide>
+            <div className='w-full'>
+                <img className='mx-auto topologias-img' src="img/tipologia-room.png" alt="ESTUDIO" />
+                <p className='primary text-lg mt-2 md:mt-10 text-center'>Estudio - 47.80 m2</p>
+            </div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <div className='w-full'>
+                <img className='mx-auto topologias-img' src="img/tipologia-recamara.png" alt="1 RECÁMARA" />
+                <p className='primary text-lg mt-2 md:mt-10 text-center'>1 Recámara - 65.55 m2</p>
+            </div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <div className='w-full'>
+                <img className='mx-auto topologias-img' src="img/tipologia-look.png" alt="LOOK OFF" />
+                <p className='primary text-lg mt-2 md:mt-10 text-center'>Lock Off - 99.60 m2</p>
+            </div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <div className='w-full'>
+                <img className='mx-auto topologias-img' src="img/tipologia-look-a.png" alt="LOOK OFF A" />
+                <p className='primary text-lg mt-2 md:mt-10 text-center'>Lock Off A - 95.25 m2</p>
+            </div>
+        </SwiperSlide>
+        </Swiper>  
+        </div>
+        
+      </section>
 
       <section className='container px-0 md:px-10 2xl:px-10 mt-5 md:mt-32 xl:mt-40 mx-auto py-10'>
         <div className='w-full mx-auto justify-center items-center'>
@@ -157,21 +196,20 @@ function Home() {
         spaceBetween={0}
         slidesPerView={3}
         loop={true}
-        navigation={true}
         autoplay={{ delay: 4000}}
         className='amenidades'
         >
         <SwiperSlide>
-                <img className='w-80' src="img/areas-verdes.png" alt="ESTUDIO" />
+                <img className='mx-auto w-80' src="img/areas-verdes.png" alt="ESTUDIO" />
         </SwiperSlide>
         <SwiperSlide>
-                <img className='w-80' src="img/padel.png" alt="1 RECÁMARA" />
+                <img className='mx-auto w-80' src="img/padel.png" alt="1 RECÁMARA" />
         </SwiperSlide>
         <SwiperSlide>
-                <img className='w-80' src="img/gimnasio.png" alt="LOOK OFF" />
+                <img className='mx-auto w-80' src="img/gimnasio.png" alt="LOOK OFF" />
         </SwiperSlide>
         <SwiperSlide>
-                <img className='w-80' src="img/terraza.png" alt="LOOK OFF A" />
+                <img className='mx-auto w-80' src="img/terraza.png" alt="LOOK OFF A" />
         </SwiperSlide>
         </Swiper>    
       </section>
@@ -196,8 +234,8 @@ function Home() {
         className='alianzas'
         >
         <SwiperSlide>
-            <div className='px-10 md:px-4'>
-                <div className='card border border-solid	rounded-lg border-gray-1 px-5 md:px-5'>
+            <div className='px-0 md:px-4'>
+                <div className='card border border-solid rounded-lg border-gray-1 px-5 md:px-4'>
                     <div className='mx-auto'>
                         <svg xmlns="http://www.w3.org/2000/svg"  className="mx-auto" width="182.207" height="103.864" viewBox="0 0 182.207 103.864">
                         <g id="Grupo_196" data-name="Grupo 196" transform="translate(-490.56 -283.554)">
@@ -233,7 +271,29 @@ function Home() {
                         </g>
                         </svg>
                     </div>
-                    <p className='primary text-center text-[10px] md:text-[15px] mt-0 md:mt-8 md:leading-relaxed'>Distrito Yaax® es un proyecto conceptualizado<br/> y desarrollado por ALMIRA DESARRROLLOS.<br/> Empresa 100 % Mexicana comprometida<br/> con el desarrollo económico y social <br/>de la región.<br/></p>
+                    <p className='primary text-center text-[10px] md:text-[12px] xl:text-[15px] mt-0 md:mt-8 md:leading-relaxed'>Distrito Yaax® es un proyecto conceptualizado<br/> y desarrollado por ALMIRA DESARRROLLOS.<br/> Empresa 100 % Mexicana comprometida<br/> con el desarrollo económico y social <br/>de la región.</p>
+                </div>
+            </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+            <div className='px-0 md:px-4'>
+                <div className='card border border-solid rounded-lg border-gray-1 px-5 md:px-4'>
+                    <div className='mx-auto'>
+                        <img className="mx-auto" src="img/4S.png" alt="4S" />
+                    </div>
+                    <p className='primary text-center text-[10px] md:text-[12px] xl:text-[15px] mt-0 md:mt-12 md:leading-relaxed'>4S es una de las empresas lideres en <br/>Latinoamerica en ingenieria de mercado <br/>y consultoría inmobiliaria.</p>
+                </div>
+            </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+            <div className='px-0 md:px-4'>
+                <div className='card border border-solid rounded-lg border-gray-1 px-5 md:px-4'>
+                    <div className='mx-auto'>
+                        <img className="mx-auto w-80" src="img/banca-mifel.png" alt="banca-mifel" />
+                    </div>
+                    <p className='primary text-center text-[10px] md:text-[12px] xl:text-[15px] mt-0 md:mt-24 md:leading-relaxed'>Brindamos seguridad jurídica a nuestros clientes,<br/> partiendo de un predio propio <br/> aportado a un fideicomiso de administración <br/> inmobiliaria con Banco MIFEL, cuyo único <br/> fines el desarrollo del proyecto.</p>
                 </div>
             </div>
         </SwiperSlide>

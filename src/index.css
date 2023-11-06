@@ -72,7 +72,7 @@
 .text-gray {
   color: var(--color-gray);
 }
-.text-brown{
+.text-brown {
   color: var(--color-brown)
 }
 
@@ -139,11 +139,6 @@
   width: 55px !important;
 }
 
-.amenidades .swiper-wrapper{
-  margin-left: 80px !important;
-  margin-right: 60px !important;
-}
-
 .alianzas .swiper-wrapper{
 }
 
@@ -162,7 +157,10 @@
 }
 
 .card{
-  height: 300px;
-  padding-bottom:30px;
-  padding-top:30px;
+  padding-top: 35px;
+  height: 330px;
+}
+.topologias-img{
+  width: 400px;
+  height: 500px;
 }
