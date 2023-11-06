@@ -9,7 +9,7 @@ function Header() {
             <div className='flex items-center nav pl-4 sm:pl-9 md:pl-10 xl:pl-0 2xl:pl-10 w-8/9'>
               <button className='text-white primary text-[22px] sm:text-lg lg:text-lg xl:text-xl flex mr-2 sm:mr-12 md:mr-10 xl:mr-10 2xl:mr-14 px-2 xl:px-4 2xl:px-6 py-1 xl:py-1'>QUIENES SOMOS</button>
               <button className='text-white primary text-[22px] sm:text-lg lg:text-lg xl:text-xl flex mr-2 sm:mr-12 md:mr-10 xl:mr-10 2xl:mr-14 px-2 xl:px-4 2xl:px-6 py-1 xl:py-1'>PROYECTO</button>
-              <button className='flex mr- sm:mr-12 md:mr-10 xl:mr-10 2xl:mr-14 px-2 xl:px-4 2xl:px-6 py-1 xl:py-1'>
+              <button className='flex sm:mr-12 md:mr-10 xl:mr-10 2xl:mr-14 px-2 xl:px-4 2xl:px-6 py-1 xl:py-1'>
                 <img src="/img/Marca.png" alt="vista-de-la-marca" />
               </button>
               <button className='text-white primary text-[22px] sm:text-lg lg:text-lg xl:text-xl flex mr-2 sm:mr-12 md:mr-10 xl:mr-10 2xl:mr-14 px-2 xl:px-4 2xl:px-6 py-1 xl:py-1'>AMENIDADES</button>
