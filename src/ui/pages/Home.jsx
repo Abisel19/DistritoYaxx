@@ -303,7 +303,7 @@ function Home() {
         </div>
       </section>
 
-      <section className='py-10 md:my-16 px-0 md:px-10'>
+      <section className='py-10 md:my-16 px-4 md:px-10'>
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         spaceBetween={10}
@@ -314,9 +314,9 @@ function Home() {
         >
         <SwiperSlide>
             <div className='px-0 md:px-4'>
-                <div className='card border border-solid rounded-3xl border-gray-1 px-5 md:px-4'>
+                <div className='card border border-solid rounded-3xl border-gray-1 px-2 md:px-4'>
                     <div className='mx-auto'>
-                        <svg xmlns="http://www.w3.org/2000/svg"  className="mx-auto w-20 md:w-12" viewBox="0 0 182.207 103.864">
+                        <svg xmlns="http://www.w3.org/2000/svg"  className="mx-auto w-20 md:w-40" viewBox="0 0 182.207 103.864">
                         <g id="Grupo_196" data-name="Grupo 196" transform="translate(-490.56 -283.554)">
                             <g id="Grupo_193" data-name="Grupo 193" transform="translate(553.964 283.554)">
                             <g id="Grupo_190" data-name="Grupo 190" transform="translate(23.174 1.113)">
@@ -350,40 +350,44 @@ function Home() {
                         </g>
                         </svg>
                     </div>
-                    <p className='primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] mt-0 md:mt-8 md:leading-relaxed'>Distrito Yaax® es un proyecto conceptualizado<br/> y desarrollado por ALMIRA DESARRROLLOS.<br/> Empresa 100 % Mexicana comprometida<br/> con el desarrollo económico y social <br/>de la región.</p>
+                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] mt-0 md:mt-8 md:leading-relaxed'>Distrito Yaax® es un proyecto conceptualizado<br/> y desarrollado por ALMIRA DESARRROLLOS.<br/> Empresa 100 % Mexicana comprometida<br/> con el desarrollo económico y social <br/>de la región.</p>
+                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] mt-3'>Distrito Yaax® es un proyecto<br/> conceptualizado y <br/>desarrollado por ALMIRA <br/>DESARRROLLOS. Empresa 100%<br/> Mexicana comprometida<br/> con el desarrollo económico y <br/>social de la región.</p>
                 </div>
             </div>
         </SwiperSlide>
 
         <SwiperSlide>
             <div className='px-0 md:px-4'>
-                <div className='card border border-solid rounded-3xl border-gray-1 px-5 md:px-4'>
+                <div className='card border border-solid rounded-3xl border-gray-1 px-2 md:px-4'>
                     <div className='mx-auto'>
-                        <img className="mx-auto w-20" src="img/4S.png" alt="4S" />
+                        <img className="mx-auto w-32 md:w-64" src="img/4S.png" alt="4S" />
                     </div>
-                    <p className='primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] mt-0 md:mt-11 md:leading-relaxed'>4S es una de las empresas lideres en <br/>Latinoamerica en ingenieria de mercado <br/>y consultoría inmobiliaria.</p>
+                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] mt-0 md:mt-11 md:leading-relaxed'>4S es una de las empresas lideres en <br/>Latinoamerica en ingenieria de mercado <br/>y consultoría inmobiliaria.</p>
+                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] mt-7'>4S es una de las empresas<br/> lideres en Latinoamerica en <br/>ingenieria de mercado <br/>y consultoría inmobiliaria.</p>
                 </div>
             </div>
         </SwiperSlide>
 
         <SwiperSlide>
             <div className='px-0 md:px-4'>
-                <div className='card border border-solid rounded-3xl border-gray-1 px-5 md:px-4'>
+                <div className='card border border-solid rounded-3xl border-gray-1 px-2 md:px-4'>
                     <div className='mx-auto'>
-                        <img className="mx-auto w-80 mt-8" src="img/banca-mifel.png" alt="banca-mifel" />
+                        <img className="mx-auto w-80 mt-2 md:mt-8" src="img/banca-mifel.png" alt="banca-mifel" />
                     </div>
-                    <p className='primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] mt-0 md:mt-12 md:leading-relaxed'>Brindamos seguridad jurídica a nuestros <br/> clientes, partiendo de un predio propio <br/> aportado a un fideicomiso de administración <br/> inmobiliaria con Banco MIFEL, cuyo único <br/> fines el desarrollo del proyecto.</p>
+                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] mt-0 md:mt-12 md:leading-relaxed'>Brindamos seguridad jurídica a nuestros <br/> clientes, partiendo de un predio propio <br/> aportado a un fideicomiso de administración <br/> inmobiliaria con Banco MIFEL, cuyo único <br/> fines el desarrollo del proyecto.</p>
+                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] mt-5'>Brindamos seguridad jurídica<br/> a nuestros clientes, partiendo<br/> de un predio propio aportado<br/> a un fideicomiso de <br/>administración inmobiliaria <br/>con Banco MIFEL, cuyo único <br/>fines el desarrollo del proyecto.</p>
                 </div>
             </div>
         </SwiperSlide>
 
         <SwiperSlide>
             <div className='px-0 md:px-4'>
-                <div className='card border border-solid rounded-3xl border-gray-1 px-5 md:px-4'>
+                <div className='card border border-solid rounded-3xl border-gray-1 px-2 md:px-4'>
                     <div className='mx-auto'>
-                        <img className="mx-auto w-64" src="img/cal.png" alt="banca-mifel" />
+                        <img className="mx-auto w-48 md:w-64" src="img/cal.png" alt="banca-mifel" />
                     </div>
                     <p className='primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] mt-8 md:mt-0 md:leading-relaxed'>Cal y Mayor es la empresa de mayor <br/>reconocimiento en ingenierías y consultoría <br/>especializada en movilidad y transporte.</p>
+                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] mt-5'>Brindamos seguridad jurídica<br/> a nuestros clientes, partiendo<br/> de un predio propio aportado<br/> a un fideicomiso de <br/>administración inmobiliaria <br/>con Banco MIFEL, cuyo único <br/>fines el desarrollo del proyecto.</p>
                 </div>
             </div>
         </SwiperSlide>
@@ -393,6 +397,7 @@ function Home() {
 
       <section className='hidden md:flex bg-gray-1 py-28'>
         <div className='container mx-auto flex'>
+
             <div className='w-full md:w-2/5 px-4 md:px-16'>
                 <h3 className='secondary text-base md:text-5xl text-white'>COTIZA</h3>
                 <h4 className='primary text-base md:text-lg text-white mt-0 md:mt-1'>HAGAMOS TU SUEÑO REALIDAD</h4>

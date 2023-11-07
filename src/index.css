@@ -191,13 +191,13 @@
     background-repeat: no-repeat;
   }
   .bg-location{
-    height:35vh;
-    width: auto;
-    background-size: cover;
+    background-image: url('img/ubicacion.png');
+    width: 100%;
+    height: 220px;
     background-repeat: no-repeat;
   }
   .card{
     padding-top: 35px;
-    height: 250px;
+    height: 230px;
   }   
 }
