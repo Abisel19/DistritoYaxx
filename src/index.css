@@ -105,6 +105,7 @@
   width: auto;
   background-repeat: no-repeat;
 }
+
 .bg-location{
   background-image: url('img/ubicacion.png');
   background-size: 100%;
@@ -139,9 +140,6 @@
   width: 55px !important;
 }
 
-.alianzas .swiper-wrapper{
-}
-
 .alianzas .swiper-button-prev{
   background-image: url('img/arrow-prev.png') !important;
   color: transparent !important;
@@ -160,7 +158,46 @@
   padding-top: 35px;
   height: 330px;
 }
+
 .topologias-img{
   width: 400px;
   height: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+  .bg-home{
+    background-image: url('img/bg-home-movil.png');
+    background-size: 100%;
+    height:54vh;
+    width: auto;
+    background-repeat: no-repeat;
+  }
+  .bg-torres{
+    background-image: url('img/bg-torres.png');
+    background-size: 100%;
+    height:26vh;
+    width: auto;
+    background-repeat: no-repeat;
+  }
+  .topologias-img{
+    width: auto;
+    height: 270px;
+  }
+  .bg-room{
+    background-size: 100%;
+    height: auto;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .bg-location{
+    height:35vh;
+    width: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .card{
+    padding-top: 35px;
+    height: 250px;
+  }   
 }
