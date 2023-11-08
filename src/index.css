@@ -42,6 +42,10 @@
   font-family: septimary-font;
   src: url(/fonts/Larken-Light.otf);
 }
+@font-face {
+  font-family: octavary-font;
+  src: url(/fonts/Poppins-ExtraLight.ttf);
+}
 
 .primary {
   font-family: primary-font !important;
@@ -63,6 +67,9 @@
 }
 .septimary {
   font-family: septimary-font !important;
+}
+.octavary {
+  font-family: octavary-font !important;
 }
 
 /* text-color */
@@ -92,6 +99,14 @@
 
 .bg-home{
   background-image: url('img/bg-home.png');
+  background-size: 100%;
+  height:85vh;
+  width: auto;
+  background-repeat: no-repeat;
+}
+
+.bg-contacto{
+  background-image: url('img/bg-contacto.png');
   background-size: 100%;
   height:85vh;
   width: auto;
@@ -172,6 +187,13 @@
     width: auto;
     background-repeat: no-repeat;
   }
+  .bg-contacto{
+    background-image: url('img/bg-home-movil.png');
+    background-size: 100%;
+    height:54vh;
+    width: auto;
+    background-repeat: no-repeat;
+  }
   .bg-torres{
     background-image: url('img/bg-torres.png');
     background-size: 100%;
@@ -191,13 +213,14 @@
     background-repeat: no-repeat;
   }
   .bg-location{
-    height:35vh;
-    width: auto;
-    background-size: cover;
+    background-image: url('img/ubicacion.png');
+    width: 100%;
+    height: 220px;
     background-repeat: no-repeat;
   }
   .card{
     padding-top: 35px;
-    height: 250px;
+    height: 230px;
   }   
 }
+
