@@ -11,14 +11,14 @@ import Header from '@components/Header';
 function App() {
   return (
     <Router>
-      {/* <Header/> */}
+      <Header/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="acerca" element={<Acerca />} />
           <Route path="contacto" element={<Contacto />} />
           <Route path="proyectos" element={<Proyectos />} />
         </Routes>
-      {/* <Footer/> */}
+      <Footer/>
     </Router>
   );
 }
