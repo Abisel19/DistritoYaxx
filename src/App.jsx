@@ -5,6 +5,8 @@ import Home from '@pages/Home';
 import Acerca from '@pages/Acerca'
 import Proyectos from '@pages/Proyectos'
 import Contacto from '@pages/Contacto'
+import NotFound from '@pages/NotFound'
+
 import Footer from '@components/Footer';
 import Header from '@components/Header';
 
@@ -17,8 +19,9 @@ function App() {
           <Route path="acerca" element={<Acerca />} />
           <Route path="contacto" element={<Contacto />} />
           <Route path="proyectos" element={<Proyectos />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-      {/* <Footer/> */}
+      <Footer/>
     </Router>
   );
 }
