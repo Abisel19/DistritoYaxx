@@ -109,7 +109,7 @@ function Header() {
                 <a href="/proyecto" className='primary text-[22px] md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0'>PROYECTO</a>
               </li>
               <li>
-                <a className='px-[4rem] hidden' href="/"><svg xmlns="http://www.w3.org/2000/svg" width="330.406" height="64.179" viewBox="0 0 330.406 64.179">
+                <a className='px-[4rem] hidden sm:block' href="/"><svg xmlns="http://www.w3.org/2000/svg" width="330.406" height="64.179" viewBox="0 0 330.406 64.179">
                   <g id="Group_235" data-name="Group 235" transform="translate(-575 -484.08)">
                     <g id="Group_179" data-name="Group 179" transform="translate(575.682 484.08)">
                       <g id="Group_178" data-name="Group 178" transform="translate(0 0)">
