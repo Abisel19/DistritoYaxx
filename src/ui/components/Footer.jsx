@@ -4,15 +4,15 @@ function Footer() {
   return (
     <footer className='bg-black'>
       <div className="flex justify-center p-8 md:pt-12 xl:pt-12">
-        <a href="#"><img className="md:hidden" src="/img/Logo s.png" alt="" /><img className="hidden sm:block" src="/img/Logo m.png" alt="" /></a>
+        <a href="/"><img className="md:hidden" src="/img/Logo s.png" alt="" /><img className="hidden sm:block" src="/img/Logo m.png" alt="" /></a>
       </div>
 
       <div className="flex items-center flex-col justify-center md:flex-row md:space-x-16">
-        <a className="text-white text-[14px] md:text-[30px] pt-1" href="#">INICIO</a>
-        <a className="text-white text-[14px] md:text-[30px] pt-1" href="#">QUIENES SOMOS</a>
-        <a className="text-white text-[14px] md:text-[30px] pt-1" href="#">PROYECTO</a>
-        <a className="text-white text-[14px] md:text-[30px] pt-1" href="#">AMENIDADES</a>
-        <a className="text-white text-[14px] md:text-[30px] pt-1" href="#">CONTACTO</a>
+        <a className="text-white text-[14px] primary md:text-[30px] pt-1" href="/">INICIO</a>
+        <a className="text-white text-[14px] primary md:text-[30px] pt-1" href="/acerca">QUIENES SOMOS</a>
+        <a className="text-white text-[14px] primary md:text-[30px] pt-1" href="/proyecto">PROYECTO</a>
+        <a className="text-white text-[14px] primary md:text-[30px] pt-1" href="#">AMENIDADES</a>
+        <a className="text-white text-[14px] primary md:text-[30px] pt-1" href="/contacto">CONTACTO</a>
       </div>
 
       <div className="md:hidden flex items-center justify-center space-x-8 pt-5">
@@ -56,13 +56,13 @@ function Footer() {
       </div>
 
       <div div className="flex flex-col items-center pt-4 md:flex-row md:justify-center">
-        <a className="text-white text-[13px] md:text-[28px] md:order-last" href="#">+52 998 8705400</a>
-        <a className="hidden sm:inline-flex text-white text-[28px] px-3" href="#">|</a>
-        <a className="text-white text-[13px] md:text-[28px] md:order-first" href="#">informes@distritoyaax.com</a>
+        <a className="text-white primary text-[13px] md:text-[28px] md:order-last" href="tel:+52 9981828289">+52 998 8705400</a>
+        <a className="hidden primary sm:inline-flex text-white text-[28px] px-3" href="#">|</a>
+        <a className="text-white primary text-[13px] md:text-[28px] md:order-first" href="#">informes@distritoyaax.com</a>
       </div>
 
       <div className="flex items-center justify-center p-5 pb-9 md:p-10">
-        <h3 className="text-white text-[12px] md:text-[20px]">COPYRIGHT 2023 | MADE BY BWE AGENCY</h3>
+        <h3 className="text-white primary text-[12px] md:text-[20px]">COPYRIGHT 2023 | MADE BY BWE AGENCY</h3>
       </div>
     </footer>
   );
