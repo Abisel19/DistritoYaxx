@@ -1,21 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { render } from 'react-dom';
+
+function Head() {
+  useEffect(() => {
+    var button = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+    var menu = document.getElementById('navbar-sticky');
+
+    button.addEventListener('click', function () {
+      var expanded = menu.getAttribute('aria-expanded') === 'true' || false;
+      menu.setAttribute('aria-expanded', !expanded);
+
+      // Toggle the visibility of the menu
+      if (!expanded) {
+        menu.style.display = 'block';
+      } else {
+        menu.style.display = 'none';
+      }
+    });
+  }, []);
+}
 
 function Header() {
   return (
     <header>
-      <nav className='bg-white md:bg-black w-full z-20 top-0 border-b'>
+      <nav className='bg-white md:bg-black w-full z-20 top-0 border-b p-7'>
         <div className='flex flex-wrap items-center justify-between md:justify-center '>
           <button data-collapse-toggle='navbar-sticky' type='button' className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden' aria-controls='navbar-sticky' aria-expanded='false'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="8.37" viewBox="0 0 23 8.37">
-              <g id="Group_3" data-name="Group 3" transform="translate(0 -0.001)">
-                <rect id="Rectangle_3" data-name="Rectangle 3" width="23" height="1.092" transform="translate(0 0.001)"/>
-                <rect id="Rectangle_4" data-name="Rectangle 4" width="23" height="1.092" transform="translate(0 3.64)"/>
-                <rect id="Rectangle_5" data-name="Rectangle 5" width="23" height="1.092" transform="translate(0 7.279)"/>
-              </g>
-            </svg>
+              <a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="8.37" viewBox="0 0 23 8.37">
+                <g id="Group_3" data-name="Group 3" transform="translate(0 -0.001)">
+                  <rect id="Rectangle_3" data-name="Rectangle 3" width="23" height="1.092" transform="translate(0 0.001)"/>
+                  <rect id="Rectangle_4" data-name="Rectangle 4" width="23" height="1.092" transform="translate(0 3.64)"/>
+                  <rect id="Rectangle_5" data-name="Rectangle 5" width="23" height="1.092" transform="translate(0 7.279)"/>
+                </g>
+            </svg></a>
           </button>
 
-          <a href="#" className='flex md:hidden items-center'><svg xmlns="http://www.w3.org/2000/svg" width="131.235" height="25.491" viewBox="0 0 131.235 25.491">
+          <a href="/" className='flex md:hidden items-center'><svg xmlns="http://www.w3.org/2000/svg" width="131.235" height="25.491" viewBox="0 0 131.235 25.491">
             <g id="Group_240" data-name="Group 240" transform="translate(-575 -484.08)">
               <g id="Group_179" data-name="Group 179" transform="translate(575.271 484.08)">
                 <g id="Group_178" data-name="Group 178" transform="translate(0 0)">
@@ -83,13 +103,13 @@ function Header() {
           <div className='hidden md:flex items-center justify-between md:justify-center w-full'>
             <ul className='flex flex-col items-center p-4 md:p-5 mt-4 font-light border md:flex-row md:space-x-8 md:mt-0 md:border-0'>
               <li>
-                <a href="#" className='primary text-[22px] md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0'>QUIENES SOMOS</a>
+                <a href="/acerca" className='primary text-[22px] md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0'>QUIENES SOMOS</a>
               </li>
               <li>
-                <a href="#" className='primary text-[22px] md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0'>PROYECTO</a>
+                <a href="/proyecto" className='primary text-[22px] md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0'>PROYECTO</a>
               </li>
               <li>
-                <a className='px-[4rem] md:' href="#"><svg xmlns="http://www.w3.org/2000/svg" width="330.406" height="64.179" viewBox="0 0 330.406 64.179">
+                <a className='px-[4rem] hidden' href="/"><svg xmlns="http://www.w3.org/2000/svg" width="330.406" height="64.179" viewBox="0 0 330.406 64.179">
                   <g id="Group_235" data-name="Group 235" transform="translate(-575 -484.08)">
                     <g id="Group_179" data-name="Group 179" transform="translate(575.682 484.08)">
                       <g id="Group_178" data-name="Group 178" transform="translate(0 0)">
@@ -139,7 +159,7 @@ function Header() {
                 <a href="#" className='primary text-[22px] md:px-8 py-2 pl-3 pr-4 md:text-white text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0'>AMENIDADES</a>
               </li>
               <li>
-                <a href="#" className='primary text-[22px] md:px-8 py-2 pl-3 pr-4 md:text-white text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0'>CONTACTO</a>
+                <a href="/contacto" className='primary text-[22px] md:px-8 py-2 pl-3 pr-4 md:text-white text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0'>CONTACTO</a>
               </li>
             </ul>
           </div>
