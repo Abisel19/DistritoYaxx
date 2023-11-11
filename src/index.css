@@ -98,7 +98,7 @@
 }
 
 .bg-home{
-  background-image: url('img/bg-home.png');
+  background-image: url(img/bg-home.png);
   background-size: 100%;
   height:85vh;
   width: auto;
@@ -106,7 +106,7 @@
 }
 
 .bg-contacto{
-  background-image: url('img/bg-contacto.png');
+  background-image: url(img/bg-contacto.png);
   background-size: 100%;
   height:85vh;
   width: auto;
@@ -114,7 +114,7 @@
 }
 
 .bg-torres{
-  background-image: url('img/bg-torres.png');
+  background-image: url(img/bg-torres.png);
   background-size: 100%;
   height:100vh;
   width: auto;
@@ -122,7 +122,7 @@
 }
 
 .bg-location{
-  background-image: url('img/ubicacion.png');
+  background-image: url(img/ubicacion.png);
   background-size: 100%;
   height:90vh;
   width: auto;
@@ -142,28 +142,28 @@
 }
 
 .amenidades .swiper-button-prev{
-  background-image: url('img/arrow-prev.png') !important;
+  background-image: url(img/arrow-prev.png) !important;
   color: transparent !important;
   background: no-repeat;
   width: 55px !important;
 }
 
 .amenidades .swiper-button-next{
-  background-image: url('img/arrow-next.png') !important;
+  background-image: url(img/arrow-next.png) !important;
   color: transparent !important;
   background: no-repeat;
   width: 55px !important;
 }
 
 .alianzas .swiper-button-prev{
-  background-image: url('img/arrow-prev.png') !important;
+  background-image: url(img/arrow-prev.png) !important;
   color: transparent !important;
   background: no-repeat;
   width: 55px !important;
 }
 
 .alianzas .swiper-button-next{
-  background-image: url('img/arrow-next.png') !important;
+  background-image: url(img/arrow-next.png) !important;
   color: transparent !important;
   background: no-repeat;
   width: 55px !important;
@@ -221,21 +221,21 @@
 
 @media only screen and (max-width: 600px) {
   .bg-home{
-    background-image: url('img/bg-home-movil.png');
+    background-image: url(img/bg-home-movil.png);
     background-size: 100%;
     height:60vh;
     width: auto;
     background-repeat: no-repeat;
   }
   .bg-contacto{
-    background-image: url('img/bg-home-movil.png');
+    background-image: url(img/bg-home-movil.png);
     background-size: 100%;
     height:54vh;
     width: auto;
     background-repeat: no-repeat;
   }
   .bg-torres{
-    background-image: url('img/bg-torres.png');
+    background-image: url(img/bg-torres.png);
     background-size: 100%;
     height:26vh;
     width: auto;
@@ -253,7 +253,7 @@
     background-repeat: no-repeat;
   }
   .bg-location{
-    background-image: url('img/ubicacion.png');
+    background-image: url(img/ubicacion.png);
     width: 100%;
     height: 215px;
     background-repeat: no-repeat;
