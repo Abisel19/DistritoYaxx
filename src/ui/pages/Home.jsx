@@ -15,7 +15,7 @@ function Home() {
 
   return (
     <>
-      <section className='bg-home'>
+      <section className='mt-20 md:mt-0 bg-home'>
       </section>
 
       <section className='container mx-auto py-10 md:py-0 md:px-10'>
@@ -400,14 +400,14 @@ function Home() {
                 <h3 className='secondary text-center md:text-left text-4xl md:text-5xl text-white'>COTIZA</h3>
                 <h4 className='primary text-center md:text-left text-base md:text-lg text-white mt-1 md:mt-1'>HAGAMOS TU SUEÑO REALIDAD</h4>
                 <form className='flex flex-col md:items-start items-center mt-4'>
-                    <input className='bg-gray-1 text-white border-b-2 border-white focus:outline-none px-7 primary text-[15px] md:text-[1.1rem] py-1' type="text" name='nombre'/>
-                    <label className='text-white primary text-[15px] md:text-[1.1rem]' htmlFor="nombre">Nombre Completo</label>
+                    <input className='bg-gray-1 text-white border-b-2 border-white focus:outline-none px-12 md:px-20 primary text-[15px] md:text-[1.1rem] py-1' type="text" name='nombre'/>
+                    <label className='text-white primary mt-2 text-[15px] md:text-[1.1rem]' htmlFor="nombre">Nombre Completo</label>
 
-                    <input className='bg-gray-1 text-white border-b-2 border-white focus:outline-none px-7 primary text-[15px] md:text-[1.1rem] py-3' type="email" name='mail'/>
-                    <label className='text-white primary text-[15px] md:text-[1.1rem]' htmlFor="email">Correo Electrónico</label>
+                    <input className='bg-gray-1 text-white border-b-2 border-white focus:outline-none px-12 md:px-20 primary text-[15px] md:text-[1.1rem] py-3' type="email" name='mail'/>
+                    <label className='text-white primary mt-2 text-[15px] md:text-[1.1rem]' htmlFor="email">Correo Electrónico</label>
 
-                    <input className='bg-gray-1 text-white border-b-2 border-white focus:outline-none px-7 primary text-[15px] md:text-[1.1rem] py-3' type="number" name='tel'/>
-                    <label className='text-white primary text-[15px] md:text-[1.1rem]' htmlFor="tel">Whatsapp</label>
+                    <input className='bg-gray-1 text-white border-b-2 border-white focus:outline-none px-12 md:px-20 primary text-[15px] md:text-[1.1rem] py-3' type="number" name='tel'/>
+                    <label className='text-white primary mt-2 text-[15px] md:text-[1.1rem]' htmlFor="tel">Whatsapp</label>
 
                     <button className='text-white text-[20px] md:text-[1.3rem] primary rounded-full border-[1.5px] px-3 mt-8'>Enviar</button>
                 </form>

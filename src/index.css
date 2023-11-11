@@ -179,11 +179,51 @@
   height: 500px;
 }
 
+#navbar-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; /* Ajusta el color de fondo según tu diseño */
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  display: none;
+  animation: expandMenu 0.3s ease-out; /* Agrega una animación de expansión */
+}
+
+@keyframes expandMenu {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#navbar-sticky ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#navbar-sticky li {
+  margin-bottom: 20px;
+}
+
+#navbar-sticky a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  /* Otros estilos que desees aplicar */
+}
+
 @media only screen and (max-width: 600px) {
   .bg-home{
     background-image: url('img/bg-home-movil.png');
     background-size: 100%;
-    height:54vh;
+    height:60vh;
     width: auto;
     background-repeat: no-repeat;
   }
@@ -215,7 +255,7 @@
   .bg-location{
     background-image: url('img/ubicacion.png');
     width: 100%;
-    height: 220px;
+    height: 215px;
     background-repeat: no-repeat;
   }
   .card{
