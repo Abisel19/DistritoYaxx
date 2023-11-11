@@ -4,18 +4,21 @@ function Footer() {
   return (
     <footer className='bg-black'>
       <div className="flex justify-center p-8 md:pt-12 xl:pt-12">
-        <a href="/"><img className="md:hidden" src="/img/Logo s.png" alt="" /><img className="hidden sm:block" src="/img/Logo m.png" alt="" /></a>
+        <a href="/">
+          <img className="md:hidden" src="/img/Logo-s.png" alt="" />
+          <img className="hidden sm:block md:w-24" src="/img/Logo-m.png" alt="" />
+        </a>
       </div>
 
       <div className="flex items-center flex-col justify-center md:flex-row md:space-x-16">
-        <a className="text-white text-[14px] primary md:text-[30px] pt-1" href="/">INICIO</a>
-        <a className="text-white text-[14px] primary md:text-[30px] pt-1" href="/acerca">QUIENES SOMOS</a>
-        <a className="text-white text-[14px] primary md:text-[30px] pt-1" href="/proyecto">PROYECTO</a>
-        <a className="text-white text-[14px] primary md:text-[30px] pt-1" href="#">AMENIDADES</a>
-        <a className="text-white text-[14px] primary md:text-[30px] pt-1" href="/contacto">CONTACTO</a>
+        <a className="text-white text-[14px] primary md:text-[15px] xl:text-[18px] 2xl:text-[22px] pt-1" href="/">INICIO</a>
+        <a className="text-white text-[14px] primary md:text-[15px] xl:text-[18px] 2xl:text-[22px] pt-1" href="/acerca">QUIENES SOMOS</a>
+        <a className="text-white text-[14px] primary md:text-[15px] xl:text-[18px] 2xl:text-[22px] pt-1" href="/proyecto">PROYECTO</a>
+        <a className="text-white text-[14px] primary md:text-[15px] xl:text-[18px] 2xl:text-[22px] pt-1" href="#">AMENIDADES</a>
+        <a className="text-white text-[14px] primary md:text-[15px] xl:text-[18px] 2xl:text-[22px] pt-1" href="/contacto">CONTACTO</a>
       </div>
 
-      <div className="md:hidden flex items-center justify-center space-x-8 pt-5">
+      <div className="md:hidden flex items-center justify-center space-x-8 pt-6 pb-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="10.303" height="19.235" viewBox="0 0 10.303 19.235">
           <path id="Path_547" data-name="Path 547" d="M9.627,10.851l.534-3.481H6.822V5.11A1.74,1.74,0,0,1,8.783,3.23H10.3V.266a18.508,18.508,0,0,0-2.7-.235C4.855.031,3.058,1.7,3.058,4.716V7.37H0v3.481H3.058v8.415H6.822V10.851Z" transform="translate(0 -0.031)" fill="#fff"/>
         </svg>
@@ -35,12 +38,18 @@ function Footer() {
         </svg>
       </div>
 
-      <div className="hidden sm:flex justify-center md:space-x-10 md:pt-12">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18.178" height="33.938" viewBox="0 0 18.178 33.938">
+      <div div className="flex flex-col items-center pt-4 md:pt-8 md:flex-row md:justify-center">
+        <a className="text-white primary text-[13px] md:text-[17px] xl:text-[17px] 2xl:text-[22px] md:order-last" href="tel:+52 9981828289">+52 998 8705400</a>
+        <a className="hidden primary sm:inline-flex text-white text-[18px] px-3" href="#">|</a>
+        <a className="text-white primary text-[13px] md:text-[17px] xl:text-[17px] 2xl:text-[22px] md:order-first mt-1 md:mt-0" href="#">informes@distritoyaax.com</a>
+      </div>
+
+      <div className="hidden md:flex justify-center md:space-x-10 md:pt-8 md:pb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" className='w-3' viewBox="0 0 18.178 33.938">
           <path id="Path_136" data-name="Path 136" d="M16.986,19.121l.943-6.142H12.036V8.993c0-1.681.823-3.318,3.461-3.318h2.681V.446A32.655,32.655,0,0,0,13.42.031C8.567.031,5.4,2.972,5.4,8.3V12.98H0v6.142H5.4V33.969h6.641V19.121Z" transform="translate(0 -0.031)" fill="#fff"/>
         </svg>
             
-        <svg xmlns="http://www.w3.org/2000/svg" width="33.938" height="33.938" viewBox="0 0 33.938 33.938">
+        <svg xmlns="http://www.w3.org/2000/svg" className='w-6' viewBox="0 0 33.938 33.938">
           <g id="Group_265" data-name="Group 265" transform="translate(-944.353 -10501.219)">
             <path id="Path_137" data-name="Path 137" d="M97.188,6.348a1.989,1.989,0,1,0,1.989,1.989,1.99,1.99,0,0,0-1.989-1.989" transform="translate(873.117 10500.931)" fill="#fff"/>
             <path id="Path_138" data-name="Path 138" d="M87.7,9.008a8.358,8.358,0,1,0,8.358,8.359A8.368,8.368,0,0,0,87.7,9.008m0,13.712a5.354,5.354,0,1,1,5.353-5.353A5.36,5.36,0,0,1,87.7,22.72" transform="translate(873.765 10500.822)" fill="#fff"/>
@@ -48,21 +57,15 @@ function Footer() {
           </g>
         </svg>
             
-        <svg xmlns="http://www.w3.org/2000/svg" width="28.363" height="32.547" viewBox="0 0 28.363 32.547">
+        <svg xmlns="http://www.w3.org/2000/svg" className='w-5' viewBox="0 0 28.363 32.547">
           <g id="Group_201" data-name="Group 201" transform="translate(896.865 -777.184)">
             <path id="Path_458" data-name="Path 458" d="M-870.134,784.809a7.8,7.8,0,0,1-6.134-6.907v-.718h-5.605V799.43a4.712,4.712,0,0,1-4.729,4.7,4.712,4.712,0,0,1-3.734-1.859l0,0,0,0a4.71,4.71,0,0,1,.9-6.6,4.711,4.711,0,0,1,4.278-.738v-5.695a10.3,10.3,0,0,0-11.611,8.791,10.3,10.3,0,0,0,2.834,8.606,10.3,10.3,0,0,0,14.565.167,10.3,10.3,0,0,0,3.1-7.365V788.064a13.313,13.313,0,0,0,7.766,2.483v-5.57A7.862,7.862,0,0,1-870.134,784.809Z" transform="translate(0 0)" fill="#fff"/>
           </g>
         </svg>
       </div>
 
-      <div div className="flex flex-col items-center pt-4 md:flex-row md:justify-center">
-        <a className="text-white primary text-[13px] md:text-[28px] md:order-last" href="tel:+52 9981828289">+52 998 8705400</a>
-        <a className="hidden primary sm:inline-flex text-white text-[28px] px-3" href="#">|</a>
-        <a className="text-white primary text-[13px] md:text-[28px] md:order-first" href="#">informes@distritoyaax.com</a>
-      </div>
-
-      <div className="flex items-center justify-center p-5 pb-9 md:p-10">
-        <h3 className="text-white primary text-[12px] md:text-[20px]">COPYRIGHT 2023 | MADE BY BWE AGENCY</h3>
+      <div className="flex items-center justify-center pb-9 md:p-10">
+        <h3 className="text-white primary text-[13px] md:text-[17px] xl:text-[17px] 2xl:text-[22px] md:leading-loose">COPYRIGHT 2023 | MADE BY BWE AGENCY</h3>
       </div>
     </footer>
   );
