@@ -73,6 +73,17 @@ function Footer() {
       <div className="flex items-center justify-center pb-9 md:p-10">
         <h3 className="text-white primary text-[13px] md:text-[17px] xl:text-[17px] 2xl:text-[22px] md:leading-loose">COPYRIGHT 2023 | MADE BY BWE AGENCY</h3>
       </div>
+
+      <div className="phone-call cbh-phone cbh-green cbh-show cbh-static" id="clbh_phone_div" style={{}}>
+        <a id="WhatsApp-button"
+          href="https://api.whatsapp.com/send?phone=+529988705400&text=Hola%quiero%saber%más%de%Distrito%Yaax%"
+          target="_blank" className="phoneJs" title="WhatsApp Distrito Yaax">
+          <div className="cbh-ph-circle"></div>
+          <div className="cbh-ph-circle-fill"></div>
+          <div className="cbh-ph-img-circle1"></div>
+        </a>
+      </div>
+
     </footer>
   );
 }

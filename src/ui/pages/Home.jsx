@@ -129,7 +129,7 @@ function Home() {
             <div className='w-full md:w-1/3 xl:w-1/3'>
                 <div className="flex items-center justify-center">
                     <div className="text-brown text-4xl md:text-5xl xl:text-[55px] tracking-wider mt-0 md:mt-2 ml-0 md:-ml-10">
-                        <h1 className='secondary md:leading-[4rem]'><a className='primary'>¿</a>QUI<span className="font-semibold">E</span>NES<br/><a className='pl-4'>SOMOS</a><a className='primary'>?</a></h1>
+                        <h1 className='secondary md:leading-[4rem]'><a className='primary'>¿</a>QUI<span className="">É</span>NES<br/><a className='pl-4'>SOMOS</a><a className='primary'>?</a></h1>
                     </div>
                 </div>
             </div>
