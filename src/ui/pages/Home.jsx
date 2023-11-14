@@ -1,11 +1,117 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { motion } from 'framer-motion';
+import AnimatedSection from '@components/AnimatedSection';
+import { useInView } from "react-intersection-observer";
+
 
 function Home() {
+
+    useEffect(() => {
+    const html = document.querySelector('html');
+
+    // Detections
+    if (!('ontouchstart' in window)) {
+      html.classList.add('noTouch');
+    }
+    if ('ontouchstart' in window) {
+      html.classList.add('isTouch');
+    }
+    if ('ontouchstart' in window) {
+      html.classList.add('isTouch');
+    }
+    if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+      if (navigator.appVersion.indexOf('Trident') === -1) {
+        html.classList.add('isEDGE');
+      } else {
+        html.classList.add('isIE', 'isIE11');
+      }
+    }
+    if (navigator.appVersion.indexOf('MSIE') !== -1) {
+      html.classList.add('isIE');
+    }
+    if (
+      navigator.userAgent.indexOf('Safari') !== -1 &&
+      navigator.userAgent.indexOf('Chrome') === -1
+    ) {
+      html.classList.add('isSafari');
+    }
+
+    // On Screen
+    const isOnScreen = (element) => {
+      const elementTop = element.offsetTop;
+      const elementBottom = elementTop + element.offsetHeight;
+      const viewportTop = window.scrollY;
+      const viewportBottom = viewportTop + window.innerHeight;
+      return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+
+    const detection = () => {
+      items.forEach((item) => {
+        const el = item;
+
+        if (isOnScreen(el)) {
+          el.classList.add('in-view');
+        } else {
+          el.classList.remove('in-view');
+        }
+      });
+    };
+
+    const items = document.querySelectorAll('*[data-animate-in], *[data-detect-viewport]');
+    let waiting = false;
+
+    const handleResizeScroll = () => {
+      if (waiting) {
+        return;
+      }
+      waiting = true;
+      detection();
+
+      setTimeout(() => {
+        waiting = false;
+      }, 100);
+    };
+
+    window.addEventListener('resize', handleResizeScroll);
+    window.addEventListener('scroll', handleResizeScroll);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        detection();
+      }, 500);
+
+      items.forEach((item) => {
+        let delay = 0;
+        const el = item;
+        if (item.getAttribute('data-animate-in-delay')) {
+          delay = `${item.getAttribute('data-animate-in-delay') / 1000}s`;
+        } else {
+          delay = 0;
+        }
+        el.style.transitionDelay = delay;
+      });
+    });
+
+    return () => {
+      window.removeEventListener('resize', handleResizeScroll);
+      window.removeEventListener('scroll', handleResizeScroll);
+    };
+  }, []);
+
+    const imageVariants = {
+        normal: { scale: 1 },
+        hover: { scale: 1.1, transition: { duration: 0.3, ease: 'easeInOut' } },
+      };
+
+    const cardVariants = {
+        normal: { scale: 1 },
+        hover: { scale: 1.1, transition: { duration: 0.5, ease: 'easeInOut' } },
+      };
 
     let slidesPerView = 3; 
 
@@ -18,7 +124,7 @@ function Home() {
       <section className='mt-20 md:mt-0 bg-home'>
       </section>
 
-      <section className='container mx-auto py-10 md:py-0 md:px-10'>
+      <section data-animate-in="up" className='container mx-auto py-10 md:py-0 md:px-10'>
         <div className='md:flex py-0 md:py-20 xl:py-24'>
             <div className='w-full md:w-1/3 xl:w-1/3'>
                 <div className="flex items-center justify-center">
@@ -42,7 +148,7 @@ function Home() {
         </div>
       </section>
 
-      <section className='flex'>
+      <section data-animate-in="up" className='flex'>
         <div className='w-full md:w-4/12 bg-black-1 py-2 md:py-6 mx-auto'>
             <div className='text-center'>
                 <h3 className='primary text-white text-[10px] md:text-[22px] leading-3 md:leading-7 tracking-normal md:tracking-wide'>CONSTRUCCIÓN <br/><a className='sextary'>SOSTENIBLE</a></h3>
@@ -63,11 +169,11 @@ function Home() {
       </section>
 
       <section className='md:flex py-5 md:py-14'>
-        <div className='w-full md:w-3/5'>
+        <div data-animate-in="up" className='w-full md:w-3/5'>
             <img src="/img/vista-laguna.png" alt="vista-a-la-laguna" />
         </div>
 
-        <div className='w-full md:w-2/5 py-5 md:py-10 pl-0 md:pl-12'>
+        <div data-animate-in="up" className='w-full md:w-2/5 py-5 md:py-10 pl-0 md:pl-12'>
             <h2 className='secondary text-center md:text-left mt-4 md:mt-0 text-brown text-4xl md:text-6xl tracking-normal md:tracking-wide xl:leading-[68px]'>VISTAS A <br/>LA LAGUNA</h2>
             <p className='quaternary text-center md:text-left text-brown mt-5 md:mt-8 text-base md:text-2xl'>Lorem ipsum lorem ipsum lorem ipsum </p>
             <p className='quaternary text-center md:text-left text-brown mt-0 md:mt-1 text-base md:text-2xl'>Lorem ipsum lorem ipsum lorem ipsum </p>
@@ -76,10 +182,10 @@ function Home() {
         </div>
 
       </section>
+      
+      <section data-animate-in="fadeIn" className='bg-torres'></section>
 
-      <section className='bg-torres'></section>
-
-      <section className='pt-10 md:pt-20 pb-5 md:pb-5'>
+      <section data-animate-in="fadeIn" className='pt-10 md:pt-20 pb-5 md:pb-5'>
         <h2 className='secondary text-brown text-center mx-auto text-4xl md:text-7xl pb-4 md:pb-20'>TIPOLOGÍAS</h2>
 
         <div className='hidden md:flex'>
@@ -93,25 +199,57 @@ function Home() {
         >
         <SwiperSlide>
             <div className='w-full'>
-                <img className='mx-auto topologias-img' src="img/tipologia-room.png" alt="ESTUDIO" />
+                <motion.img
+                className='mx-auto topologias-img'
+                src="img/tipologia-room.png"
+                alt="ESTUDIO"
+                variants={imageVariants}
+                initial="normal"
+                whileHover="hover"
+                whileTap="hover" 
+                />
                 <p className='primary text-lg mt-2 md:mt-10 text-center'>Estudio - 47.80 m2</p>
             </div>
         </SwiperSlide>
         <SwiperSlide>
             <div className='w-full'>
-                <img className='mx-auto topologias-img' src="img/tipologia-recamara.png" alt="1 RECÁMARA" />
+                <motion.img
+                className='mx-auto topologias-img'
+                src="img/tipologia-recamara.png"
+                alt="1 RECÁMARA"
+                variants={imageVariants}
+                initial="normal"
+                whileHover="hover"
+                whileTap="hover" 
+                />
                 <p className='primary text-lg mt-2 md:mt-10 text-center'>1 Recámara - 65.55 m2</p>
             </div>
         </SwiperSlide>
         <SwiperSlide>
             <div className='w-full'>
-                <img className='mx-auto topologias-img' src="img/tipologia-look.png" alt="LOOK OFF" />
+                <motion.img
+                className='mx-auto topologias-img'
+                src="img/tipologia-look.png"
+                alt="LOOK OFF"
+                variants={imageVariants}
+                initial="normal"
+                whileHover="hover"
+                whileTap="hover" 
+                />
                 <p className='primary text-lg mt-2 md:mt-10 text-center'>Lock Off - 99.60 m2</p>
             </div>
         </SwiperSlide>
         <SwiperSlide>
             <div className='w-full'>
-                <img className='mx-auto topologias-img' src="img/tipologia-look-a.png" alt="LOOK OFF A" />
+                <motion.img
+                className='mx-auto topologias-img'
+                src="img/tipologia-look-a.png"
+                alt="LOOK OFF A"
+                variants={imageVariants}
+                initial="normal"
+                whileHover="hover"
+                whileTap="hover" 
+                />
                 <p className='primary text-lg mt-2 md:mt-10 text-center'>Lock Off A - 95.25 m2</p>
             </div>
         </SwiperSlide>
@@ -150,13 +288,13 @@ function Home() {
         
       </section>
 
-      <section className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-32 xl:mt-40 pb-8 md:mb-12 xl:mb-20'>
+      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-32 xl:mt-40 pb-8 md:mb-12 xl:mb-20'>
         <div className='flex mx-auto justify-center align-item'>
             <h2 className='secondary text-brown mx-auto text-5xl md:text-[110px] xl:text-[158px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center'>R E N D E R S</h2>
         </div>
       </section>
       
-      <section className='relative md:-mt-2 z-10'>
+      <section data-animate-in="up" className='relative md:-mt-2 z-10'>
         <Swiper
         modules={[Autoplay]}
         spaceBetween={0}
@@ -186,8 +324,8 @@ function Home() {
         </SwiperSlide>
         </Swiper>     
       </section>
-      
-      <section className='hidden md:flex container w-full mx-auto px-10 2xl:px-32 pt-0 md:pt-40'>
+
+      <section data-animate-in="up" className='hidden md:flex container w-full mx-auto px-10 2xl:px-32 pt-0 md:pt-40'>
             <div className='w-full md:w-1/2 pl-0 md:pl-14'>
                 <h2 className='septimary text-brown text-base md:text-[45px] 2xl:text-[65px]'>TORRE ITZ<a className='text-base md:text-[48px] 2xl:text-[68px]'>É</a></h2>
                 <h2 className='septimary text-brown mt-10 text-base md:text-[45px] 2xl:text-[65px]'>TORRE SAASIL</h2>
@@ -230,7 +368,7 @@ function Home() {
             </div>
       </section>
 
-      <section className='container md:hidden'>
+      <section data-animate-in="fadeIn" className='container md:hidden'>
         <div className='py-12'>
             <h2 className='secondary text-brown text-center mx-auto text-[42px]'>TORRE ITZ<a className='secondary text-[45px]'>É</a></h2>
             <h2 className='secondary text-brown -mt-4 text-center mx-auto text-[42px]'>TORRE SAASIL</h2>
@@ -267,7 +405,7 @@ function Home() {
         </div>
       </section>
 
-      <section className='relative md:mt-28 px-5 md:px-10 py-10 md:py-0'>
+      <section data-animate-in="fadeIn" className='relative md:mt-28 px-5 md:px-10 py-10 md:py-0'>
         <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         spaceBetween={30}
@@ -277,23 +415,59 @@ function Home() {
         className='amenidades'
         >
         <SwiperSlide>
-                <img className='mx-auto w-80 2xl:w-96' src="img/areas-verdes.png" alt="ESTUDIO" />
+                <motion.img
+                className='mx-auto w-80 2xl:w-96 py-0 md:py-4'
+                src="img/areas-verdes.png"
+                alt="AREAS VERDES"
+                variants={imageVariants}
+                initial="normal"
+                whileHover="hover"
+                whileTap="hover" 
+                />
+                {/* <img className='mx-auto w-80 2xl:w-96 py-0 md:py-4' src="img/areas-verdes.png" alt="ESTUDIO" /> */}
         </SwiperSlide>
         <SwiperSlide>
-                <img className='mx-auto w-80 2xl:w-96' src="img/padel.png" alt="1 RECÁMARA" />
+                <motion.img
+                className='mx-auto w-80 2xl:w-96 py-0 md:py-4'
+                src="img/padel.png"
+                alt="PADEL"
+                variants={imageVariants}
+                initial="normal"
+                whileHover="hover"
+                whileTap="hover" 
+                />
+                {/* <img className='mx-auto w-80 2xl:w-96 py-0 md:py-4' src="img/padel.png" alt="1 RECÁMARA" /> */}
         </SwiperSlide>
         <SwiperSlide>
-                <img className='mx-auto w-80 2xl:w-96' src="img/gimnasio.png" alt="LOOK OFF" />
+                <motion.img
+                className='mx-auto w-80 2xl:w-96 py-0 md:py-4'
+                src="img/gimnasio.png"
+                alt="GIMNASIO"
+                variants={imageVariants}
+                initial="normal"
+                whileHover="hover"
+                whileTap="hover" 
+                />
+                {/* <img className='mx-auto w-80 2xl:w-96 py-0 md:py-4' src="img/gimnasio.png" alt="LOOK OFF" /> */}
         </SwiperSlide>
         <SwiperSlide>
-                <img className='mx-auto w-80 2xl:w-96' src="img/terraza.png" alt="LOOK OFF A" />
+                <motion.img
+                className='mx-auto w-80 2xl:w-96 py-0 md:py-4'
+                src="img/terraza.png"
+                alt="TERRAZA"
+                variants={imageVariants}
+                initial="normal"
+                whileHover="hover"
+                whileTap="hover" 
+                />
+                {/* <img className='mx-auto w-80 2xl:w-96 py-0 md:py-4' src="img/terraza.png" alt="LOOK OFF A" /> */}
         </SwiperSlide>
         </Swiper>    
       </section>
 
       <section className='bg-location md:mt-36'></section>
 
-      <section className='bg-black-1 -mt-1 md:mt-0 py-2 md:py-4 xl:py-10 2xl:py-12'>
+      <section data-animate-in="up" className='bg-black-1 -mt-1 md:mt-0 py-2 md:py-4 xl:py-10 2xl:py-12'>
         <div className='flex container mx-auto px-0 md:px-40 2xl:px-40 pb-8 md:mb-12 xl:mb-20'>
             <div className='flex mx-auto justify-center align-item'>
                 <h2 className='secondary text-white mx-auto text-5xl md:text-[110px] xl:text-[140px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center mt-2 md:mt-8 xl:mt-14'>A L I A N Z A S</h2>
@@ -301,7 +475,7 @@ function Home() {
         </div>
       </section>
 
-      <section className='py-10 md:my-16 px-4 md:px-10'>
+      <section data-animate-in="fadeIn" className='py-10 md:my-16 px-4 md:px-10'>
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         spaceBetween={10}
@@ -311,7 +485,12 @@ function Home() {
         className='alianzas'
         >
         <SwiperSlide>
-            <div className='px-0 md:px-4'>
+        <motion.div
+        variants={cardVariants}
+        whileHover="hover"
+        whileTap="hover" // Para dispositivos táctiles
+        >
+            <div className='px-0 md:px-4 py-0 md:py-5'>
                 <div className='card border border-solid rounded-3xl border-gray-1 px-2 md:px-4'>
                     <div className='mx-auto'>
                         <svg xmlns="http://www.w3.org/2000/svg"  className="mx-auto w-20 md:w-40" viewBox="0 0 182.207 103.864">
@@ -352,10 +531,16 @@ function Home() {
                     <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] mt-3'>Distrito Yaax® es un proyecto<br/> conceptualizado y <br/>desarrollado por ALMIRA <br/>DESARRROLLOS. Empresa 100%<br/> Mexicana comprometida<br/> con el desarrollo económico y <br/>social de la región.</p>
                 </div>
             </div>
+        </motion.div>
         </SwiperSlide>
 
         <SwiperSlide>
-            <div className='px-0 md:px-4'>
+        <motion.div
+        variants={cardVariants}
+        whileHover="hover"
+        whileTap="hover" // Para dispositivos táctiles
+        >
+            <div className='px-0 md:px-4 py-0 md:py-5'>
                 <div className='card border border-solid rounded-3xl border-gray-1 px-2 md:px-4'>
                     <div className='mx-auto'>
                         <img className="mx-auto w-32 md:w-64" src="img/4S.png" alt="4S" />
@@ -364,10 +549,16 @@ function Home() {
                     <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] mt-5'>4S es una de las empresas<br/> lideres en Latinoamerica en <br/>ingenieria de mercado <br/>y consultoría inmobiliaria.</p>
                 </div>
             </div>
+        </motion.div>
         </SwiperSlide>
 
         <SwiperSlide>
-            <div className='px-0 md:px-4'>
+        <motion.div
+        variants={cardVariants}
+        whileHover="hover"
+        whileTap="hover" // Para dispositivos táctiles
+        >
+            <div className='px-0 md:px-4 py-0 md:py-5'>
                 <div className='card border border-solid rounded-3xl border-gray-1 px-2 md:px-4'>
                     <div className='mx-auto'>
                         <img className="mx-auto w-80 mt-2 md:mt-8" src="img/banca-mifel.png" alt="banca-mifel" />
@@ -376,10 +567,16 @@ function Home() {
                     <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] mt-5'>Brindamos seguridad jurídica<br/> a nuestros clientes, partiendo<br/> de un predio propio aportado<br/> a un fideicomiso de <br/>administración inmobiliaria <br/>con Banco MIFEL, cuyo único <br/>fines el desarrollo del proyecto.</p>
                 </div>
             </div>
+        </motion.div>
         </SwiperSlide>
-
+        
         <SwiperSlide>
-            <div className='px-0 md:px-4'>
+        <motion.div
+        variants={cardVariants}
+        whileHover="hover"
+        whileTap="hover" // Para dispositivos táctiles
+        >
+            <div className='px-0 md:px-4 py-0 md:py-5'>
                 <div className='card border border-solid rounded-3xl border-gray-1 px-2 md:px-4'>
                     <div className='mx-auto'>
                         <img className="mx-auto w-48 md:w-64 -mt-5 md:mt-0" src="img/cal.png" alt="banca-mifel" />
@@ -388,12 +585,13 @@ function Home() {
                     <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] mt-0'>Cal y Mayor es la empresa de <br/>mayor reconocimiento en <br/>ingenierías y consultoría<br/> especializada en movilidad y<br/> transporte.</p>
                 </div>
             </div>
+        </motion.div>
         </SwiperSlide>
 
       </Swiper>    
       </section>
 
-      <section className='bg-gray-1 py-28'>
+      <section data-animate-in="up" className='bg-gray-1 py-28'>
         <div className='container mx-auto md:flex'>
 
             <div className='w-full md:w-2/5 px-4 md:px-16'>

@@ -17,7 +17,7 @@ function Header() {
       <nav className=' fixed md:relative z-20 top-0 pt-4 md:pt-8 pb-4 md:pb-12 bg-white md:bg-black w-full'>
         <div className='container px-0 md:px-10 mx-auto'>
 
-          <div className='flex flex-wrap items-center justify-between md:justify-center '>
+          <div className='flex mx-auto flex-wrap items-center justify-between md:justify-center '>
             <button data-collapse-toggle="navbar-sticky"  onClick={handleOpen} type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden" aria-controls="navbar-sticky" aria-expanded="false">
             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="8.37" viewBox="0 0 23 8.37">
               <g id="Group_3" data-name="Group 3" transform="translate(0 -0.001)">
@@ -26,9 +26,9 @@ function Header() {
                 <rect id="Rectangle_5" data-name="Rectangle 5" width="23" height="1.092" transform="translate(0 7.279)"/>
               </g>
             </svg>          
-          </button>
+            </button>
 
-            <a href="/" className='flex md:hidden items-center'><svg xmlns="http://www.w3.org/2000/svg" width="131.235" height="25.491" viewBox="0 0 131.235 25.491">
+            <a href="/" className='flex md:hidden items-center ml-8 md:mr-0'><svg xmlns="http://www.w3.org/2000/svg" width="131.235" height="25.491" viewBox="0 0 131.235 25.491">
               <g id="Group_240" data-name="Group 240" transform="translate(-575 -484.08)">
                 <g id="Group_179" data-name="Group 179" transform="translate(575.271 484.08)">
                   <g id="Group_178" data-name="Group 178" transform="translate(0 0)">
@@ -74,13 +74,13 @@ function Header() {
             </svg></a>
 
             <div className='flex'>
-              <a href="/" className='px-1'>
+              <a href="https://www.facebook.com/distritoyaax.cancun" className='px-[6px]'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="9.487" height="17.712" viewBox="0 0 9.487 17.712">
                   <path id="Path_539" data-name="Path 539" d="M8.865,9.994l.492-3.205H6.282V4.708A1.6,1.6,0,0,1,8.088,2.977h1.4V.248A17.042,17.042,0,0,0,7,.031c-2.533,0-4.188,1.535-4.188,4.314V6.789H0V9.994H2.816v7.749H6.282V9.994Z" transform="translate(0 -0.031)"/>
                 </svg>
               </a>
 
-              <a href="/" className='px-1'>
+              <a href="https://www.instagram.com/distritoyaax.cancun/" className='px-[6px]'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="17.712" height="17.712" viewBox="0 0 17.712 17.712">
                   <g id="Group_264" data-name="Group 264" transform="translate(-373.343 -44.077)">
                     <path id="Path_536" data-name="Path 536" d="M96.237,6.348a1.038,1.038,0,1,0,1.038,1.038,1.039,1.039,0,0,0-1.038-1.038" transform="translate(290.65 40.892)"/>
@@ -90,7 +90,7 @@ function Header() {
                 </svg>
               </a>
 
-              <a href="/" className='px-1'>
+              <a href="/" className='px-[6px]'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="14.802" height="16.986" viewBox="0 0 14.802 16.986">
                   <g id="Group_241" data-name="Group 241" transform="translate(0 0)">
                     <path id="Path_458" data-name="Path 458" d="M-882.914,781.163a4.07,4.07,0,0,1-3.2-3.6v-.375h-2.925v11.61a2.459,2.459,0,0,1-2.468,2.451,2.46,2.46,0,0,1-1.949-.971h0a2.458,2.458,0,0,1,.47-3.445,2.459,2.459,0,0,1,2.233-.385v-2.972a5.374,5.374,0,0,0-6.06,4.588,5.375,5.375,0,0,0,1.479,4.492,5.375,5.375,0,0,0,7.6.087,5.375,5.375,0,0,0,1.618-3.844v-5.932a6.948,6.948,0,0,0,4.053,1.3v-2.907A4.1,4.1,0,0,1-882.914,781.163Z" transform="translate(896.865 -777.184)"/>
@@ -102,13 +102,13 @@ function Header() {
 
             <div className='hidden md:flex md:justify-center w-full'>
               <ul className='flex mx-auto items-center py-2 md:py-0 mt-4 font-light border md:mt-0 md:border-0'>
-                <li className='md:px-6 xl:px-9 2xl:12'>
-                  <a href="/acerca" className='primary md:text-[16px] 2xl:text-[22px] text-black md:text-white'>QUIENES SOMOS</a>
+                <li className='md:px-6 xl:px-9 2xl:12 hover:scale-110 transition-transform'>
+                  <a href="/acerca" className='primary md:text-[16px] 2xl:text-[22px] text-black md:text-white tracking-wider'>QUIENES SOMOS</a>
                 </li>
-                <li className='md:px-6 xl:px-9 2xl:12'>
-                  <a href="/proyectos" className='primary md:text-[16px] 2xl:text-[22px] text-black md:text-white'>PROYECTO</a>
+                <li className='md:px-6 xl:px-9 2xl:12 hover:scale-110 transition-transform'>
+                  <a href="/proyectos" className='primary md:text-[16px] 2xl:text-[22px] text-black md:text-white tracking-wider'>PROYECTO</a>
                 </li>
-                <li className='px-20'>
+                <li className='px-20 hover:scale-105 transition-transform'>
                   <a className='hidden sm:block' href="/"><svg xmlns="http://www.w3.org/2000/svg" className="md:w-52 xl:w-56 2xl:72" viewBox="0 0 330.406 64.179">
                     <g id="Group_235" data-name="Group 235" transform="translate(-575 -484.08)">
                       <g id="Group_179" data-name="Group 179" transform="translate(575.682 484.08)">
@@ -155,11 +155,11 @@ function Header() {
                     </svg>
                   </a>
                 </li>
-                <li className='md:px-6 xl:px-9 2xl:12'>
-                  <a href="#" className='primary md:text-[16px] 2xl:text-[22px] md:text-white text-black'>AMENIDADES</a>
+                <li className='md:px-6 xl:px-9 2xl:12 hover:scale-110 transition-transform '>
+                  <a href="#" className='primary md:text-[16px] 2xl:text-[22px] md:text-white text-black tracking-wider'>AMENIDADES</a>
                 </li>
-                <li className='md:px-6 xl:px-9 2xl:12'>
-                  <a href="/contacto" className='primary md:text-[16px] 2xl:text-[22px] md:text-white text-black'>CONTACTO</a>
+                <li className='md:px-6 xl:px-9 2xl:12 hover:scale-110 transition-transform'>
+                  <a href="/contacto" className='primary md:text-[16px] 2xl:text-[22px] md:text-white text-black tracking-wider'>CONTACTO</a>
                 </li>
               </ul>
             </div>
@@ -173,12 +173,12 @@ function Header() {
 
               <ul class="flex flex-col items-center p-4 md:p-5 mt-4 font-light border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
                 <li>
-                  <a href="#" class="block md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">QUIENES SOMOS</a>
+                  <a href="/acerca" class="block md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">QUIENES SOMOS</a>
                 </li>
                 <li>
-                  <a href="#" class="block md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">PROYECTO</a>
+                  <a href="/proyectos" class="block md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">PROYECTO</a>
                 </li>
-                <li>
+                <li className='hidden md:flex'>
                   <a class="px-[8rem]" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="330.406" height="64.179" viewBox="0 0 330.406 64.179">
                     <g id="Group_235" data-name="Group 235" transform="translate(-575 -484.08)">
                       <g id="Group_179" data-name="Group 179" transform="translate(575.682 484.08)">
@@ -229,7 +229,7 @@ function Header() {
                   <a href="#" class="block md:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">AMENIDADES</a>
                 </li>
                 <li>
-                  <a href="#" class="block me:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">CONTACTO</a>
+                  <a href="/contacto" class="block me:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">CONTACTO</a>
                 </li>
               </ul>
 

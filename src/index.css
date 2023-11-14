@@ -188,15 +188,15 @@
   background-color: white; /* Ajusta el color de fondo según tu diseño */
   z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
   display: none;
-  animation: expandMenu 0.3s ease-out; /* Agrega una animación de expansión */
+  animation: slideInMenu 0.3s ease-out; /* Cambia la animación a slideInMenu */
 }
 
-@keyframes expandMenu {
+@keyframes slideInMenu {
   from {
-    transform: scale(0);
+    transform: translateX(-100%); /* Desplaza hacia la izquierda (fuera de la pantalla) al inicio de la animación */
   }
   to {
-    transform: scale(1);
+    transform: translateX(0); /* Desplaza hacia la derecha (posición original) al final de la animación */
   }
 }
 
@@ -213,10 +213,9 @@
 }
 
 #navbar-sticky a {
-  color: black;
+  color: var(--color-brown);
   text-decoration: none;
   font-size: 1.5rem;
-  /* Otros estilos que desees aplicar */
 }
 
 @media only screen and (max-width: 600px) {
@@ -264,3 +263,51 @@
   }   
 }
 
+/*Animations*/
+
+[data-animate-in] {
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease
+}
+
+[data-animate-in="up"] {
+  transform: translate3d(0, 24px, 0)
+}
+
+[data-animate-in="left"] {
+  transform: translate3d(-25%, 0, 0)
+}
+
+[data-animate-in="right"] {
+  transform: translate3d(25%, 0, 0)
+}
+
+[data-animate-in="down"] {
+  transform: translate3d(0, -24px, 0)
+}
+
+[data-animate-in="fadeIn"] {
+  transform: translate3d(0, 0, 0)
+}
+
+[data-animate-in].in-view {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transition: transform 0.6s ease, opacity 0.6s ease
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease
+}
+
+.page-loaded .fade-in,.page-loaded.fade-in {
+  opacity: 1
+}
+
+.isSafari.isTouch [data-animate-in],.isSafari.isTouch [data-animate-in="up"] {
+  opacity: 1;
+  transition: none;
+  transform: none
+}
