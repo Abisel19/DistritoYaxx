@@ -1,11 +1,103 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 function Proyectos() {
+
+    useEffect(() => {
+        const html = document.querySelector('html');
+    
+        // Detections
+        if (!('ontouchstart' in window)) {
+          html.classList.add('noTouch');
+        }
+        if ('ontouchstart' in window) {
+          html.classList.add('isTouch');
+        }
+        if ('ontouchstart' in window) {
+          html.classList.add('isTouch');
+        }
+        if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+          if (navigator.appVersion.indexOf('Trident') === -1) {
+            html.classList.add('isEDGE');
+          } else {
+            html.classList.add('isIE', 'isIE11');
+          }
+        }
+        if (navigator.appVersion.indexOf('MSIE') !== -1) {
+          html.classList.add('isIE');
+        }
+        if (
+          navigator.userAgent.indexOf('Safari') !== -1 &&
+          navigator.userAgent.indexOf('Chrome') === -1
+        ) {
+          html.classList.add('isSafari');
+        }
+    
+        // On Screen
+        const isOnScreen = (element) => {
+          const elementTop = element.offsetTop;
+          const elementBottom = elementTop + element.offsetHeight;
+          const viewportTop = window.scrollY;
+          const viewportBottom = viewportTop + window.innerHeight;
+          return elementBottom > viewportTop && elementTop < viewportBottom;
+        };
+    
+        const detection = () => {
+          items.forEach((item) => {
+            const el = item;
+    
+            if (isOnScreen(el)) {
+              el.classList.add('in-view');
+            } else {
+              el.classList.remove('in-view');
+            }
+          });
+        };
+    
+        const items = document.querySelectorAll('*[data-animate-in], *[data-detect-viewport]');
+        let waiting = false;
+    
+        const handleResizeScroll = () => {
+          if (waiting) {
+            return;
+          }
+          waiting = true;
+          detection();
+    
+          setTimeout(() => {
+            waiting = false;
+          }, 100);
+        };
+    
+        window.addEventListener('resize', handleResizeScroll);
+        window.addEventListener('scroll', handleResizeScroll);
+    
+        document.addEventListener('DOMContentLoaded', () => {
+          setTimeout(() => {
+            detection();
+          }, 500);
+    
+          items.forEach((item) => {
+            let delay = 0;
+            const el = item;
+            if (item.getAttribute('data-animate-in-delay')) {
+              delay = `${item.getAttribute('data-animate-in-delay') / 1000}s`;
+            } else {
+              delay = 0;
+            }
+            el.style.transitionDelay = delay;
+          });
+        });
+    
+        return () => {
+          window.removeEventListener('resize', handleResizeScroll);
+          window.removeEventListener('scroll', handleResizeScroll);
+        };
+      }, []);
 
     let slidesPerView = 3; 
 
@@ -18,7 +110,7 @@ function Proyectos() {
       <section className='bg-home'>
       </section>
 
-      <section className='pt-10 md:pt-20 pb-5 md:pb-5'>
+      <section data-animate-in="up" className='pt-10 md:pt-20 pb-5 md:pb-5'>
         <h2 className='secondary text-brown text-center mx-auto text-4xl md:text-7xl pb-4 md:pb-20'>TIPOLOGÍAS</h2>
 
         <div className='hidden md:flex'>
@@ -89,13 +181,13 @@ function Proyectos() {
         
       </section>
 
-      <section className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-32 xl:mt-40 pb-8 md:mb-12 xl:mb-20'>
+      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-32 xl:mt-40 pb-8 md:mb-12 xl:mb-20'>
         <div className='flex mx-auto justify-center align-item'>
             <h2 className='secondary text-brown mx-auto text-5xl md:text-[110px] xl:text-[158px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center'>ESTUDIO</h2>
         </div>
       </section>
       
-      <section className='relative md:-mt-2 z-10'>
+      <section data-animate-in="up" className='relative md:-mt-2 z-10'>
         <Swiper
         modules={[Autoplay]}
         spaceBetween={0}
@@ -109,13 +201,13 @@ function Proyectos() {
         </Swiper>     
       </section>
 
-      <section className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-24 xl:mt-32 pb-8 md:mb-12 xl:mb-20'>
+      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-24 xl:mt-32 pb-8 md:mb-12 xl:mb-20'>
         <div className='flex mx-auto justify-center align-item'>
             <h2 className='secondary text-brown mx-auto text-5xl md:text-[110px] xl:text-[158px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center'>1 RECÁMARA</h2>
         </div>
       </section>
       
-      <section className='relative md:-mt-2 z-10'>
+      <section data-animate-in="up" className='relative md:-mt-2 z-10'>
         <Swiper
         modules={[Autoplay]}
         spaceBetween={0}
@@ -129,13 +221,13 @@ function Proyectos() {
         </Swiper>     
       </section>
 
-      <section className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-24 xl:mt-32 pb-8 md:mb-12 xl:mb-20'>
+      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-24 xl:mt-32 pb-8 md:mb-12 xl:mb-20'>
         <div className='flex mx-auto justify-center align-item'>
             <h2 className='secondary text-brown mx-auto text-5xl md:text-[110px] xl:text-[158px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center'>LOOK OFF</h2>
         </div>
       </section>
       
-      <section className='relative md:-mt-2 z-10'>
+      <section data-animate-in="up" className='relative md:-mt-2 z-10'>
         <Swiper
         modules={[Autoplay]}
         spaceBetween={0}
@@ -149,13 +241,13 @@ function Proyectos() {
         </Swiper>     
       </section>
 
-      <section className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-24 xl:mt-32 pb-8 md:mb-12 xl:mb-20'>
+      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-24 xl:mt-32 pb-8 md:mb-12 xl:mb-20'>
         <div className='flex mx-auto justify-center align-item'>
             <h2 className='secondary text-brown mx-auto text-5xl md:text-[110px] xl:text-[158px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center'>LOOK OFF A</h2>
         </div>
       </section>
       
-      <section className='relative md:-mt-2 z-10'>
+      <section data-animate-in="up" className='relative md:-mt-2 z-10'>
         <Swiper
         modules={[Autoplay]}
         spaceBetween={0}
@@ -169,7 +261,7 @@ function Proyectos() {
         </Swiper>     
       </section>
 
-      <section className='bg-gray-1 py-28 mt-0 md:mt-20'>
+      <section data-animate-in="up" className='bg-gray-1 py-28 mt-0 md:mt-20'>
         <div className='container mx-auto md:flex'>
 
             <div className='w-full md:w-2/5 px-4 md:px-16'>

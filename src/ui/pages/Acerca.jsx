@@ -1,18 +1,105 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import React, { useEffect } from 'react';
 
 function Acerca() {
+
+    useEffect(() => {
+        const html = document.querySelector('html');
+    
+        // Detections
+        if (!('ontouchstart' in window)) {
+          html.classList.add('noTouch');
+        }
+        if ('ontouchstart' in window) {
+          html.classList.add('isTouch');
+        }
+        if ('ontouchstart' in window) {
+          html.classList.add('isTouch');
+        }
+        if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+          if (navigator.appVersion.indexOf('Trident') === -1) {
+            html.classList.add('isEDGE');
+          } else {
+            html.classList.add('isIE', 'isIE11');
+          }
+        }
+        if (navigator.appVersion.indexOf('MSIE') !== -1) {
+          html.classList.add('isIE');
+        }
+        if (
+          navigator.userAgent.indexOf('Safari') !== -1 &&
+          navigator.userAgent.indexOf('Chrome') === -1
+        ) {
+          html.classList.add('isSafari');
+        }
+    
+        // On Screen
+        const isOnScreen = (element) => {
+          const elementTop = element.offsetTop;
+          const elementBottom = elementTop + element.offsetHeight;
+          const viewportTop = window.scrollY;
+          const viewportBottom = viewportTop + window.innerHeight;
+          return elementBottom > viewportTop && elementTop < viewportBottom;
+        };
+    
+        const detection = () => {
+          items.forEach((item) => {
+            const el = item;
+    
+            if (isOnScreen(el)) {
+              el.classList.add('in-view');
+            } else {
+              el.classList.remove('in-view');
+            }
+          });
+        };
+    
+        const items = document.querySelectorAll('*[data-animate-in], *[data-detect-viewport]');
+        let waiting = false;
+    
+        const handleResizeScroll = () => {
+          if (waiting) {
+            return;
+          }
+          waiting = true;
+          detection();
+    
+          setTimeout(() => {
+            waiting = false;
+          }, 100);
+        };
+    
+        window.addEventListener('resize', handleResizeScroll);
+        window.addEventListener('scroll', handleResizeScroll);
+    
+        document.addEventListener('DOMContentLoaded', () => {
+          setTimeout(() => {
+            detection();
+          }, 500);
+    
+          items.forEach((item) => {
+            let delay = 0;
+            const el = item;
+            if (item.getAttribute('data-animate-in-delay')) {
+              delay = `${item.getAttribute('data-animate-in-delay') / 1000}s`;
+            } else {
+              delay = 0;
+            }
+            el.style.transitionDelay = delay;
+          });
+        });
+    
+        return () => {
+          window.removeEventListener('resize', handleResizeScroll);
+          window.removeEventListener('scroll', handleResizeScroll);
+        };
+      }, []);
 
   return (
     <>
       <section className='bg-home'>
       </section>
 
-      <section className='container mx-auto py-10 md:py-0 md:px-10'>
+      <section data-animate-in="up" className='container mx-auto py-10 md:py-0 md:px-10'>
         <div className='md:flex py-0 md:py-20 xl:py-24'>
             <div className='w-full md:w-1/3 xl:w-1/3'>
                 <div className="flex items-center justify-center">
@@ -36,7 +123,7 @@ function Acerca() {
         </div>
       </section>
 
-      <section className='flex'>
+      <section data-animate-in="up" className='flex'>
         <div className='w-full md:w-4/12 bg-black-1 py-2 md:py-6 mx-auto'>
             <div className='text-center'>
                 <h3 className='primary text-white text-[10px] md:text-[22px] leading-3 md:leading-7 tracking-normal md:tracking-wide'>CONSTRUCCIÓN <br/><a className='sextary'>SOSTENIBLE</a></h3>
@@ -56,7 +143,7 @@ function Acerca() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 md:px-10 py-10 md:py-24">
+      <section data-animate-in="up" className="container mx-auto px-4 md:px-10 py-10 md:py-24">
             <h2 className="hidden md:grid secondary text-center md:text-6xl md:leading-[4rem]">NUESTRO TEAM</h2>
             <h2 className="grid md:hidden secondary text-center text-4xl">NUESTRO <br />TEAM</h2>
             <div className="flex flex-wrap justify-center md:justify-start mt-10 md:mt-28">
@@ -86,7 +173,7 @@ function Acerca() {
             </div>
         </section>
 
-        <section className='bg-gray-1 py-28 mt-10 md:mt-0'>
+        <section data-animate-in="up" className='bg-gray-1 py-28 mt-10 md:mt-0'>
             <div className='container mx-auto md:flex'>
 
                 <div className='w-full md:w-2/5 px-4 md:px-16'>
