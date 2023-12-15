@@ -11,11 +11,12 @@ function Footer() {
       </div>
 
       <div className="flex items-center flex-col justify-center md:flex-row md:space-x-16">
-        <a className="text-white text-[14px] primary md:text-[15px] xl:text-[18px] 2xl:text-[22px] pt-1 hover:scale-110 transition-transform" href="/">INICIO</a>
-        <a className="text-white text-[14px] primary md:text-[15px] xl:text-[18px] 2xl:text-[22px] pt-1 hover:scale-110 transition-transform" href="/acerca">QUIENES SOMOS</a>
-        <a className="text-white text-[14px] primary md:text-[15px] xl:text-[18px] 2xl:text-[22px] pt-1 hover:scale-110 transition-transform" href="/proyecto">PROYECTO</a>
-        <a className="text-white text-[14px] primary md:text-[15px] xl:text-[18px] 2xl:text-[22px] pt-1 hover:scale-110 transition-transform" href="#">AMENIDADES</a>
-        <a className="text-white text-[14px] primary md:text-[15px] xl:text-[18px] 2xl:text-[22px] pt-1 hover:scale-110 transition-transform" href="/contacto">CONTACTO</a>
+        <a className="text-white text-[14px] primary md:text-[14px] xl:text-[15px] 2xl:text-[18px] pt-1 hover:scale-110 transition-transform" href="/">QUIÉNES SOMOS</a>
+        <a className="text-white text-[14px] primary md:text-[14px] xl:text-[15px] 2xl:text-[18px] pt-1 hover:scale-110 transition-transform" href="/acerca">MODELOS</a>
+        <a className="text-white text-[14px] primary md:text-[14px] xl:text-[15px] 2xl:text-[18px] pt-1 hover:scale-110 transition-transform" href="/proyecto">AMENIDADES</a>
+        <a className="text-white text-[14px] primary md:text-[14px] xl:text-[15px] 2xl:text-[18px] pt-1 hover:scale-110 transition-transform" href="#">UBICACIÓN</a>
+        <a className="text-white text-[14px] primary md:text-[14px] xl:text-[15px] 2xl:text-[18px] pt-1 hover:scale-110 transition-transform" href="#">TOUR VIRTUAL</a>
+        <a className="text-white text-[14px] primary md:text-[14px] xl:text-[15px] 2xl:text-[18px] pt-1 hover:scale-110 transition-transform" href="/contacto">CONTACTO</a>
       </div>
 
       <div className="md:hidden flex items-center justify-center space-x-8 pt-6 pb-2">
@@ -39,9 +40,9 @@ function Footer() {
       </div>
 
       <div div className="flex flex-col items-center pt-4 md:pt-8 md:flex-row md:justify-center">
-        <a className="text-white primary text-[13px] md:text-[17px] xl:text-[17px] 2xl:text-[22px] md:order-last hover:scale-105 transition-transform" href="tel:+52 9981828289">+52 998 8705400</a>
+        <a className="text-white primary text-[13px] md:text-[17px] xl:text-[17px] 2xl:text-[18px] md:order-last hover:scale-105 transition-transform" href="tel:+52 9981828289">+52 998 8705400</a>
         <a className="hidden primary sm:inline-flex text-white text-[18px] px-3" href="#">|</a>
-        <a className="text-white primary text-[13px] md:text-[17px] xl:text-[17px] 2xl:text-[22px] md:order-first mt-1 md:mt-0 hover:scale-105 transition-transform" href="#">informes@distritoyaax.com</a>
+        <a className="text-white primary text-[13px] md:text-[17px] xl:text-[17px] 2xl:text-[18px] md:order-first mt-1 md:mt-0 hover:scale-105 transition-transform" href="#">informes@distritoyaax.com</a>
       </div>
 
       <div className="hidden md:flex justify-center md:space-x-10 md:pt-8 md:pb-0">
@@ -71,7 +72,7 @@ function Footer() {
       </div>
 
       <div className="flex items-center justify-center pb-9 md:p-10">
-        <h3 className="text-white primary text-[13px] md:text-[17px] xl:text-[17px] 2xl:text-[22px] md:leading-loose">COPYRIGHT 2023 | MADE BY BWE AGENCY</h3>
+        <h3 className="text-white primary text-[13px] md:text-[14px] xl:text-[15px] 2xl:text-[15px] md:leading-loose tracking-wider	">COPYRIGHT 2023 | MADE BY BWE AGENCY</h3>
       </div>
 
       <div className="phone-call cbh-phone cbh-green cbh-show cbh-static" id="clbh_phone_div" style={{}}>

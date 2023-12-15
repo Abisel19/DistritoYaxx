@@ -105,7 +105,7 @@ function Home() {
 
     const imageVariants = {
         normal: { scale: 1 },
-        hover: { scale: 1.1, transition: { duration: 0.3, ease: 'easeInOut' } },
+        hover: { scale: 1.05, transition: { duration: 0.3, ease: 'easeInOut' } },
       };
 
     const cardVariants = {
@@ -121,7 +121,7 @@ function Home() {
 
   return (
     <>
-      <section className='mt-20 md:mt-0 bg-home'>
+      <section className='mt-20 md:mt-20 bg-home'>
       </section>
 
       <section data-animate-in="up" className='container mx-auto py-10 md:py-0 md:px-10'>
@@ -175,10 +175,7 @@ function Home() {
 
         <div data-animate-in="up" className='w-full md:w-2/5 py-5 md:py-10 pl-0 md:pl-12'>
             <h2 className='secondary text-center md:text-left mt-4 md:mt-0 text-brown text-4xl md:text-6xl tracking-normal md:tracking-wide xl:leading-[68px]'>VISTAS A <br/>LA LAGUNA</h2>
-            <p className='quaternary text-center md:text-left text-brown mt-5 md:mt-8 text-base md:text-2xl'>Lorem ipsum lorem ipsum lorem ipsum </p>
-            <p className='quaternary text-center md:text-left text-brown mt-0 md:mt-1 text-base md:text-2xl'>Lorem ipsum lorem ipsum lorem ipsum </p>
-            <p className='quaternary text-center md:text-left text-brown mt-0 md:mt-10 text-base md:text-2xl'>Lorem ipsum lorem ipsum lorem ipsum </p>
-            <p className='quaternary text-center md:text-left text-brown mt-0 md:mt-1 text-base md:text-2xl'>Lorem ipsum lorem ipsum lorem ipsum </p>
+            <p className='quaternary text-center md:text-justify text-brown mt-5 md:mt-8 text-base md:text-2xl md:pr-12 2xl-pr-20'>La Laguna Nichupté ofrece un oasis de tranquilidad y conexión con la naturaleza. Esta característica única agrega un valor inigualable a nuestro proyecto inmobiliario, proporcionando a los residentes una experiencia de vida que combina la ofisticación urbana con la serenidadnatural.</p>
         </div>
 
       </section>
@@ -188,72 +185,81 @@ function Home() {
       <section data-animate-in="fadeIn" className='pt-10 md:pt-20 pb-5 md:pb-5'>
         <h2 className='secondary text-brown text-center mx-auto text-4xl md:text-7xl pb-4 md:pb-20'>TIPOLOGÍAS</h2>
 
-        <div className='hidden md:flex'>
+        <div className='hidden md:flex px-0 md:px-20'>
         <Swiper
-        modules={[Autoplay]}
+        modules={[Autoplay, Navigation]}
         loop={true}
-        spaceBetween={0}
-        slidesPerView={3}
+        spaceBetween={20}
+        slidesPerView={2}
+        // navigation={true}
         
-        autoplay={{ delay: 5000}}
+        autoplay={{ delay: 4000}}
         >
-        <SwiperSlide>
-            <div className='w-full'>
-                <motion.img
-                className='mx-auto topologias-img'
-                src="img/tipologia-room.png"
-                alt="ESTUDIO"
-                variants={imageVariants}
-                initial="normal"
-                whileHover="hover"
-                whileTap="hover" 
-                />
-                <p className='primary text-lg mt-2 md:mt-10 text-center'>Estudio - 47.80 m2</p>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className='w-full'>
-                <motion.img
-                className='mx-auto topologias-img'
-                src="img/tipologia-recamara.png"
-                alt="1 RECÁMARA"
-                variants={imageVariants}
-                initial="normal"
-                whileHover="hover"
-                whileTap="hover" 
-                />
-                <p className='primary text-lg mt-2 md:mt-10 text-center'>1 Recámara - 65.55 m2</p>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className='w-full'>
-                <motion.img
-                className='mx-auto topologias-img'
-                src="img/tipologia-look.png"
-                alt="LOOK OFF"
-                variants={imageVariants}
-                initial="normal"
-                whileHover="hover"
-                whileTap="hover" 
-                />
-                <p className='primary text-lg mt-2 md:mt-10 text-center'>Lock Off - 99.60 m2</p>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className='w-full'>
-                <motion.img
-                className='mx-auto topologias-img'
-                src="img/tipologia-look-a.png"
-                alt="LOOK OFF A"
-                variants={imageVariants}
-                initial="normal"
-                whileHover="hover"
-                whileTap="hover" 
-                />
-                <p className='primary text-lg mt-2 md:mt-10 text-center'>Lock Off A - 95.25 m2</p>
-            </div>
-        </SwiperSlide>
-        </Swiper>  
+            <SwiperSlide>
+                <div className='w-full'>
+                    <div className='h-[590px]'>
+                    <motion.img
+                    className='mx-auto w-[320px]'
+                    src="img/tipologia-room.png"
+                    alt="ESTUDIO"
+                    variants={imageVariants}
+                    initial="normal"
+                    whileHover="hover"
+                    whileTap="hover" 
+                    />
+                    </div>
+                    <p className='primary text-lg text-center'>Estudio - 47.80 m2</p>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className='w-full'>
+                    <div className='h-[590px]'>
+                    <motion.img
+                    className='mx-auto w-[550px]'
+                    src="img/tipologia-recamara.png"
+                    alt="1 RECÁMARA"
+                    variants={imageVariants}
+                    initial="normal"
+                    whileHover="hover"
+                    whileTap="hover" 
+                    />
+                    </div>
+                    <p className='primary text-lg text-center'>1 Recámara - 65.55 m2</p>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className='w-full'>
+                    <div className='h-[590px]'>
+                    <motion.img
+                    className='mx-auto w-[600px]'
+                    src="img/tipologia-look.png"
+                    alt="LOOK OFF"
+                    variants={imageVariants}
+                    initial="normal"
+                    whileHover="hover"
+                    whileTap="hover" 
+                    />
+                    </div>
+                    <p className='primary text-lg text-center'>Lock Off A - 99.60 m2</p>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className='w-full'>
+                    <div className='h-[590px]'>
+                    <motion.img
+                    className='mx-auto w-[660px]'
+                    src="img/tipologia-look-a.png"
+                    alt="LOOK OFF A"
+                    variants={imageVariants}
+                    initial="normal"
+                    whileHover="hover"
+                    whileTap="hover" 
+                    />
+                    </div>
+                    <p className='primary text-lg text-center'>Lock Off - 95.25 m2</p>
+                </div>
+            </SwiperSlide>
+        </Swiper>
         </div>
 
         <div className='flex md:hidden px-5 md:px-0'>
@@ -288,9 +294,9 @@ function Home() {
         
       </section>
 
-      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-32 xl:mt-40 pb-8 md:mb-12 xl:mb-20'>
+      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-10 md:mt-32 xl:mt-40 pb-8 md:mb-12 xl:mb-20 2xl:mb-24 in-view'>
         <div className='flex mx-auto justify-center align-item'>
-            <h2 className='secondary text-brown mx-auto text-5xl md:text-[110px] xl:text-[158px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center'>R E N D E R S</h2>
+            <h2 className='secondary text-brown mx-auto text-5xl md:text-[110px] xl:text-[158px] 2xl:text-[165px] md:tracking-widest absolute z-10 text-center'>R E N D E R S</h2>
         </div>
       </section>
       
@@ -345,26 +351,24 @@ function Home() {
                     <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>FIRE PITS</p>
                 </div>
                 <div className='flex mt-0 md:mt-2 xl:mt-4'>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] pr-3'>PISCINA FAMILIAR</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>PISCINA PARA NIÑOS</p>
+                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] pr-3'>ALBERCA FAMILIAR</p>
+                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>ALBERCA PARA NIÑOS</p>
                     <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>SUN DECK</p>
                     <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>ÁREA LOUNGE</p>
                 </div>
-                <div className='flex mt-0 md:mt-6 xl:mt-10'>
+                <div className='flex mt-0 md:mt-2 xl:mt-4'>
                     <p className='quaternary text-base md:text-[12px] xl:text-[16px] pr-3'>PISTA JOGGING</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>SALA WELLNESS</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>SALÓN DE USOS MÚLTIPLES</p>
+                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>TERRAZA WELLNESS</p>
+                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>SALÓN DE USOS</p>
+                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>GIMNASIO</p>
                 </div>
                 <div className='flex md:mt-2 xl:mt-4'>
                     <p className='quaternary text-base md:text-[12px] xl:text-[16px] pr-3'>CENTRO DE NEGOCIOS</p>
                     <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>KIDS CLUB</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>PISCINA SUN DECK</p>
-                </div>
-                <div className='flex md:mt-2 xl:mt-4'>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] pr-3'>ÁREA LOUNGE</p>
+                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>INFINITY POOL</p>
                     <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>BAR</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>GIMNASIO</p>
                 </div>
+
             </div>
       </section>
 
@@ -470,7 +474,7 @@ function Home() {
       <section data-animate-in="up" className='bg-black-1 -mt-1 md:mt-0 py-2 md:py-4 xl:py-10 2xl:py-12'>
         <div className='flex container mx-auto px-0 md:px-40 2xl:px-40 pb-8 md:mb-12 xl:mb-20'>
             <div className='flex mx-auto justify-center align-item'>
-                <h2 className='secondary text-white mx-auto text-5xl md:text-[110px] xl:text-[140px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center mt-2 md:mt-8 xl:mt-14'>A L I A N Z A S</h2>
+                <h2 className='secondary text-white mx-auto text-5xl md:text-[110px] xl:text-[140px] 2xl:text-[170px] md:tracking-widest absolute z-10 text-center mt-2 md:mt-8 xl:mt-8 2xl:mt-4'>A L I A N Z A S</h2>
             </div>
         </div>
       </section>
