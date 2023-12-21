@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -103,9 +103,23 @@ function Home() {
     };
   }, []);
 
+    const [background, setBackground] = useState('estudio');
+    const [background1, setBackground1] = useState('recamara');
+    const [background2, setBackground2] = useState('look-off');
+    const [background3, setBackground3] = useState('look-off-a');
+
+
+    const handleImageClick = (newBackground) => {
+        setBackground(newBackground);
+    };
+
+    const handleImageClick1 = (newBackground1) => {
+        setBackground1(newBackground1);
+    };
+
     const imageVariants = {
         normal: { scale: 1 },
-        hover: { scale: 1.05, transition: { duration: 0.3, ease: 'easeInOut' } },
+        hover: { scale: 1.1, transition: { duration: 0.3, ease: 'easeInOut' } },
       };
 
     const cardVariants = {
@@ -124,24 +138,23 @@ function Home() {
       <section className='mt-20 md:mt-20 bg-home'>
       </section>
 
-      <section data-animate-in="up" className='container mx-auto py-10 md:py-0 md:px-10'>
+      <section data-animate-in="up" className='mx-auto py-2 pb-12 md:py-0 md:pl-32 md:pr-32 2xl:pl-56 2xl:pr-38 3xl:pr-48 3xl:pl-96'>
         <div className='md:flex py-0 md:py-20 xl:py-24'>
-            <div className='w-full md:w-1/3 xl:w-1/3'>
-                <div className="flex items-center justify-center">
-                    <div className="text-brown text-4xl md:text-5xl xl:text-[55px] tracking-wider mt-0 md:mt-2 ml-0 md:-ml-10">
-                        <h1 className='secondary md:leading-[4rem]'><a className='primary'>¿</a>QUI<span className="">É</span>NES<br/><a className='pl-4'>SOMOS</a><a className='primary'>?</a></h1>
+            <div className='w-full md:w-1/3 xl:w-1/3 3xl:w-5/12'>
+                <div className="flex justify-center md:justify-start">
+                    <div className="text-brown text-4xl md:text-5xl xl:text-[55px] 3xl:text-[80px] tracking-wider mt-0 md:-mt-2 ml-0 md:-ml-10">
+                        <h1 className='secondary tracking-normal md:tracking-wide xl:leading-[68px] 3xl:xl:leading-[88px]'><a className='primary'>¿</a>QUI<span className="">É</span>NES<br/><a className='pl-4'>SOMOS</a><a className='primary'>?</a></h1>
                     </div>
                 </div>
             </div>
             <div className='w-full md:w-2/3 lg:w-2/3 2xl:w-2/3 px-2 md:px-0'>
                 <div className="flex items-center justify-center">
-                    <div className="text-brown text-center md:text-left text-[11px] md:text-lg xl:text-[23px] px-0 md:px-0 xl:px-0 ml-0 md:ml-14 hidden md:grid">
-                        <p className='primary leading-none md:leading-7 py-4 md:py-0'><a className='sextary'>Distrito Yaax®</a> es un proyecto conceptualizado y desarrollado <br/>por ALMIRA DESARRROLLOS. Empresa 100 % Mexicana  <br/>comprometida con el desarrollo económico y social de la región.</p>
-                        <p className='primary leading-none md:leading-7 mt-0 md:mt-2'><a className='sextary'>YAAX</a> palabra maya que significa <a className='sextary'>VERDE.</a> Indica el origen y el <br/>principio, además de significar la naturaleza en crecimiento.</p>
+                    <div className="text-brown text-center md:text-left text-[11px] md:text-lg xl:text-[23px] 3xl:text-[28px] px-0 md:px-0 xl:px-0 ml-0 md:ml-14 hidden md:grid">
+                        <p className='primary leading-none md:leading-7 3xl:leading-9 py-4 md:py-0 text-justify'><a className='sextary'>Distrito Yaax® </a>es un proyecto conceptualizado y desarrollado por ALMIRA DESARRROLLOS. Empresa 100 % Mexicana comprometida con el desarrollo económico y social de la región. YAAX palabra maya que significa VERDE. Indica el origen y el principio, además de significar la naturaleza en crecimiento.</p>
                     </div>
                     <div className="text-brown text-center md:text-left text-[12px] md:text-lg xl:text-[23px] px-0 md:px-0 xl:px-0 ml-0 md:ml-14 grid md:hidden">
-                        <p className='primary leading-none md:leading-7 py-4 md:py-0'><a className='sextary'>Distrito Yaax®</a> es un proyecto conceptualizado <br/>y desarrollado por ALMIRA DESARRROLLOS. Empresa 100 % <br/>Mexicana comprometida con el desarrollo económico <br/>y social de la región.</p>
-                        <p className='primary leading-none md:leading-7 mt-0 md:mt-2'><a className='sextary'>YAAX</a> palabra maya que significa <a className='sextary'>VERDE.</a> Indica el <br/>origen y el principio, además de significar la naturaleza<br/> en crecimiento.</p>
+                        <p className='primary leading-4 md:leading-7 py-4 md:py-0 text-justify px-4 md:px-0'><a className='sextary'>Distrito Yaax®</a> es un proyecto conceptualizado y desarrollado por ALMIRA DESARRROLLOS. Empresa 100 % Mexicana comprometida con el desarrollo económico y social de la región.</p>
+                        <p className='primary leading-4 md:leading-7 mt-0 md:mt-2 text-justify px-4 md:px-0'><a className='sextary'>YAAX</a> palabra maya que significa <a className='sextary'>VERDE.</a> Indica el origen y el principio, además de significar la naturaleza en  crecimiento.</p>
                     </div>
                 </div>
             </div>
@@ -149,57 +162,92 @@ function Home() {
       </section>
 
       <section data-animate-in="up" className='flex'>
-        <div className='w-full md:w-4/12 bg-black-1 py-2 md:py-6 mx-auto'>
+        <div className='w-full md:w-4/12 bg-black-1 py-2 md:py-6 3xl:py-12 mx-auto'>
             <div className='text-center'>
-                <h3 className='primary text-white text-[10px] md:text-[22px] leading-3 md:leading-7 tracking-normal md:tracking-wide'>CONSTRUCCIÓN <br/><a className='sextary'>SOSTENIBLE</a></h3>
+                <h3 className='primary text-white text-[10px] md:text-[22px] 3xl:text-[30px] leading-3 md:leading-7 tracking-normal md:tracking-wide'>CONSTRUCCIÓN <br/><a className='sextary'>SOSTENIBLE</a></h3>
             </div>
         </div>
 
-        <div className='w-full md:w-4/12 bg-gray-1 py-2 md:py-6 mx-auto'>
+        <div className='w-full md:w-4/12 bg-gray-1 py-2 md:py-6 3xl:py-12 mx-auto'>
             <div className='text-center'>
-                <h3 className='primary text-white text-[10px] md:text-[22px] leading-3 md:leading-7 tracking-normal md:tracking-wide'>PRIMER PROYECTO <br/><a className='sextary'>SMART CITY EN CANCÚN</a></h3>
+                <h3 className='primary text-white text-[10px] md:text-[22px] 3xl:text-[30px] leading-3 md:leading-7 tracking-normal md:tracking-wide'>PRIMER PROYECTO <br/><a className='sextary'>SMART CITY EN CANCÚN</a></h3>
             </div>
         </div>
 
-        <div className='w-full md:w-4/12 bg-black-1 py-2 md:py-6 mx-auto'>
+        <div className='w-full md:w-4/12 bg-black-1 py-2 md:py-6 3xl:py-12 mx-auto'>
             <div className='text-center'>
-                <h3 className='primary text-white text-[10px] md:text-[22px] leading-3 md:leading-7 tracking-normal md:tracking-wide'>60% DE <br/><a className='sextary'>ÁREAS VERDES</a></h3>
+                <h3 className='primary text-white text-[10px] md:text-[22px] 3xl:text-[30px] leading-3 md:leading-7 tracking-normal md:tracking-wide'>60% DE <br/><a className='sextary'>ÁREAS VERDES</a></h3>
             </div>
         </div>
       </section>
 
-      <section className='md:flex py-5 md:py-14'>
-        <div data-animate-in="up" className='w-full md:w-3/5'>
-            <img src="/img/vista-laguna.png" alt="vista-a-la-laguna" />
-        </div>
+      <section data-animate-in="up" className='md:flex py-5 md:py-14'>
+        <Swiper
+        modules={[Autoplay]}
+        spaceBetween={0}
+        slidesPerView={1}
+        autoplay={{ delay: 5000}}
+        loop={true}
+        >
+        <SwiperSlide>
+            <div className='md:flex py-5 md:py-14'>
+                <div className='w-full md:w-3/5 3xl:w-7/12'>
+                    <img className="w-full" src="/img/vista-laguna.png" alt="vista-a-la-laguna" />
+                </div>
 
-        <div data-animate-in="up" className='w-full md:w-2/5 py-5 md:py-10 pl-0 md:pl-12'>
-            <h2 className='secondary text-center md:text-left mt-4 md:mt-0 text-brown text-4xl md:text-6xl tracking-normal md:tracking-wide xl:leading-[68px]'>VISTAS A <br/>LA LAGUNA</h2>
-            <p className='quaternary text-center md:text-justify text-brown mt-5 md:mt-8 text-base md:text-2xl md:pr-12 2xl-pr-20'>La Laguna Nichupté ofrece un oasis de tranquilidad y conexión con la naturaleza. Esta característica única agrega un valor inigualable a nuestro proyecto inmobiliario, proporcionando a los residentes una experiencia de vida que combina la ofisticación urbana con la serenidadnatural.</p>
-        </div>
+                <div className='w-full md:w-2/5 3xl:w-5/12 py-5 md:py-10 pl-0 md:pr-20 md:pl-12 2xl:pr-38 2xl:pl-10 3xl:pr-48 3xl:pl-20 mb-4 md:mb-0'>
+                    <h2 className='secondary text-center md:text-left mt-3 md:mt-0 text-brown text-4xl md:text-5xl xl:text-[55px] 3xl:text-[60px] tracking-normal md:tracking-wide xl:leading-[68px] 3xl:xl:leading-[88px]'>VISTAS A <br/>LA LAGUNA</h2>
+                    <p className='quaternary leading-4 md:leading-7 2xl:leading-9 md:text-justify text-brown mt-5 md:mt-8 2xl:mt-10 3xl:mt-14x text-[12px] md:text-lg xl:text-[20px] 3xl:text-[30px] md:pr-10 px-4 md:px-0 text-justify'>La Laguna Nichupté ofrece un oasis de tranquilidad y conexión con la naturaleza. Esta característica única agrega un valor inigualable a nuestro proyecto inmobiliario, proporcionando a los residentes una experiencia de vida que combina la ofisticación urbana con la serenidadnatural.</p>
+                </div>
+            </div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <div className='md:flex py-5 md:py-14'>
+                <div className='w-full md:w-3/5 3xl:w-7/12'>
+                    <img className="w-full" src="/img/vista-a-la-ciudad.png" alt="vista-a-la-ciudad" />
+                </div>
 
+                <div className='w-full md:w-2/5 3xl:w-5/12 pl-0 md:pr-20 md:pl-12 2xl:pr-38 2xl:pl-10 3xl:pr-48 3xl:pl-20 mb-4 md:mb-0'>
+                    <h2 className='secondary text-center md:text-left mt-3 md:mt-0 text-brown text-4xl md:text-5xl xl:text-[55px] 3xl:text-[60px] tracking-normal md:tracking-wide xl:leading-[68px] 3xl:xl:leading-[88px]'>VISTAS A <br/>LA CIUDAD</h2>
+                    <p className='quaternary leading-4 md:leading-7 2xl:leading-9 md:text-justify text-brown mt-5 md:mt-8 2xl:mt-10 3xl:mt-14x text-[12px] md:text-lg xl:text-[20px] 3xl:text-[30px] md:pr-10 px-4 md:px-0 text-justify'>Desde Distrito Yaax, la ciudad de Cancún se despliega con una encantadora fusión de luces y vida urbana. Cada ventana es un cuadro que captura la dinámica energía de la ciudad, destacando la vitalidad de sus calles y su arquitectura. Al caer la tarde, los atardeceres pintan el cielo con tonos cálidos, creando una atmósfera única que transforma la ciudad en un lienzo de serenidad y belleza. Disfruta de este espectáculo en constante cambio desde la comodidad de tu hogar en Distrito Yaax.</p>
+                </div>
+            </div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <div className='md:flex py-5 md:py-14'>
+                <div className='w-full md:w-3/5 3xl:w-7/12'>
+                    <img className="w-full" src="/img/vista-al-mar-caribe.png" alt="vista-al-mar-caribe" />
+                </div>
+
+                <div className='w-full md:w-2/5 3xl:w-5/12 pl-0 md:pr-20 md:pl-12 2xl:pr-38 2xl:pl-10 3xl:pr-48 3xl:pl-20 mb-4 md:mb-0'>
+                    <h2 className='secondary text-center md:text-left mt-3 md:mt-0 text-brown text-4xl md:text-5xl xl:text-[55px] 3xl:text-[60px] tracking-normal md:tracking-wide xl:leading-[68px] 3xl:xl:leading-[88px]'>VISTAS AL <br/>MAR CARIBE</h2>
+                    <p className='quaternary leading-4 md:leading-7 2xl:leading-9 md:text-justify text-brown mt-5 md:mt-8 2xl:mt-10 3xl:mt-14x text-[12px] md:text-lg xl:text-[20px] 3xl:text-[30px] md:pr-10 px-4 md:px-0 text-justify'>Desde Distrito Yaax, la ciudad de Cancún se despliega con una encantadora fusión de luces y vida urbana. Cada ventana es un cuadro que captura la dinámica energía de la ciudad, destacando la vitalidad de sus calles y la modernidad de su arquitectura. Al caer la tarde, los atardeceres pintan el cielo con tonos cálidos, creando una atmósfera única que transforma la ciudad en un lienzo de serenidad y belleza. Disfruta de este espectáculo en constante cambio desde la comodidad de tu hogar en Distrito Yaax.</p>
+                </div>
+            </div>
+        </SwiperSlide>
+        </Swiper>     
       </section>
       
       <section data-animate-in="fadeIn" className='bg-torres'></section>
 
       <section data-animate-in="fadeIn" className='pt-10 md:pt-20 pb-5 md:pb-5'>
-        <h2 className='secondary text-brown text-center mx-auto text-4xl md:text-7xl pb-4 md:pb-20'>TIPOLOGÍAS</h2>
+        <h2 className='secondary text-brown text-center mx-auto text-4xl md:text-7xl 2xl:text-8xl 3xl:text-[90px] pb-4 md:pb-20 3xl:pb-40'>TIPOLOGÍAS</h2>
 
-        <div className='hidden md:flex px-0 md:px-20'>
+        <div className='flex px-10 md:px-56'>
         <Swiper
         modules={[Autoplay, Navigation]}
         loop={true}
         spaceBetween={20}
-        slidesPerView={2}
-        // navigation={true}
+        slidesPerView={1}
+        //navigation={true}
         
         autoplay={{ delay: 4000}}
         >
             <SwiperSlide>
                 <div className='w-full'>
-                    <div className='h-[590px]'>
+                    <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
                     <motion.img
-                    className='mx-auto w-[320px]'
+                    className='mx-auto py-4 w-[200px] md:w-[320px] 3xl:w-[380px]'
                     src="img/tipologia-room.png"
                     alt="ESTUDIO"
                     variants={imageVariants}
@@ -208,14 +256,14 @@ function Home() {
                     whileTap="hover" 
                     />
                     </div>
-                    <p className='primary text-lg text-center'>Estudio - 47.80 m2</p>
+                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Estudio - 47.80 m2</p>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className='w-full'>
-                    <div className='h-[590px]'>
+                    <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
                     <motion.img
-                    className='mx-auto w-[550px]'
+                    className='mx-auto py-4 w-[550px] 3xl:w-[610px]'
                     src="img/tipologia-recamara.png"
                     alt="1 RECÁMARA"
                     variants={imageVariants}
@@ -224,14 +272,14 @@ function Home() {
                     whileTap="hover" 
                     />
                     </div>
-                    <p className='primary text-lg text-center'>1 Recámara - 65.55 m2</p>
+                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>1 Recámara - 65.55 m2</p>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className='w-full'>
-                    <div className='h-[590px]'>
+                    <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
                     <motion.img
-                    className='mx-auto w-[600px]'
+                    className='mx-auto py-4 w-[600px] 3xl:w-[660px]'
                     src="img/tipologia-look.png"
                     alt="LOOK OFF"
                     variants={imageVariants}
@@ -240,14 +288,14 @@ function Home() {
                     whileTap="hover" 
                     />
                     </div>
-                    <p className='primary text-lg text-center'>Lock Off A - 99.60 m2</p>
+                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Lock Off A - 99.60 m2</p>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className='w-full'>
-                    <div className='h-[590px]'>
+                    <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
                     <motion.img
-                    className='mx-auto w-[660px]'
+                    className='mx-auto py-4 w-[660px] 3xl:w-[720px]'
                     src="img/tipologia-look-a.png"
                     alt="LOOK OFF A"
                     variants={imageVariants}
@@ -256,40 +304,10 @@ function Home() {
                     whileTap="hover" 
                     />
                     </div>
-                    <p className='primary text-lg text-center'>Lock Off - 95.25 m2</p>
+                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Lock Off - 95.25 m2</p>
                 </div>
             </SwiperSlide>
         </Swiper>
-        </div>
-
-        <div className='flex md:hidden px-5 md:px-0'>
-            <div className='w-1/2'>
-                <div className='w-full'>
-                    <img className='mx-auto topologias-img' src="img/tipologia-room.png" alt="ESTUDIO" />
-                    <p className='primary text-xs mt-5 md:mt-10 text-center'>Estudio - 47.80 m2</p>
-                </div>
-            </div>
-            <div className='w-1/2'>
-            <div className='w-full'>
-                    <img className='mx-auto topologias-img' src="img/tipologia-recamara.png" alt="RECAMARA" />
-                    <p className='primary text-xs mt-5 md:mt-10 text-center'>Estudio - 47.80 m2</p>
-                </div>
-            </div>
-        </div>
-
-        <div className='flex md:hidden px-5 md:px-0 mt-10 md:mt-0'>
-            <div className='w-1/2'>
-                <div className='w-full'>
-                    <img className='mx-auto topologias-img' src="img/tipologia-look.png" alt="ESTUDIO" />
-                    <p className='primary text-xs mt-5 md:mt-10 text-center'>Estudio - 47.80 m2</p>
-                </div>
-            </div>
-            <div className='w-1/2'>
-            <div className='w-full'>
-                    <img className='mx-auto topologias-img' src="img/tipologia-look-a.png" alt="RECAMARA" />
-                    <p className='primary text-xs mt-5 md:mt-10 text-center'>Estudio - 47.80 m2</p>
-                </div>
-            </div>
         </div>
         
       </section>
@@ -305,78 +323,189 @@ function Home() {
         modules={[Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
-        loop={true}
         autoplay={{ delay: 5000}}
+        loop={true}
         >
         <SwiperSlide>
-            <div className='w-full'>
-                <img className='bg-room' src="img/bg-room.png" alt="ESTUDIO" />
+            <div className={`w-full fade ${background}`}>
+                <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
+                    <div className='bg-black w-1/3 md:w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
+                        <div className='flex items-center px-2 md:px-10 py-1 md:py-0'>
+                            <div className='w-1/3'>
+                                <img className='w-5 md:w-14 flex ml-1 md:ml-6 -mt-2 md:mt-0' src="/img/Logo-m.png" alt="" />
+                            </div>
+                            <div className='w-2/3'>
+                                <p className='secondary text-white text-[8px] md:text-4xl -mt-[0.5rem] md:mt-0 tracking-wider'>ESTUDIO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='flex cards-bg pb-4 md:pb-8'>
+                    <div className='w-1/2'>
+                        <div className='flex'>
+                            <div className='w-1/2 px-2'>
+                                <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('recamara')}>
+                                    <img src="img/recamara.png" alt="" />
+                                </div>
+                            </div>
+                            <div className='w-1/2 px-2'>
+                                <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('look-off')}>
+                                    <img src="img/look-off.png" alt="" />
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className='w-full'>
-                <img className='bg-room' src="img/bg-room-1.png" alt="1 RECÁMARA" />
-            </div>
+        <div className={`w-full fade ${background1}`}>
+                <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
+                    <div className='bg-black w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
+                        <div className='flex items-center px-2 md:px-10 py-1 md:py-0 '>
+                            <div className='w-1/3'>
+                                <img className='w-5 md:w-14 flex ml-1 md:ml-6' src="/img/Logo-m.png" alt="" />
+                            </div>
+                            <div className='w-2/3'>
+                                <p className='secondary text-white text-[8px] md:text-4xl tracking-wider'>1 RECÁMARA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='flex cards-bg pb-4 md:pb-8'>
+                    <div className='w-1/2'>
+                        <div className='flex'>
+                            <div className='w-1/2 px-2'>
+                                <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('recamara')}>
+                                    <img src="img/recamara.png" alt="" />
+                                </div>
+                            </div>
+                            <div className='w-1/2 px-2'>
+                                <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('look-off')}>
+                                    <img src="img/look-off.png" alt="" />
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+        </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className='w-full'>
-                <img className='bg-room' src="img/bg-look-off.png" alt="LOOK OFF" />
-            </div>
+        <div className={`w-full fade ${background2}`}>
+                <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
+                    <div className='bg-black w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
+                        <div className='flex items-center px-2 md:px-10 py-1 md:py-0 '>
+                            <div className='w-1/3'>
+                                <img className='w-5 md:w-14 flex ml-1 md:ml-6' src="/img/Logo-m.png" alt="" />
+                            </div>
+                            <div className='w-2/3'>
+                                <p className='secondary text-white text-[8px] md:text-4xl tracking-wider'>LOOK OFF</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='flex cards-bg pb-4 md:pb-8'>
+                    <div className='w-1/2'>
+                        <div className='flex'>
+                            <div className='w-1/2 px-2'>
+                                <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('recamara')}>
+                                    <img src="img/recamara.png" alt="" />
+                                </div>
+                            </div>
+                            <div className='w-1/2 px-2'>
+                                <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('look-off')}>
+                                    <img src="img/look-off.png" alt="" />
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+        </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className='w-full'>
-                <img className='bg-room' src="img/bg-look-off-a.png" alt="LOOK OFF A" />
-            </div>
+        <div className={`w-full fade ${background3}`}>
+                <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
+                    <div className='bg-black w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
+                        <div className='flex items-center px-2 md:px-10 py-1 md:py-0 '>
+                            <div className='w-1/3'>
+                                <img className='w-5 md:w-14 flex ml-1 md:ml-6' src="/img/Logo-m.png" alt="" />
+                            </div>
+                            <div className='w-2/3'>
+                                <p className='secondary text-white text-[8px] md:text-4xl tracking-wider'>LOOK OFF A</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='flex cards-bg pb-4 md:pb-8'>
+                    <div className='w-1/2'>
+                        <div className='flex'>
+                            <div className='w-1/2 px-2'>
+                                <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('recamara')}>
+                                    <img src="img/recamara.png" alt="" />
+                                </div>
+                            </div>
+                            <div className='w-1/2 px-2'>
+                                <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('look-off')}>
+                                    <img src="img/look-off.png" alt="" />
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+        </div>
         </SwiperSlide>
         </Swiper>     
       </section>
 
-      <section data-animate-in="up" className='hidden md:flex container w-full mx-auto px-10 2xl:px-32 pt-0 md:pt-40'>
-            <div className='w-full md:w-1/2 pl-0 md:pl-14'>
-                <h2 className='septimary text-brown text-base md:text-[45px] 2xl:text-[65px]'>TORRE ITZ<a className='text-base md:text-[48px] 2xl:text-[68px]'>É</a></h2>
-                <h2 className='septimary text-brown mt-10 text-base md:text-[45px] 2xl:text-[65px]'>TORRE SAASIL</h2>
-                <h3 className='quinary text-brown mt-0 md:mt-12 font-light text-base md:text-[18px] 2xl:text-[22px]'>RENTA VACACIONAL</h3>
-                <div className='mt-0 md:-mt-60'>
-                  <svg xmlns="http://www.w3.org/2000/svg" className='md:w-[400px] md:h-[320px] xl:w-[530px] xl:h-[320px]' viewBox="0 0 699.328 315.547">
+      <section data-animate-in="up" className='hidden md:flex w-full mx-auto px-10 2xl:px-32 pt-0 md:pt-40'>
+            <div className='w-full md:w-5/12 2xl:w-5/12 3xl:w-6/12 pl-0 md:pl-14'>
+                <h2 className='septimary text-brown text-base md:text-[45px] 2xl:text-[65px] 3xl:text-[100px]'>TORRE ITZ<a className='text-base md:text-[48px] 2xl:text-[68px] 3xl:text-[103px]'>É</a></h2>
+                <h2 className='septimary text-brown mt-10 3xl:mt-16 text-base md:text-[45px] 2xl:text-[65px] 3xl:text-[100px]'>TORRE SAASIL</h2>
+                <h3 className='quinary text-brown mt-0 md:mt-12 font-light text-base md:text-[18px] 2xl:text-[22px] 3xl:text-[40px]'>RENTA VACACIONAL</h3>
+                <div className='mt-0 md:-mt-60 3xl:ml-20'>
+                  <svg xmlns="http://www.w3.org/2000/svg" className='md:w-[400px] md:h-[700px] xl:w-[530px] xl:h-[320px] 2xl:w-[500px] 2xl:h-[300px] 3xl:w-[900px] 3xl:h-[300px]' viewBox="0 0 699.328 315.547">
                     <path id="Trazado_513" data-name="Trazado 513" d="M-5053,4172.055h605.487V3857.508h93.841" transform="translate(5053 -3857.008)" fill="none" stroke="#707070" stroke-width="1"/>
                   </svg>
                 </div>
             </div>
-            <div className='w-full md:w-1/2 mt-0 md:-mt-4 xl:-mt-12'>
-                <h3 className='septimary text-brown text-base md:text-[32px]'>AMENIDADES</h3>
-                <div className='flex mt-0 md:mt-8 xl:mt-12'>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] pr-3'>CANCHA DE PADEL</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>ÁREA DE BBQ</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>JUEGOS INFANTILES</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>FIRE PITS</p>
+            <div className='w-full md:w-7/12 2xl:w-6/12 3xl:w-6/12 mt-0 md:-mt-4 xl:-mt-12 2xl:-mt-14 2xl:ml-8'>
+                <h3 className='septimary text-brown text-base md:text-[34px] 2xl:text-[40px] 3xl:text-[80px] 2xl:ml-4'>AMENIDADES</h3>
+                <div className='flex mt-0 md:mt-8 xl:mt-12 3xl:mt-16'>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] pr-3 2xl:px-4 3xl:pr-6'>CANCHA DE PADEL</p>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>ÁREA DE BBQ</p>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>JUEGOS INFANTILES</p>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>FIRE PITS</p>
                 </div>
-                <div className='flex mt-0 md:mt-2 xl:mt-4'>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] pr-3'>ALBERCA FAMILIAR</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>ALBERCA PARA NIÑOS</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>SUN DECK</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>ÁREA LOUNGE</p>
+                <div className='flex mt-0 md:mt-2 xl:mt-4 3xl:mt-6'>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] pr-3 2xl:px-4 3xl:pr-6'>ALBERCA FAMILIAR</p>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>ALBERCA PARA NIÑOS</p>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>SUN DECK</p>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>ÁREA LOUNGE</p>
                 </div>
-                <div className='flex mt-0 md:mt-2 xl:mt-4'>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] pr-3'>PISTA JOGGING</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>TERRAZA WELLNESS</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>SALÓN DE USOS</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>GIMNASIO</p>
+                <div className='flex mt-0 md:mt-2 xl:mt-4 3xl:mt-6'>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] pr-3 2xl:px-4 3xl:pr-6'>PISTA JOGGING</p>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>TERRAZA WELLNESS</p>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>SALÓN DE USOS</p>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>GIMNASIO</p>
                 </div>
-                <div className='flex md:mt-2 xl:mt-4'>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] pr-3'>CENTRO DE NEGOCIOS</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>KIDS CLUB</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>INFINITY POOL</p>
-                    <p className='quaternary text-base md:text-[12px] xl:text-[16px] px-3'>BAR</p>
+                <div className='flex md:mt-2 xl:mt-4 3xl:mt-6'>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] pr-3 2xl:px-4 3xl:pr-6'>CENTRO DE NEGOCIOS</p>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>KIDS CLUB</p>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>INFINITY POOL</p>
+                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>BAR</p>
                 </div>
 
             </div>
       </section>
 
       <section data-animate-in="fadeIn" className='container md:hidden'>
-        <div className='py-12'>
+        <div className='py-10'>
             <h2 className='secondary text-brown text-center mx-auto text-[42px]'>TORRE ITZ<a className='secondary text-[45px]'>É</a></h2>
             <h2 className='secondary text-brown -mt-4 text-center mx-auto text-[42px]'>TORRE SAASIL</h2>
-            <p className='primary text-brown text-center text-[16px] -mt-2'>Renta Vacacional</p>
         </div>
         <div>
             <p className='septimary text-brown text-center text-[25px]'>AMENIDADES</p>
@@ -385,42 +514,42 @@ function Home() {
                 <p className='quaternary text-center text-brown text-[11px] px-2'>ÁREA DE BBQ</p>
                 <p className='quaternary text-center text-brown text-[11px] px-2'>JUEGOS INFANTILES</p>
             </div>
-            <div className='flex justify-center mx-auto px-2 m-1'>
+            <div className='flex justify-center mx-auto px-2 m-2'>
                 <p className='quaternary text-center text-brown text-[11px] pr-1'>FIRE PITS</p>
-                <p className='quaternary text-center text-brown text-[11px] px-2'>PISCINA FAMILIAR</p>
-                <p className='quaternary text-center text-brown text-[11px] px-2'>PISCINA PARA NIÑOS</p>
+                <p className='quaternary text-center text-brown text-[11px] px-2'>ALBERCA FAMILIAR</p>
+                <p className='quaternary text-center text-brown text-[11px] px-2'>ALBERCA PARA NIÑOS</p>
             </div>
-            <div className='flex justify-center mx-auto px-2 m-1'>
-                <p className='quaternary text-center text-brown text-[11px] pr-1'>ÁREA LOUNGE</p>
-                <p className='quaternary text-center text-brown text-[11px] px-2'>SUN DECK</p>
+            <div className='flex justify-center mx-auto px-2 m-2'>
+                <p className='quaternary text-center text-brown text-[11px] pr-1'>SUN DECK</p>
+                <p className='quaternary text-center text-brown text-[11px] px-2'>ÁREA LOUNGE</p>
                 <p className='quaternary text-center text-brown text-[11px] px-2'>GIMNASIO</p>
-                <p className='quaternary text-center text-brown text-[11px] px-2'>PISTA JOGGING</p>
+                <p className='quaternary text-center text-brown text-[11px] px-2'>TERRAZA WELLNESS</p>
             </div>
-            <div className='flex justify-center mx-auto px-2 m-1'>
-                <p className='quaternary text-center text-brown text-[11px] pr-1'>BAR</p>
-                <p className='quaternary text-center text-brown text-[11px] px-2'>SALA WELLNESS</p>
-                <p className='quaternary text-center text-brown text-[11px] px-2'>SALÓN DE USOS</p>
-                <p className='quaternary text-center text-brown text-[11px] px-2'>KIDS CLUB</p>
-            </div>
-            <div className='flex justify-center mx-auto px-2 m-1'>
-                <p className='quaternary text-center text-brown text-[11px] pr-1'>PISCINA SUN DECK</p>
+            <div className='flex justify-center mx-auto px-2 m-2'>
+                <p className='quaternary text-center text-brown text-[11px] pr-1'>SALÓN DE USOS</p>
+                <p className='quaternary text-center text-brown text-[11px] px-2'>PISTA JOGGING </p>
                 <p className='quaternary text-center text-brown text-[11px] px-2'>CENTRO DE NEGOCIOS</p>
+            </div>
+            <div className='flex justify-center mx-auto px-2 m-2'>
+                <p className='quaternary text-center text-brown text-[11px] pr-1'>KIDS CLUB</p>
+                <p className='quaternary text-center text-brown text-[11px] px-2'>INFINITY POOL</p>
+                <p className='quaternary text-center text-brown text-[11px] px-2'>BAR</p>
             </div>
         </div>
       </section>
 
-      <section data-animate-in="fadeIn" className='relative md:mt-28 px-5 md:px-10 py-10 md:py-0'>
+      <section data-animate-in="fadeIn" className='relative md:mt-28 px-0 md:px-10 py-10 md:py-0'>
         <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         spaceBetween={30}
         slidesPerView={slidesPerView}
         loop={true}
         autoplay={{ delay: 4000}}
-        className='amenidades'
+        className='amenidades px-4'
         >
         <SwiperSlide>
                 <motion.img
-                className='mx-auto w-80 2xl:w-96 py-0 md:py-4'
+                className='mx-auto w-80 2xl:w-96 3xl:w-[550px] py-0 md:py-4'
                 src="img/areas-verdes.png"
                 alt="AREAS VERDES"
                 variants={imageVariants}
@@ -432,7 +561,7 @@ function Home() {
         </SwiperSlide>
         <SwiperSlide>
                 <motion.img
-                className='mx-auto w-80 2xl:w-96 py-0 md:py-4'
+                className='mx-auto w-80 2xl:w-96 3xl:w-[550px] py-0 md:py-4'
                 src="img/padel.png"
                 alt="PADEL"
                 variants={imageVariants}
@@ -440,11 +569,11 @@ function Home() {
                 whileHover="hover"
                 whileTap="hover" 
                 />
-                {/* <img className='mx-auto w-80 2xl:w-96 py-0 md:py-4' src="img/padel.png" alt="1 RECÁMARA" /> */}
+                {/* <img className='mx-auto w-80 2xl:w-96 3xl:w-[550px] py-0 md:py-4' src="img/padel.png" alt="1 RECÁMARA" /> */}
         </SwiperSlide>
         <SwiperSlide>
                 <motion.img
-                className='mx-auto w-80 2xl:w-96 py-0 md:py-4'
+                className='mx-auto w-80 2xl:w-96 3xl:w-[550px] py-0 md:py-4'
                 src="img/gimnasio.png"
                 alt="GIMNASIO"
                 variants={imageVariants}
@@ -452,11 +581,11 @@ function Home() {
                 whileHover="hover"
                 whileTap="hover" 
                 />
-                {/* <img className='mx-auto w-80 2xl:w-96 py-0 md:py-4' src="img/gimnasio.png" alt="LOOK OFF" /> */}
+                {/* <img className='mx-auto w-80 2xl:w-96 3xl:w-[550px] py-0 md:py-4' src="img/gimnasio.png" alt="LOOK OFF" /> */}
         </SwiperSlide>
         <SwiperSlide>
                 <motion.img
-                className='mx-auto w-80 2xl:w-96 py-0 md:py-4'
+                className='mx-auto w-80 2xl:w-96 3xl:w-[550px] py-0 md:py-4'
                 src="img/terraza.png"
                 alt="TERRAZA"
                 variants={imageVariants}
@@ -469,12 +598,12 @@ function Home() {
         </Swiper>    
       </section>
 
-      <section className='bg-location md:mt-36'></section>
+      <section className='bg-location md:h-[120vh] 2xl:h-[110vh] 3xl:h-[100vh] md:mt-36'></section>
 
-      <section data-animate-in="up" className='bg-black-1 -mt-1 md:mt-0 py-2 md:py-4 xl:py-10 2xl:py-12'>
+      <section data-animate-in="up" className='bg-black-1 -mt-1 md:mt-0 3xl:-mt-4 py-2 md:py-4 xl:py-10 2xl:py-12'>
         <div className='flex container mx-auto px-0 md:px-40 2xl:px-40 pb-8 md:mb-12 xl:mb-20'>
             <div className='flex mx-auto justify-center align-item'>
-                <h2 className='secondary text-white mx-auto text-5xl md:text-[110px] xl:text-[140px] 2xl:text-[170px] md:tracking-widest absolute z-10 text-center mt-2 md:mt-8 xl:mt-8 2xl:mt-4'>A L I A N Z A S</h2>
+                <h2 className='secondary text-white mx-auto text-5xl md:text-[110px] xl:text-[140px] 2xl:text-[170px] md:tracking-widest absolute z-10 text-center mt-0 md:mt-8 xl:mt-8 2xl:mt-4'>A L I A N Z A S</h2>
             </div>
         </div>
       </section>
@@ -486,7 +615,7 @@ function Home() {
         slidesPerView={slidesPerView}
         loop={true}
         autoplay={{ delay: 4000}}
-        className='alianzas'
+        className='alianzas py-5'
         >
         <SwiperSlide>
         <motion.div
@@ -494,9 +623,9 @@ function Home() {
         whileHover="hover"
         whileTap="hover" // Para dispositivos táctiles
         >
-            <div className='px-0 md:px-4 py-0 md:py-5'>
-                <div className='card border border-solid rounded-3xl border-gray-1 px-2 md:px-4'>
-                    <div className='mx-auto'>
+            <div className='px-0 md:px-4 xl:px-6 3xl:px-6 py-0 md:py-5 2xl:py-6'>
+                <div className='h-[200px] md:h-[340px] 3xl:h-[800px] border border-solid rounded-3xl border-gray-1 px-2 md:px-4 py-0 2xl:py-5 3xl:py-10'>
+                    <div className='mx-auto mt-5 3xl:mt-8'>
                         <svg xmlns="http://www.w3.org/2000/svg"  className="mx-auto w-20 md:w-40" viewBox="0 0 182.207 103.864">
                         <g id="Grupo_196" data-name="Grupo 196" transform="translate(-490.56 -283.554)">
                             <g id="Grupo_193" data-name="Grupo 193" transform="translate(553.964 283.554)">
@@ -531,8 +660,8 @@ function Home() {
                         </g>
                         </svg>
                     </div>
-                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] mt-0 md:mt-8 md:leading-relaxed'>Distrito Yaax® es un proyecto conceptualizado<br/> y desarrollado por ALMIRA DESARRROLLOS.<br/> Empresa 100 % Mexicana comprometida<br/> con el desarrollo económico y social <br/>de la región.</p>
-                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] mt-3'>Distrito Yaax® es un proyecto<br/> conceptualizado y <br/>desarrollado por ALMIRA <br/>DESARRROLLOS. Empresa 100%<br/> Mexicana comprometida<br/> con el desarrollo económico y <br/>social de la región.</p>
+                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px] mt-0 md:mt-8 md:leading-relaxed'>Distrito Yaax® es un proyecto conceptualizado<br/> y desarrollado por ALMIRA DESARRROLLOS.<br/> Empresa 100 % Mexicana comprometida<br/> con el desarrollo económico y social <br/>de la región.</p>
+                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px] mt-3'>Distrito Yaax® es un proyecto conceptualizado y desarrollado por ALMIRA DESARRROLLOS. Empresa 100% Mexicana comprometida con el desarrollo económico y social de la región.</p>
                 </div>
             </div>
         </motion.div>
@@ -544,13 +673,13 @@ function Home() {
         whileHover="hover"
         whileTap="hover" // Para dispositivos táctiles
         >
-            <div className='px-0 md:px-4 py-0 md:py-5'>
-                <div className='card border border-solid rounded-3xl border-gray-1 px-2 md:px-4'>
-                    <div className='mx-auto'>
+            <div className='px-0 md:px-4 xl:px-6 3xl:px-6 py-0 md:py-5 2xl:py-6'>
+                <div className='h-[200px] md:h-[340px] 3xl:h-[800px] border border-solid rounded-3xl border-gray-1 px-2 md:px-4 py-0 2xl:py-5 3xl:py-10'>
+                    <div className='mx-auto mt-5 3xl:mt-8'>
                         <img className="mx-auto w-32 md:w-64" src="img/4S.png" alt="4S" />
                     </div>
-                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] mt-0 md:mt-11 md:leading-relaxed'>4S es una de las empresas lideres en <br/>Latinoamerica en ingenieria de mercado <br/>y consultoría inmobiliaria.</p>
-                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] mt-5'>4S es una de las empresas<br/> lideres en Latinoamerica en <br/>ingenieria de mercado <br/>y consultoría inmobiliaria.</p>
+                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px]  mt-0 md:mt-11 md:leading-relaxed'>4S es una de las empresas lideres en <br/>Latinoamerica en ingenieria de mercado <br/>y consultoría inmobiliaria.</p>
+                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px]  mt-5'>4S es una de las empresas lideres en Latinoamerica en ingenieria de mercado y consultoría inmobiliaria.</p>
                 </div>
             </div>
         </motion.div>
@@ -562,13 +691,13 @@ function Home() {
         whileHover="hover"
         whileTap="hover" // Para dispositivos táctiles
         >
-            <div className='px-0 md:px-4 py-0 md:py-5'>
-                <div className='card border border-solid rounded-3xl border-gray-1 px-2 md:px-4'>
-                    <div className='mx-auto'>
+            <div className='px-0 md:px-4 xl:px-6 3xl:px-6 py-0 md:py-5 2xl:py-6'>
+                <div className='h-[200px] md:h-[340px] 3xl:h-[800px] border border-solid rounded-3xl border-gray-1 px-2 md:px-4 py-0 2xl:py-5 3xl:py-10'>
+                    <div className='mx-auto mt-5 3xl:mt-8'>
                         <img className="mx-auto w-80 mt-2 md:mt-8" src="img/banca-mifel.png" alt="banca-mifel" />
                     </div>
-                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] mt-0 md:mt-12 md:leading-relaxed'>Brindamos seguridad jurídica a nuestros <br/> clientes, partiendo de un predio propio <br/> aportado a un fideicomiso de administración <br/> inmobiliaria con Banco MIFEL, cuyo único <br/> fines el desarrollo del proyecto.</p>
-                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] mt-5'>Brindamos seguridad jurídica<br/> a nuestros clientes, partiendo<br/> de un predio propio aportado<br/> a un fideicomiso de <br/>administración inmobiliaria <br/>con Banco MIFEL, cuyo único <br/>fines el desarrollo del proyecto.</p>
+                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px]  mt-0 md:mt-12 md:leading-relaxed'>Brindamos seguridad jurídica a nuestros <br/> clientes, partiendo de un predio propio <br/> aportado a un fideicomiso de administración <br/> inmobiliaria con Banco MIFEL, cuyo único <br/> fines el desarrollo del proyecto.</p>
+                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px]  mt-5'>Brindamos seguridad jurídica a nuestros clientes, partiendo de un predio propio aportado a un fideicomiso de administración inmobiliaria con Banco MIFEL, cuyo único fines el desarrollo del proyecto.</p>
                 </div>
             </div>
         </motion.div>
@@ -580,13 +709,13 @@ function Home() {
         whileHover="hover"
         whileTap="hover" // Para dispositivos táctiles
         >
-            <div className='px-0 md:px-4 py-0 md:py-5'>
-                <div className='card border border-solid rounded-3xl border-gray-1 px-2 md:px-4'>
-                    <div className='mx-auto'>
+            <div className='px-0 md:px-4 xl:px-6 3xl:px-6 py-0 md:py-5 2xl:py-6'>
+                <div className='h-[200px] md:h-[340px] 3xl:h-[800px] border border-solid rounded-3xl border-gray-1 px-2 md:px-4 py-0 2xl:py-5 3xl:py-10'>
+                    <div className='mx-auto mt-5 3xl:mt-8'>
                         <img className="mx-auto w-48 md:w-64 -mt-5 md:mt-0" src="img/cal.png" alt="banca-mifel" />
                     </div>
-                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] mt-8 md:mt-0 md:leading-relaxed'>Cal y Mayor es la empresa de mayor <br/>reconocimiento en ingenierías y consultoría <br/>especializada en movilidad y transporte.</p>
-                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] mt-0'>Cal y Mayor es la empresa de <br/>mayor reconocimiento en <br/>ingenierías y consultoría<br/> especializada en movilidad y<br/> transporte.</p>
+                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px]  mt-8 md:mt-0 md:leading-relaxed'>Cal y Mayor es la empresa de mayor <br/>reconocimiento en ingenierías y consultoría <br/>especializada en movilidad y transporte.</p>
+                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px]  mt-0'>Cal y Mayor es la empresa de mayor reconocimiento en ingenierías y consultoría especializada en movilidad y transporte.</p>
                 </div>
             </div>
         </motion.div>

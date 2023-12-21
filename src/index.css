@@ -124,8 +124,25 @@
 .bg-location{
   background-image: url(/img/ubicacion.png);
   background-size: 100%;
-  height:120vh;
   width: auto;
+  background-repeat: no-repeat;
+}
+
+.bg-render-1{
+  background-image: url(/img/render.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bg-render-2{
+  background-image: url(/img/render-2.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bg-render-3{
+  background-image: url(/img/render-3.png);
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
@@ -138,6 +155,53 @@
   background-repeat: no-repeat;
   flex-wrap: wrap;
 }
+
+.estudio{
+  background-image: url(/img/estudio.png);
+  background-size: 100%;
+  margin: 0 auto !important;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+}
+
+.recamara{
+  background-image: url(/img/recamara.png);
+  background-size: 100%;
+  margin: 0 auto !important;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+}
+
+.look-off{
+  background-image: url(/img/look-off.png);
+  background-size: 100%;
+  margin: 0 auto !important;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+}
+.look-off-a{
+  background-image: url(/img/look-off-a.png);
+  background-size: 100%;
+  margin: 0 auto !important;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+}
+.cards-bg{
+  align-items: end;
+  flex-wrap: wrap;
+}  
 
 .line{
   height: 320px;
@@ -192,6 +256,8 @@
   z-index: 1000;
   display: none; /* Inicialmente oculto */
 }
+
+
 
 /* Animación de entrada del menú */
 @keyframes slideInMenuAnimation {
@@ -259,7 +325,7 @@
   .bg-torres{
     background-image: url(/img/bg-torres.png);
     background-size: 100%;
-    height:26vh;
+    height:280px;
     width: auto;
     background-repeat: no-repeat;
   }
@@ -280,11 +346,68 @@
     height: 215px;
     background-repeat: no-repeat;
   }
+  .bg-render-1{
+    background-image: url(/img/render-1-movil.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .bg-render-2{
+    background-image: url(/img/render-2-movil.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .bg-render-3{
+    background-image: url(/img/render-3-movil.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
   .card{
     padding-top: 35px;
     height: 230px;
   }   
+  .estudio{
+    background-image: url(/img/estudio.png);
+    background-size: 100%;
+    margin: 0 auto !important;
+    display: flex;
+    height: 218px;
+    width: 100vw;
+    background-repeat: no-repeat;
+  }
+  
+  .recamara{
+    background-image: url(/img/recamara.png);
+    background-size: 100%;
+    margin: 0 auto !important;
+    display: flex;
+    height: 218px;
+    width: 100vw;
+    background-repeat: no-repeat;
+  }
+  
+  .look-off{
+    background-image: url(/img/look-off.png);
+    background-size: 100%;
+    margin: 0 auto !important;
+    display: flex;
+    height: 218px;
+    width: 100vw;
+    background-repeat: no-repeat;
+  }
+  .look-off-a{
+    background-image: url(/img/look-off-a.png);
+    background-size: 100%;
+    margin: 0 auto !important;
+    display: flex;
+    height: 218px;
+    width: 100vw;
+    background-repeat: no-repeat;
+  }
 }
+
+/*Animations*/
 
 /*Animations*/
 
