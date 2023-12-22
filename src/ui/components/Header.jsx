@@ -103,12 +103,12 @@ function Header() {
                   </a>
                 </li>
                 <li className='mr-10 transition-transform transform hover:scale-110'>
-                  <a href='/proyectos' className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
+                  <a href='/modelos' className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
                     MODELOS
                   </a>
                 </li>
                 <li className='mr-10 transition-transform transform hover:scale-110'>
-                  <a href='#' className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
+                  <a href='/amenidades' className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
                     AMENIDADES
                   </a>
                 </li>
@@ -226,7 +226,7 @@ function Header() {
                   <a href="/acerca" class="block md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">QUIÉNES SOMOS</a>
                 </li>
                 <li>
-                  <a href="/proyectos" class="block md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">MODELOS</a>
+                  <a href="/modelos" class="block md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">MODELOS</a>
                 </li>
                 <li className='hidden'>
                   <a class="px-[8rem]" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="330.406" height="64.179" viewBox="0 0 330.406 64.179">
@@ -276,7 +276,7 @@ function Header() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="block md:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">AMENIDADES</a>
+                  <a href="/amenidades" class="block md:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">AMENIDADES</a>
                 </li>
                 <li>
                   <a href="#" class="block md:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">UBICACIÓN</a>

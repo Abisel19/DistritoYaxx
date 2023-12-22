@@ -102,10 +102,7 @@ function Contacto() {
 
   return (
     <>
-      <section className='bg-contacto'>
-      </section>
-
-      <section data-animate-in="fadeIn">
+      <section>
         <Iframe url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.1308688589097!2d-86.84156522458022!3d21.107348085074403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2b4b4b5d2a8b%3A0xb4aef9045d8e90c8!2sDistrito%20Yaax!5e0!3m2!1ses-419!2smx!4v1699474001337!5m2!1ses-419!2smx"
             className="w-full h-screen"
             id=""

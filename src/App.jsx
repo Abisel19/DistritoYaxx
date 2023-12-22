@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Home from '@pages/Home';
 import Acerca from '@pages/Acerca'
-import Proyectos from '@pages/Proyectos'
+import Modelos from '@pages/Modelos'
+import Amenidades from '@pages/Amenidades'
 import Contacto from '@pages/Contacto'
 import NotFound from '@pages/NotFound'
 
@@ -18,7 +19,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/acerca" element={<Acerca />} />
           <Route path="/contacto" element={<Contacto />} />
-          <Route path="/proyectos" element={<Proyectos />} />
+          <Route path="/modelos" element={<Modelos />} />
+          <Route path="/amenidades" element={<Amenidades />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       <Footer/>

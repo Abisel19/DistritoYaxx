@@ -96,10 +96,8 @@ function Acerca() {
 
   return (
     <>
-      <section className='md:mt-20 bg-home'>
-      </section>
 
-      <section data-animate-in="up" className='mx-auto py-10 md:py-0 px-4 md:px-20 2xl:px-32 md:mb-10 md:mt-20'>
+      <section className='mx-auto py-10 md:py-0 px-4 md:px-20 2xl:px-32 md:mb-10 md:mt-20'>
         <div className='md:flex py-0 md:py-20 xl:py-24'>
             <div className='w-full md:w-1/3 xl:w-1/3 3xl:w-5/12'>
                 <div className="flex justify-center md:justify-start">
@@ -123,7 +121,7 @@ function Acerca() {
       </section>
 
 
-      <section data-animate-in="up" className='mx-auto py-2 md:py-0 px-4 md:px-20 2xl:px-32'>
+      <section id="sostenible" className='mx-auto py-2 md:py-0 px-4 md:px-20 2xl:px-32'>
         <div className='w-full flex mb-0 md:mb-6'>
           <div className='w-1/12 md:w-1/12'>
             <p className='secondary leading-none md:leading-7 3xl:leading-9 py-4 md:py-0 text-justify text-[14px] md:text-[30px]'>01.</p>
@@ -160,7 +158,7 @@ function Acerca() {
       </section>
 
 
-      <section data-animate-in="up" className='mx-auto py-2 md:py-0 px-4 md:px-20 2xl:px-32 mt-10 md:mt-24 3xl:mt-28'>
+      <section data-animate-in="up" id="smart" className='mx-auto py-2 md:py-0 px-4 md:px-20 2xl:px-32 mt-10 md:mt-24 3xl:mt-28'>
         <div className='w-full flex mb-0 md:mb-6'>
           <div className='w-1/12 md:w-1/12'>
             <p className='secondary leading-none md:leading-7 3xl:leading-9 py-4 md:py-0 text-justify text-[14px] md:text-[30px]'>02.</p>
@@ -197,7 +195,7 @@ function Acerca() {
       </section>
 
 
-      <section data-animate-in="up" className='mx-auto py-2 md:py-0 px-4 md:px-20 2xl:px-32 mt-10 md:mt-24 3xl:mt-28 md:mb-24'>
+      <section data-animate-in="up" id="verdes" className='mx-auto py-2 md:py-0 px-4 md:px-20 2xl:px-32 mt-10 md:mt-24 3xl:mt-28 md:mb-24'>
         <div className='w-full flex mb-0 md:mb-6'>
           <div className='w-1/12 md:w-1/12'>
             <p className='secondary leading-none md:leading-7 3xl:leading-9 py-4 md:py-0 text-justify text-[14px] md:text-[30px]'>03.</p>
