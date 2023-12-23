@@ -9,7 +9,7 @@ function Header() {
 
   return (
     <header>
-      <nav className=' fixed md:fixed top-0 pt-4 md:pt-3 pb-4 md:pb-6 bg-white md:bg-black w-full z-[9999]'>
+      <nav className=' fixed md:fixed top-0 py-4 md:py-6 2xl:py-7 3xl:py-8 bg-white md:bg-black w-full z-[9999]'>
         <div className='px-2 mx-auto'>
 
           <div className='flex mx-auto flex-wrap items-center justify-between md:justify-center'>
@@ -68,7 +68,7 @@ function Header() {
               </g>
             </svg></a>
 
-            <div className='flex'>
+            <div className='flex md:hidden'>
               <a href="https://www.facebook.com/distritoyaax.cancun" className='px-[6px]'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="9.487" height="17.712" viewBox="0 0 9.487 17.712">
                   <path id="Path_539" data-name="Path 539" d="M8.865,9.994l.492-3.205H6.282V4.708A1.6,1.6,0,0,1,8.088,2.977h1.4V.248A17.042,17.042,0,0,0,7,.031c-2.533,0-4.188,1.535-4.188,4.314V6.789H0V9.994H2.816v7.749H6.282V9.994Z" transform="translate(0 -0.031)"/>
@@ -124,7 +124,7 @@ function Header() {
                 </li>
 
                 <li className='mr-10 transition-transform transform hover:scale-110'>
-                  <a href='#' className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
+                  <a href='/ubicacion' className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
                     UBICACIÓN
                   </a>
                 </li>
@@ -279,7 +279,7 @@ function Header() {
                   <a href="/amenidades" class="block md:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">AMENIDADES</a>
                 </li>
                 <li>
-                  <a href="#" class="block md:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">UBICACIÓN</a>
+                  <a href="/ubicacion" class="block md:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">UBICACIÓN</a>
                 </li>
                 <li>
                   <a href="#" class="block md:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">TOUR VIRTUAL</a>

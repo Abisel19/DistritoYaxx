@@ -206,18 +206,28 @@
   width: 530px;
 }
 
-.amenidades .swiper-button-prev{
+.swiper-button-prev{
   background-image: url(/img/arrow-prev.png) !important;
   color: transparent !important;
   background: no-repeat;
   width: 55px !important;
 }
 
-.amenidades .swiper-button-next{
+.swiper-button-next{
   background-image: url(/img/arrow-next.png) !important;
   color: transparent !important;
   background: no-repeat;
   width: 55px !important;
+}
+
+.swiper-button-prev:hover{
+  transform: scale(1.2);
+  transition: ease-in-out 0.2s;
+}
+
+.swiper-button-next:hover{
+  transform: scale(1.2);
+  transition: ease-in-out 0.2s;
 }
 
 .alianzas .swiper-button-prev{
