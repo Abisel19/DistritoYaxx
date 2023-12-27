@@ -212,7 +212,7 @@ function Amenidades() {
         </div>
       </section>
 
-      <section className='px-4 md:px-10 mt-4 md:mt-14'>
+      <section className='px-4 md:px-10 mt-4 md:mt-14 hidden md:flex'>
         <div className='flex w-full'>
             <div className='w-1/3'>
                 <motion.img
@@ -285,7 +285,82 @@ function Amenidades() {
         </div>
       </section>
 
-      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-32 xl:mt-40 2xl:mt-48 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
+      <section className='px-4 md:px-10 mt-4 md:mt-14 md:hidden grid'> 
+        <div className='flex w-full'>
+            <div className='w-1/2 px-4 mt-4 mb-2'>
+                <motion.img
+                    className='mx-auto w-80 2xl:w-96 3xl:w-[550px] py-0 md:py-4'
+                    src="img/padel.png"
+                    alt="PADEL"
+                    variants={imageVariants}
+                    initial="normal"
+                    whileHover="hover"
+                    whileTap="hover" 
+                    />
+            </div>
+            <div className='w-1/2 px-4 mt-4 mb-2'>
+                <motion.img
+                    className='mx-auto w-80 2xl:w-96 3xl:w-[550px] py-0 md:py-4'
+                    src="img/areas-verdes.png"
+                    alt="AREAS VERDES"
+                    variants={imageVariants}
+                    initial="normal"
+                    whileHover="hover"
+                    whileTap="hover" 
+                    />
+            </div>
+        </div>
+        <div className='flex'>
+            <div className='w-1/2 px-4 mt-4 mb-2'>
+                <motion.img
+                    className='mx-auto w-80 2xl:w-96 3xl:w-[550px] py-0 md:py-4'
+                    src="img/gimnasio.png"
+                    alt="GIMNASIO"
+                    variants={imageVariants}
+                    initial="normal"
+                    whileHover="hover"
+                    whileTap="hover" 
+                    />
+            </div>
+            <div className='w-1/2 px-4 mt-4 mb-2'>
+                <motion.img
+                    className='mx-auto w-80 2xl:w-96 3xl:w-[550px] py-0 md:py-4'
+                    src="img/terraza.png"
+                    alt="TERRAZA"
+                    variants={imageVariants}
+                    initial="normal"
+                    whileHover="hover"
+                    whileTap="hover" 
+                    />
+            </div>
+        </div>
+        <div className='flex'>
+            <div className='w-1/2 px-4 mt-4 mb-2'>
+                  <motion.img
+                      className='mx-auto w-80 2xl:w-96 3xl:w-[550px] py-0 md:py-4'
+                      src="img/sky-lounge.png"
+                      alt="sky lounge"
+                      variants={imageVariants}
+                      initial="normal"
+                      whileHover="hover"
+                      whileTap="hover" 
+                      />
+            </div>
+            <div className='w-1/2 px-4 mt-4 mb-2'>
+                  <motion.img
+                      className='mx-auto w-80 2xl:w-96 3xl:w-[550px] py-0 md:py-4'
+                      src="img/snack-bar.png"
+                      alt="snack bar"
+                      variants={imageVariants}
+                      initial="normal"
+                      whileHover="hover"
+                      whileTap="hover" 
+                      />
+            </div>
+        </div>
+      </section>
+
+      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-10 md:mt-32 xl:mt-40 2xl:mt-48 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
         <div className='flex mx-auto justify-center align-item'>
             <h2 className='secondary text-brown mx-auto text-5xl md:text-[110px] xl:text-[158px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center'>EXTERIORES</h2>
         </div>
@@ -294,15 +369,15 @@ function Amenidades() {
       <section data-animate-in="fadeIn" className='relative md:-mt-2 z-10 mb-6'>
         <Swiper
         modules={[Autoplay, Pagination, Navigation]}
-        spaceBetween={20}
+        spaceBetween={0}
         slidesPerView={2}
         loop={true}
         autoplay={{ delay: 4000}}
-        className='amenidades px-4'
+        className='amenidades'
         >
         <SwiperSlide>
                 <motion.img
-                className='mx-auto'
+                className='mx-auto px-1 w-full'
                 src="img/exteriores-1.png"
                 alt="AREAS VERDES"
                 initial="normal"
@@ -312,7 +387,7 @@ function Amenidades() {
         </SwiperSlide>
         <SwiperSlide>
                 <motion.img
-                className='mx-auto'
+                className='mx-auto px-1 w-full'
                 src="img/exteriores-2.png"
                 alt="PADEL"
                 initial="normal"
@@ -322,7 +397,7 @@ function Amenidades() {
         </SwiperSlide>
         <SwiperSlide>
                 <motion.img
-                className='mx-auto'
+                className='mx-auto px-1 w-full'
                 src="img/exteriores-3.png"
                 alt="GIMNASIO"
                 initial="normal"
@@ -332,7 +407,7 @@ function Amenidades() {
         </SwiperSlide>
         <SwiperSlide>
                 <motion.img
-                className='mx-auto'
+                className='mx-auto px-1 w-full'
                 src="img/exteriores-4.png"
                 alt="TERRAZA"
                 initial="normal"
@@ -342,7 +417,7 @@ function Amenidades() {
         </SwiperSlide>
         <SwiperSlide>
                 <motion.img
-                className='mx-auto'
+                className='mx-auto px-1 w-full'
                 src="img/exteriores-5.png"
                 alt="TERRAZA"
                 initial="normal"
@@ -353,7 +428,7 @@ function Amenidades() {
         </Swiper>    
       </section>
 
-      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-32 xl:mt-40 2xl:mt-48 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
+      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-10 md:mt-32 xl:mt-40 2xl:mt-48 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
         <div className='flex mx-auto justify-center align-item'>
             <h2 className='secondary text-brown mx-auto text-5xl md:text-[110px] xl:text-[158px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center'>INTERIORES</h2>
         </div>
@@ -361,19 +436,19 @@ function Amenidades() {
       
       <section data-animate-in="up" className='relative md:-mt-2 z-10 mb-6'>
         <div className='w-full flex'>
-            <div className='w-1/3 mx-2'>
+            <div className='w-1/3 mx-1 md:mx-2'>
                 <img src="/img/interiores-1.png" alt="INTEREIORES DISTRITO YAAX" />
             </div>
-            <div className='w-1/3 mx-2'>
+            <div className='w-1/3 mx-1 md:mx-2'>
                 <img src="/img/interiores-2.png" alt="INTEREIORES DISTRITO YAAX" />
             </div>
-            <div className='w-1/3 mx-2'>
+            <div className='w-1/3 mx-1 md:mx-2'>
                 <img src="/img/interiores-3.png" alt="INTEREIORES DISTRITO YAAX" />
             </div>
         </div>
       </section>
 
-      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-32 xl:mt-40 2xl:mt-36 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
+      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-10 md:mt-32 xl:mt-40 2xl:mt-36 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
         <div className='flex mx-auto justify-center align-item'>
             <h2 className='secondary text-brown mx-auto text-5xl md:text-[110px] xl:text-[158px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center'>ROOF TOP</h2>
         </div>
@@ -387,13 +462,13 @@ function Amenidades() {
 
       <section data-animate-in="up" className='relative md:-mt-4 z-10 mb-6'>
         <div className='w-full flex'>
-            <div className='w-1/3 mx-2'>
+            <div className='w-1/3 mx-1 md:mx-2'>
                 <img src="/img/roof-1.png" alt="INTEREIORES DISTRITO YAAX" />
             </div>
-            <div className='w-1/3 mx-2'>
+            <div className='w-1/3 mx-1 md:mx-2'>
                 <img src="/img/roof-2.png" alt="INTEREIORES DISTRITO YAAX" />
             </div>
-            <div className='w-1/3 mx-2'>
+            <div className='w-1/3 mx-1 md:mx-2'>
                 <img src="/img/roof-3.png" alt="INTEREIORES DISTRITO YAAX" />
             </div>
         </div>

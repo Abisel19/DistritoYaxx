@@ -1,26 +1,105 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Footer() {
+
+  const [nombre, setNombre] = useState('');
+  const [mail, setMail] = useState('');
+  const [tel, setTel] = useState('');
+  const [formularioValido, setFormularioValido] = useState(true);
+  const [botonVisible, setBotonVisible] = useState(true);
+  const formularioEnviado = localStorage.getItem('formularioEnviado');
+  const [mensajeError, setMensajeError] = useState('');
+  const [correoEnviado, setCorreoEnviado] = useState(false);
+
+  useEffect(() => {
+  const formularioEnviado = localStorage.getItem('formularioEnviado');
+    if (formularioEnviado) {
+      setBotonVisible(false);
+    }
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (nombre.trim() === '' || mail.trim() === '' || tel.trim() === '') {
+      setFormularioValido(false);
+      return;
+    }
+
+    setNombre('');
+    setMail('');
+    setTel('');
+
+    localStorage.setItem('formularioEnviado', 'true');
+
+    setBotonVisible(false);
+
+    setCorreoEnviado(true);
+  };
+
+  const handleNoDescargarClick = () => {
+    setMensajeError('Por favor, llena el formulario antes de intentar descargar el brochure.');    
+  };
+
+  const descargarPDF = () => {
+    // Reemplaza con la ruta correcta de tu archivo PDF
+    const rutaPDF = '/pdf/yaax-brochure.pdf';
+
+    // Crea un enlace temporal
+    const link = document.createElement('a');
+    link.href = rutaPDF;
+    link.download = 'brochure.pdf';
+
+    // Añade el enlace al documento y haz clic en él
+    document.body.appendChild(link);
+    link.click();
+
+    // Elimina el enlace después de hacer clic
+    document.body.removeChild(link);
+  };
+
+
   return (
     <>
-          <section className='bg-gray-1 py-28 mt-0 md:mt-0'>
+      <section className='bg-gray-1 py-28 mt-0 md:mt-0'>
         <div className='container mx-auto md:flex'>
 
             <div className='w-full md:w-2/5 px-4 md:px-16'>
                 <h3 className='secondary text-center md:text-left text-4xl md:text-5xl text-white'>COTIZA</h3>
                 <h4 className='primary text-center md:text-left text-base md:text-lg text-white mt-1 md:mt-1'>HAGAMOS TU SUEÑO REALIDAD</h4>
-                <form className='flex flex-col md:items-start items-center mt-4'>
-                    <input className='bg-gray-1 text-white border-b-2 border-white focus:outline-none px-12 md:px-20 primary text-[15px] md:text-[1.1rem] py-1' type="text" name='nombre'/>
-                    <label className='text-white primary mt-2 text-[15px] md:text-[1.1rem]' htmlFor="nombre">Nombre Completo</label>
+                <form className='flex flex-col md:items-start items-center mt-4' onSubmit={handleSubmit}>
+                <input
+                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none pr-12 md:pr-32 primary text-[15px] md:text-[1.1rem] py-1 ${!formularioValido && nombre.trim() === '' ? 'border-red-500' : ''}`}
+                  type='text'
+                  name='nombre'
+                  value={nombre}
+                  onChange={(e) => setNombre(e.target.value)}
+                />
+                <label className='text-white primary mt-2 text-[15px] md:text-[1.1rem]' htmlFor="nombre">Nombre Completo</label>
 
-                    <input className='bg-gray-1 text-white border-b-2 border-white focus:outline-none px-12 md:px-20 primary text-[15px] md:text-[1.1rem] py-3' type="email" name='mail'/>
-                    <label className='text-white primary mt-2 text-[15px] md:text-[1.1rem]' htmlFor="email">Correo Electrónico</label>
+                <input
+                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none pr-12 md:pr-32 primary text-[15px] md:text-[1.1rem] py-1 ${!formularioValido && mail.trim() === '' ? 'border-red-500' : ''}`}
+                  type="email"
+                  name='mail'
+                  value={mail}
+                  onChange={(e) => setMail(e.target.value)}
+                />
+                <label className='text-white primary mt-2 text-[15px] md:text-[1.1rem]' htmlFor="email">Correo Electrónico</label>
 
-                    <input className='bg-gray-1 text-white border-b-2 border-white focus:outline-none px-12 md:px-20 primary text-[15px] md:text-[1.1rem] py-3' type="number" name='tel'/>
-                    <label className='text-white primary mt-2 text-[15px] md:text-[1.1rem]' htmlFor="tel">Whatsapp</label>
+                <input
+                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none pr-12 md:pr-32 primary text-[15px] md:text-[1.1rem] py-1 ${!formularioValido && tel.trim() === '' ? 'border-red-500' : ''}`}
+                  type="number"
+                  name='tel'
+                  value={tel}
+                  onChange={(e) => setTel(e.target.value)}
+                />
+                <label className='text-white primary mt-2 text-[15px] md:text-[1.1rem]' htmlFor="tel">WhatsApp</label>
 
-                    <button className='text-white text-[20px] md:text-[1.3rem] primary rounded-full border-[1.5px] px-3 mt-8'>Enviar</button>
+                <button className='text-white text-[20px] md:text-[1.3rem] primary rounded-full border-[1.5px] px-3 mt-8 transition-transform transform hover:scale-90'>Enviar</button>
                 </form>
+                {correoEnviado && (
+                  <p className="text-green-500 mt-2">Correo enviado correctamente</p>
+                )}
             </div>
 
             <div className='w-full md:w-1/5 mx-auto py-5 md:py-0'>
@@ -46,18 +125,38 @@ function Footer() {
                 </div>
 
                 <div className='mt-[8px] md:mt-4 flex justify-center md:justify-start'>
-                <svg xmlns="http://www.w3.org/2000/svg" className='w-3 md:w-5' viewBox="0 0 31.766 35.438">
-                    <g id="Grupo_185" data-name="Grupo 185" transform="translate(3198.273 304.39)">
-                        <path id="Trazado_429" data-name="Trazado 429" d="M-3198.273-295.737a11.688,11.688,0,0,1,2.666-7.192,3.312,3.312,0,0,1,1.976-1.106,16.5,16.5,0,0,1,2.174-.353.933.933,0,0,1,.666.36,5.759,5.759,0,0,1,.6,1.025c1.024,1.965,2.031,3.941,3.067,5.9.569,1.073.573,1.568-.23,2.453-.625.689-1.326,1.291-1.989,1.937-.287.28-.576.559-.844.861a1.593,1.593,0,0,0-.262,2.263c.473.932.959,1.856,1.472,2.761a23.189,23.189,0,0,0,7.866,8.287c.582.368,1.165.735,1.757,1.083a.983.983,0,0,0,1.363-.27c.553-.667,1.075-1.366,1.616-2.045.385-.482.753-.984,1.175-1.423.789-.82,1.177-.828,2.106-.213,1.57,1.039,3.147,2.063,4.723,3.091.442.288.892.563,1.331.856a1.18,1.18,0,0,1,.526,1.142,9.933,9.933,0,0,1-.752,3.486,4.373,4.373,0,0,1-1.127,1.439,8.671,8.671,0,0,1-6.141,2.439,10.6,10.6,0,0,1-3.591-.936,32.065,32.065,0,0,1-5.188-2.426,32.938,32.938,0,0,1-6.713-5.953,33.126,33.126,0,0,1-5.167-7.306,37.525,37.525,0,0,1-2.923-8.614A12.285,12.285,0,0,1-3198.273-295.737Z" fill="#fff"/>
-                    </g>
-                </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" className='w-3 md:w-5' viewBox="0 0 31.766 35.438">
+                      <g id="Grupo_185" data-name="Grupo 185" transform="translate(3198.273 304.39)">
+                          <path id="Trazado_429" data-name="Trazado 429" d="M-3198.273-295.737a11.688,11.688,0,0,1,2.666-7.192,3.312,3.312,0,0,1,1.976-1.106,16.5,16.5,0,0,1,2.174-.353.933.933,0,0,1,.666.36,5.759,5.759,0,0,1,.6,1.025c1.024,1.965,2.031,3.941,3.067,5.9.569,1.073.573,1.568-.23,2.453-.625.689-1.326,1.291-1.989,1.937-.287.28-.576.559-.844.861a1.593,1.593,0,0,0-.262,2.263c.473.932.959,1.856,1.472,2.761a23.189,23.189,0,0,0,7.866,8.287c.582.368,1.165.735,1.757,1.083a.983.983,0,0,0,1.363-.27c.553-.667,1.075-1.366,1.616-2.045.385-.482.753-.984,1.175-1.423.789-.82,1.177-.828,2.106-.213,1.57,1.039,3.147,2.063,4.723,3.091.442.288.892.563,1.331.856a1.18,1.18,0,0,1,.526,1.142,9.933,9.933,0,0,1-.752,3.486,4.373,4.373,0,0,1-1.127,1.439,8.671,8.671,0,0,1-6.141,2.439,10.6,10.6,0,0,1-3.591-.936,32.065,32.065,0,0,1-5.188-2.426,32.938,32.938,0,0,1-6.713-5.953,33.126,33.126,0,0,1-5.167-7.306,37.525,37.525,0,0,1-2.923-8.614A12.285,12.285,0,0,1-3198.273-295.737Z" fill="#fff"/>
+                      </g>
+                  </svg>
                     <a href="tel:+52 9981828289" className='primary text-center md:text-left text-[14px] md:text-lg text-white ml-2 md:ml-5'>+52 9981828289</a>
                 </div>
+                <div className='flex justify-center md:justify-start'>
+                  {formularioEnviado === 'true' ? (
+                  <button
+                    className={`text-white text-[20px] md:text-[1.3rem] primary rounded-full border-[1.5px] px-12 pt-2 pb-1 mt-8 transition-transform transform hover:scale-90 ${
+                    !formularioValido ? 'bg-red-500' : ''
+                    }`}
+                    onClick={descargarPDF}
+                  >
+                   DESCARGAR BROCHURE
+                  </button>
+                  ) : (                  
+                  <button
+                  className={`text-white text-[20px] md:text-[1.3rem] primary rounded-full border-[1.5px] px-12 pt-2 pb-1 mt-8`}
+                  onClick={handleNoDescargarClick}
+                  >
+                   NO DESCARGAR BROCHURE
+                  </button>                  
+                  )}
+                </div>
+                {mensajeError && <p className="text-red-500 mt-2">{mensajeError}</p>}
             </div>
         </div>
       </section>
 
-      <footer className='bg-black'>
+    <footer className='bg-black'>
       <div className="flex justify-center p-8 md:pt-12 xl:pt-12">
         <a href="/">
           <img className="md:hidden" src="/img/Logo-s.png" alt="" />

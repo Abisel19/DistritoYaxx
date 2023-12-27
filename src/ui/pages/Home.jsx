@@ -8,11 +8,8 @@ import { motion } from 'framer-motion';
 import AnimatedSection from '@components/AnimatedSection';
 import { useInView } from "react-intersection-observer";
 
-
-
 function Home() {
 
-    
     useEffect(() => {
     const html = document.querySelector('html');
 
@@ -105,19 +102,28 @@ function Home() {
     };
   }, []);
 
-    const [background, setBackground] = useState('estudio');
-    const [background1, setBackground1] = useState('recamara');
-    const [background2, setBackground2] = useState('look-off');
-    const [background3, setBackground3] = useState('look-off-a');
+  const [background, setBackground] = useState('estudio');
+  const [background1, setBackground1] = useState('recamara');
+  const [background2, setBackground2] = useState('lock-off');
+  const [background3, setBackground3] = useState('lock-off-a');
 
 
-    const handleImageClick = (newBackground) => {
-        setBackground(newBackground);
-    };
+  const handleImageClick = (newBackground) => {
+      setBackground(newBackground);
+  };
 
-    const handleImageClick1 = (newBackground1) => {
-        setBackground1(newBackground1);
-    };
+  const handleImageClick1 = (newBackground1) => {
+      setBackground1(newBackground1);
+  };
+
+  const handleImageClick2 = (newBackground2) => {
+    setBackground2(newBackground2);
+  };
+
+  const handleImageClick3 = (newBackground3) => {
+    setBackground3(newBackground3);
+  };
+
 
     const imageVariants = {
         normal: { scale: 1 },
@@ -141,7 +147,7 @@ function Home() {
         <video className="bg-home" src="img/YAAX FULLHD1.mp4" autoplay="true" muted="true" loop="true" poster="img/YAAX FULLHDntacto.jpg"></video>
       </section>
 
-      <section data-animate-in="up" className='mx-auto py-2 pb-12 md:py-0 md:pl-32 md:pr-32 2xl:pl-56 2xl:pr-38 3xl:pr-48 3xl:pl-96'>
+      <section className='mx-auto py-2 pb-12 md:py-0 md:pl-32 md:pr-32 2xl:pl-56 2xl:pr-38 3xl:pr-48 3xl:pl-96'>
         <div className='md:flex py-0 md:py-20 xl:py-24'>
             <div className='w-full md:w-1/3 xl:w-1/3 3xl:w-5/12'>
                 <div className="flex justify-center md:justify-start">
@@ -236,7 +242,7 @@ function Home() {
       <section data-animate-in="fadeIn" className='pt-10 md:pt-20 pb-5 md:pb-5'>
         <h2 className='secondary text-brown text-center mx-auto text-4xl md:text-7xl 2xl:text-[80px] 3xl:text-[90px] pb-4 md:pb-20 3xl:pb-40'>TIPOLOGÍAS</h2>
 
-        <div className='flex px-10 md:px-56 2xl:px-96'>
+        <div className='flex px-0 md:px-56 2xl:px-96'>
         <Swiper
         modules={[Autoplay, Navigation]}
         loop={true}
@@ -264,7 +270,7 @@ function Home() {
                 <div className='w-full'>
                 <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
                 <a href='#recamara'><motion.img
-                    className='mx-auto py-4 w-[550px] 3xl:w-[610px]'
+                    className='mx-auto py-4 w-[310px] md:w-[550px] 3xl:w-[610px]'
                     src="img/tipologia-recamara.png"
                     alt="1 RECÁMARA"
                     variants={imageVariants}
@@ -280,7 +286,7 @@ function Home() {
                     <div className='w-full'>
                     <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
                     <a href='#lock-off'><motion.img
-                    className='mx-auto py-4 w-[600px] 3xl:w-[660px]'
+                    className='mx-auto py-4 w-[310px] md:w-[600px] 3xl:w-[660px]'
                     src="img/tipologia-look.png"
                     alt="LOCK OFF"
                     variants={imageVariants}
@@ -289,14 +295,14 @@ function Home() {
                     whileTap="hover" 
                     /></a>
                     </div>
-                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Lock Off A - 99.60 m2</p>
+                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Lock Off - 99.60 m2</p>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className='w-full'>
                     <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
                     <a href='#lock-off-a'><motion.img
-                    className='mx-auto py-4 w-[660px] 3xl:w-[720px]'
+                    className='mx-auto py-4 w-[310px] md:w-[660px] 3xl:w-[720px]'
                     src="img/tipologia-look-a.png"
                     alt="LOCK OFF A"
                     variants={imageVariants}
@@ -305,7 +311,7 @@ function Home() {
                     whileTap="hover" 
                     /></a>
                     </div>
-                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Lock Off - 95.25 m2</p>
+                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Lock Off A - 95.25 m2</p>
                 </div>
             </SwiperSlide>
         </Swiper>
@@ -328,147 +334,151 @@ function Home() {
         >
         <SwiperSlide  id="estudio">
             <div className={`w-full fade ${background}`}>
-                <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
-                    <div className='bg-black w-1/3 md:w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
-                        <div className='flex items-center px-2 md:px-10 py-1 md:py-0'>
+                    <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
+                        <div className='bg-black w-1/3 md:w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
+                            <div className='flex items-center px-2 md:px-10 py-1 md:py-0'>
                             <div className='w-1/3'>
-                                <img className='w-5 md:w-12 flex ml-1 md:mt-1' src="/img/Logo-m.png" alt="" />
+                                <img className='w-5 md:w-12 flex ml-1 -mt-2 md:mt-1' src="/img/Logo-m.png" alt="" />
                             </div>
                             <div className='w-2/3'>
-                                <p className='secondary text-white text-[8px] md:text-2xl tracking-wider md:mt-2'>ESTUDIO</p>
+                                <p className='secondary text-white text-[8px] md:text-2xl tracking-wider -mt-2 md:mt-2'>ESTUDIO</p>
+                            </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10'>
-                    <div className='w-1/2'>
-                        <div className='flex'>
-                            <div className='w-1/2 px-2'>
-                                <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('recamara')}>
-                                    <img src="img/recamara.png" alt="" />
+                    <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10'>
+                        <div className='w-1/2'>
+                            <div className='flex'>
+                                <div className='w-1/2 px-2'>
+                                <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('estudio-2')}>
+                                        <img src="img/estudio/estudio-4.jpg" alt="" />
                                 </div>
+                                </div>
+                                <div className='w-1/2 px-2'>
+                                    <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('estudio-3')}>
+                                        <img src="img/estudio/estudio-3.jpg" alt="" />
+                                    </div>
+                                </div> 
                             </div>
-                            <div className='w-1/2 px-2'>
-                                <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('look-off')}>
-                                    <img src="img/look-off.png" alt="" />
-                                </div>
-                            </div> 
+
                         </div>
                     </div>
-                </div>
             </div>
         </SwiperSlide>
         <SwiperSlide  id="recamara">
             <div className={`w-full fade ${background1}`}>
-                    <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
-                        <div className='bg-black w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
-                            <div className='flex items-center px-2 md:px-10 py-1 md:py-0 '>
+                        <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
+                            <div className='bg-black w-1/3 md:w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
+                                <div className='flex items-center px-2 md:px-10 py-1 md:py-0'>
                                 <div className='w-1/3'>
-                                    <img className='w-5 md:w-12 flex ml-1 md:mt-1' src="/img/Logo-m.png" alt="" />
+                                    <img className='w-5 md:w-12 flex ml-1 -mt-2 md:mt-1' src="/img/Logo-m.png" alt="" />
                                 </div>
                                 <div className='w-2/3'>
-                                    <p className='secondary text-white text-[8px] md:text-2xl tracking-wider md:mt-2'>1 RECÁMARA</p>
+                                    <p className='secondary text-white text-[8px] md:text-2xl tracking-wider -mt-2 md:mt-2'>1 RECÁMARA</p>
+                                </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10'>
-                        <div className='w-1/2'>
-                            <div className='flex'>
-                                <div className='w-1/2 px-2'>
-                                    <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('recamara')}>
-                                        <img src="img/recamara.png" alt="" />
+                        <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10'>
+                            <div className='w-1/2'>
+                                <div className='flex'>
+                                    <div className='w-1/2 px-2'>
+                                        <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick1('recamara-2')}>
+                                            <img src="img/recamara/recamara-2.jpg" alt="" />
+                                        </div>
                                     </div>
+                                    <div className='w-1/2 px-2'>
+                                        <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick1('recamara-3')}>
+                                            <img src="img/recamara/recamara-3.jpg" alt="" />
+                                        </div>
+                                    </div> 
                                 </div>
-                                <div className='w-1/2 px-2'>
-                                    <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('look-off')}>
-                                        <img src="img/look-off.png" alt="" />
-                                    </div>
-                                </div> 
                             </div>
                         </div>
-                    </div>
             </div>
         </SwiperSlide>
         <SwiperSlide id="lock-off">
             <div className={`w-full fade ${background2}`}>
-                    <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
-                        <div className='bg-black w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
-                            <div className='flex items-center px-2 md:px-10 py-1 md:py-0 '>
-                                <div className='w-1/3'>
-                                    <img className='w-5 md:w-12 flex ml-1 md:mt-1' src="/img/Logo-m.png" alt="" />
-                                </div>
-                                <div className='w-2/3'>
-                                    <p className='secondary text-white text-[8px] md:text-2xl tracking-wider md:mt-2'>LOCK OFF</p>
+                        <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
+                            <div className='bg-black w-1/3 md:w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
+                                <div className='flex items-center px-2 md:px-10 py-1 md:py-0'>
+                                    <div className='w-1/3'>
+                                    <img className='w-5 md:w-12 flex ml-1 -mt-2 md:mt-1' src="/img/Logo-m.png" alt="" />
+                                    </div>
+                                    <div className='w-2/3'>
+                                    <p className='secondary text-white text-[8px] md:text-2xl tracking-wider -mt-2 md:mt-2'>LOCK OFF</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10'>
-                        <div className='w-1/2'>
-                            <div className='flex'>
-                                <div className='w-1/2 px-2'>
-                                    <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('recamara')}>
-                                        <img src="img/recamara.png" alt="" />
+                        <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10'>
+                            <div className='w-1/2'>
+                                <div className='flex'>
+                                    <div className='w-1/2 px-2'>
+                                        <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-2')}>
+                                            <img src="img/lock-off/lock-off-5.jpg" alt="" />
+                                        </div>
                                     </div>
+                                    <div className='w-1/2 px-2'>
+                                        <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-3')}>
+                                            <img src="img/lock-off/lock-off-3.jpg" alt="" />
+                                        </div>
+                                    </div> 
                                 </div>
-                                <div className='w-1/2 px-2'>
-                                    <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('look-off')}>
-                                        <img src="img/look-off.png" alt="" />
-                                    </div>
-                                </div> 
                             </div>
                         </div>
-                    </div>
-            </div>
+            </div>  
         </SwiperSlide>
         <SwiperSlide id="lock-off-a">
             <div className={`w-full fade ${background3}`}>
-                    <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
-                        <div className='bg-black w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
-                            <div className='flex items-center px-2 md:px-10 py-1 md:py-0 '>
-                                <div className='w-1/3'>
-                                    <img className='w-5 md:w-12 flex ml-1 md:mt-1' src="/img/Logo-m.png" alt="" />
-                                </div>
-                                <div className='w-2/3'>
-                                    <p className='secondary text-white text-[8px] md:text-2xl tracking-wider md:mt-2'>LOCK OFF A</p>
+                        <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
+                            <div className='bg-black w-1/3 md:w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
+                                <div className='flex items-center px-2 md:px-10 py-1 md:py-0'>
+                                    <div className='w-1/3'>
+                                    <img className='w-5 md:w-12 flex ml-1 -mt-2 md:mt-1' src="/img/Logo-m.png" alt="" />
+                                    </div>
+                                    <div className='w-2/3'>
+                                    <p className='secondary text-white text-[8px] md:text-2xl tracking-wider -mt-2 md:mt-2'>LOCK OFF A</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10'>
-                        <div className='w-1/2'>
-                            <div className='flex'>
-                                <div className='w-1/2 px-2'>
-                                    <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('recamara')}>
-                                        <img src="img/recamara.png" alt="" />
+                        <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10'>
+                            <div className='w-1/2'>
+                                <div className='flex'>
+                                    <div className='w-1/2 px-2'>
+                                        <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick3('lock-off-a-2')}>
+                                            <img src="img/lock-off-a/lock-off-a-2.jpg" alt="" />
+                                        </div>
                                     </div>
+                                    <div className='w-1/2 px-2'>
+                                        <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick3('lock-off-a-3')}>
+                                            <img src="img/lock-off-a/lock-off-a-5.jpg" alt="" />
+                                        </div>
+                                    </div> 
                                 </div>
-                                <div className='w-1/2 px-2'>
-                                    <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('look-off')}>
-                                        <img src="img/look-off.png" alt="" />
-                                    </div>
-                                </div> 
                             </div>
                         </div>
-                    </div>
-            </div>
+            </div> 
         </SwiperSlide>
         </Swiper>     
       </section>
 
       <section data-animate-in="up" className='hidden md:flex w-full mx-auto pt-0 md:pt-40 pb-0 md:pb-20 my-0 md:my-10 2xl:my-20'>
-        <div className='w-full md:w-5/12 2xl:w-5/12 3xl:w-6/12 pl-0 md:pl-14 grid justify-center'>
+        <div className='w-full md:w-5/12 2xl:w-5/12 3xl:w-6/12 pl-0 md:pl-14 grid justify-center content-center'>
                 <h2 className='septimary text-brown text-base md:text-[45px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE ITZ<a className='text-base md:text-[48px] 2xl:text-[73px] 3xl:text-[106px]'>É</a></h2>
-                <h2 className='septimary text-brown mt-12 2xl:mt-12 3xl:mt-16 text-base md:text-[45px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE SAASIL</h2>
+                <h2 className='septimary text-brown mt-12 md:mt-4 2xl:mt-12 3xl:mt-20 text-base md:text-[45px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE SAASIL</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" className='-mt-[150px] xl:-mt-[110px] 2xl:ml-[80px] 3xl:ml-[100px] w-[450px] h-[200px] 2xl:w-[500px] 2xl:h-[200px]' viewBox="0 0 699.328 274">
+                    <path id="Trazado_513" data-name="Trazado 513" d="M-5053,4130.508h605.487v-273h93.841" transform="translate(5053 -3857.008)" fill="none" stroke="#707070" stroke-width="1"/>
+                </svg>
         </div>
-            <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-0 md:-mt-4 xl:-mt-2 2xl:-mt-14 ml-0 md:ml-10 2xl:ml-14'>
-                <h3 className='septimary text-brown text-base md:text-[34px] 2xl:text-[45px] 3xl:text-[80px] 2xl:ml-4'>AMENIDADES</h3>
-                <div className='flex mt-0 md:mt-8 xl:mt-12 3xl:mt-16'>
+            <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-0 md:-mt-6 xl:-mt-2 2xl:-mt-14 ml-0 md:ml-10 2xl:ml-14'>
+                <h3 className='septimary text-brown text-base md:text-[34px] 2xl:text-[45px] 3xl:text-[80px] 2xl:ml-4 md:mt-1 xl:mt-0 2xl:mt-0'>AMENIDADES</h3>
+                <div className='flex mt-0 md:mt-6 2xl:mt-12 3xl:mt-16'>
                     <p className='quaternary text-base md:text-[12px] 2xl:text-[19px] 3xl:text-[22px] pr-3 2xl:px-5 3xl:pr-6'>CANCHA DE PADEL</p>
                     <p className='quaternary text-base md:text-[12px] 2xl:text-[19px] 3xl:text-[22px] px-3 2xl:px-5 3xl:px-6'>ÁREA DE BBQ</p>
                     <p className='quaternary text-base md:text-[12px] 2xl:text-[19px] 3xl:text-[22px] px-3 2xl:px-5 3xl:px-6'>JUEGOS INFANTILES</p>

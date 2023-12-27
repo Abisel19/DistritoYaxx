@@ -155,7 +155,7 @@
 }
 
 .estudio{
-  background-image: url(/img/estudio.png);
+  background-image: url(/img/estudio/estudio-1.jpg);
   background-size: 100%;
   margin: 0 auto !important;
   display: flex;
@@ -164,9 +164,32 @@
   background-repeat: no-repeat;
   flex-wrap: wrap;
 }
+
+.estudio-2{
+  background-image: url(/img/estudio/estudio-4.jpg);
+  background-size: 100%;
+  margin: 0 auto !important;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+}
+
+.estudio-3{
+  background-image: url(/img/estudio/estudio-3.jpg);
+  background-size: 100%;
+  margin: 0 auto !important;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+}
+
 
 .recamara{
-  background-image: url(/img/recamara.png);
+  background-image: url(/img/recamara/recamara-1.jpg);
   background-size: 100%;
   margin: 0 auto !important;
   display: flex;
@@ -176,8 +199,8 @@
   flex-wrap: wrap;
 }
 
-.look-off{
-  background-image: url(/img/look-off.png);
+.recamara-2{
+  background-image: url(/img/recamara/recamara-2.jpg);
   background-size: 100%;
   margin: 0 auto !important;
   display: flex;
@@ -186,8 +209,9 @@
   background-repeat: no-repeat;
   flex-wrap: wrap;
 }
-.look-off-a{
-  background-image: url(/img/look-off-a.png);
+
+.recamara-3{
+  background-image: url(/img/recamara/recamara-3.jpg);
   background-size: 100%;
   margin: 0 auto !important;
   display: flex;
@@ -196,6 +220,70 @@
   background-repeat: no-repeat;
   flex-wrap: wrap;
 }
+
+.lock-off{
+  background-image: url(/img/lock-off/lock-off-1.jpg);
+  background-size: 100%;
+  margin: 0 auto !important;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+}
+.lock-off-2{
+  background-image: url(/img/lock-off/lock-off-5.jpg);
+  background-size: 100%;
+  margin: 0 auto !important;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+}
+.lock-off-3{
+  background-image: url(/img/lock-off/lock-off-3.jpg);
+  background-size: 100%;
+  margin: 0 auto !important;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+}
+
+
+.lock-off-a{
+  background-image: url(/img/lock-off-a/lock-off-a-1.jpg);
+  background-size: 100%;
+  margin: 0 auto !important;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+}
+.lock-off-a-2{
+  background-image: url(/img/lock-off-a/lock-off-a-2.jpg);
+  background-size: 100%;
+  margin: 0 auto !important;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+}
+.lock-off-a-3{
+  background-image: url(/img/lock-off-a/lock-off-a-5.jpg);
+  background-size: 100%;
+  margin: 0 auto !important;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+}
+
 .cards-bg{
   align-items: end;
   flex-wrap: wrap;
@@ -374,7 +462,25 @@
     height: 230px;
   }   
   .estudio{
-    background-image: url(/img/estudio.png);
+    background-image: url(/img/estudio/estudio-1.jpg);
+    background-size: 100%;
+    margin: 0 auto !important;
+    display: flex;
+    height: 218px;
+    width: 100vw;
+    background-repeat: no-repeat;
+  }
+  .estudio-2{
+    background-image: url(/img/estudio/estudio-4.jpg);
+    background-size: 100%;
+    margin: 0 auto !important;
+    display: flex;
+    height: 218px;
+    width: 100vw;
+    background-repeat: no-repeat;
+  }
+  .estudio-3{
+    background-image: url(/img/estudio/estudio-3.jpg);
     background-size: 100%;
     margin: 0 auto !important;
     display: flex;
@@ -384,7 +490,25 @@
   }
   
   .recamara{
-    background-image: url(/img/recamara.png);
+    background-image: url(/img/recamara/recamara-1.jpg);
+    background-size: 100%;
+    margin: 0 auto !important;
+    display: flex;
+    height: 218px;
+    width: 100vw;
+    background-repeat: no-repeat;
+  }
+  .recamara-2{
+    background-image: url(/img/recamara/recamara-2.jpg);
+    background-size: 100%;
+    margin: 0 auto !important;
+    display: flex;
+    height: 218px;
+    width: 100vw;
+    background-repeat: no-repeat;
+  }
+  .recamara-3{
+    background-image: url(/img/recamara/recamara-3.jpg);
     background-size: 100%;
     margin: 0 auto !important;
     display: flex;
@@ -393,8 +517,8 @@
     background-repeat: no-repeat;
   }
   
-  .look-off{
-    background-image: url(/img/look-off.png);
+  .lock-off{
+    background-image: url(/img/lock-off/lock-off-1.jpg);
     background-size: 100%;
     margin: 0 auto !important;
     display: flex;
@@ -402,14 +526,58 @@
     width: 100vw;
     background-repeat: no-repeat;
   }
-  .look-off-a{
-    background-image: url(/img/look-off-a.png);
+  .lock-off-2{
+    background-image: url(/img/lock-off/lock-off-5.jpg);
     background-size: 100%;
     margin: 0 auto !important;
     display: flex;
     height: 218px;
     width: 100vw;
     background-repeat: no-repeat;
+  }
+  .lock-off-3{
+    background-image: url(/img/lock-off/lock-off-3.jpg);
+    background-size: 100%;
+    margin: 0 auto !important;
+    display: flex;
+    height: 218px;
+    width: 100vw;
+    background-repeat: no-repeat;
+  }
+  
+  .lock-off-a{
+    background-image: url(/img/lock-off-a/lock-off-a-1.jpg);
+    background-size: 100%;
+    margin: 0 auto !important;
+    display: flex;
+    height: 218px;
+    width: 100vw;
+    background-repeat: no-repeat;
+  }
+  .lock-off-a-2{
+    background-image: url(/img/lock-off-a/lock-off-a-2.jpg);
+    background-size: 100%;
+    margin: 0 auto !important;
+    display: flex;
+    height: 218px;
+    width: 100vw;
+    background-repeat: no-repeat;
+  }
+  .lock-off-a-3{
+    background-image: url(/img/lock-off-a/lock-off-a-5.jpg);
+    background-size: 100%;
+    margin: 0 auto !important;
+    display: flex;
+    height: 218px;
+    width: 100vw;
+    background-repeat: no-repeat;
+  }
+  .swiper-button-prev{
+    width: 50px !important;
+  }
+  
+  .swiper-button-next{
+    width: 50px !important;
   }
 }
 
