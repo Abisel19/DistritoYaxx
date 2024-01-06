@@ -135,48 +135,29 @@ function Amenidades() {
 
   return (
     <>
-      <section className='hidden md:flex w-full mx-auto px-10 2xl:px-32 pt-0 md:pt-60'>
-            <div className='w-full md:w-5/12 2xl:w-5/12 3xl:w-6/12 pl-0 md:pl-14 2xl:pl-32'>
-                <h2 className='septimary text-brown text-base md:text-[45px] 2xl:text-[65px] 3xl:text-[100px]'>TORRE ITZ<a className='text-base md:text-[48px] 2xl:text-[68px] 3xl:text-[103px]'>É</a></h2>
-                <h2 className='septimary text-brown mt-10 3xl:mt-16 text-base md:text-[45px] 2xl:text-[65px] 3xl:text-[100px]'>TORRE SAASIL</h2>
-                <h3 className='quinary text-brown mt-0 md:mt-12 font-light text-base md:text-[18px] 2xl:text-[22px] 3xl:text-[40px]'>RENTA VACACIONAL</h3>
-                <div className='mt-0 md:-mt-60 2xl:-mt-56 2xl:ml-10 3xl:ml-20'>
-                  <svg xmlns="http://www.w3.org/2000/svg" className='md:w-[400px] md:h-[400px] xl:w-[420px] xl:h-[380px] 2xl:w-[500px] 2xl:h-[300px] 3xl:w-[900px] 3xl:h-[300px]' viewBox="0 0 699.328 315.547">
-                    <path id="Trazado_513" data-name="Trazado 513" d="M-5053,4172.055h605.487V3857.508h93.841" transform="translate(5053 -3857.008)" fill="none" stroke="#707070" stroke-width="1"/>
-                  </svg>
-                </div>
+      <section className='hidden md:flex w-full mt-40 md:mt-60 3xl:mt-80 pb-0 md:pb-20 3xl:pb-28'>
+            <div className='w-full md:w-5/12 2xl:w-5/12 3xl:w-6/12 pl-0 md:pl-14 grid justify-center content-center'>
+                    <h2 className='septimary text-brown text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE ITZ<a className='text-base md:text-[61px] xl:text-[68px] 2xl:text-[73px] 3xl:text-[106px]'>É</a></h2>
+                    <h2 className='septimary text-brown mt-12 md:mt-10 xl:mt-12 2xl:mt-14 3xl:mt-20 text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE SAASIL</h2>
             </div>
-            <div className='w-full md:w-7/12 2xl:w-6/12 3xl:w-6/12 mt-0 md:-mt-4 2xl:-mt-8 2xl:ml-8'>
-                <h3 className='septimary text-brown text-base md:text-[34px] 2xl:text-[40px] 3xl:text-[80px] 2xl:ml-4'>AMENIDADES</h3>
-                <div className='flex mt-0 md:mt-8 2xl:mt-12 3xl:mt-16'>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] pr-3 2xl:px-4 3xl:pr-6'>CANCHA DE PADEL</p>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>ÁREA DE BBQ</p>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>JUEGOS INFANTILES</p>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>FIRE PITS</p>
+            <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-0 md:-mt-6 xl:-mt-2 2xl:-mt-14 ml-0 md:ml-10 2xl:ml-14'>
+                <h3 className='septimary text-brown text-base md:text-[34px] 2xl:text-[45px] 3xl:text-[80px] 2xl:ml-4 md:mt-1 xl:mt-0 2xl:mt-0'>AMENIDADES</h3>
+                <div className='flex mt-0 md:mt-6 2xl:mt-12 3xl:mt-16'>
+                    <p className='quaternary text-base text-justify md:text-[15px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] pr-3 2xl:px-5 3xl:pr-6'>- CANCHA DE PADEL ㅤㅤ - ÁREA DE BBQ ㅤㅤ - JUEGOS INFANTILES ㅤㅤ - FIRE PITS<br/></p>
                 </div>
-                <div className='flex mt-0 md:mt-2 2xl:mt-5 3xl:mt-6'>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] pr-3 2xl:px-4 3xl:pr-6'>ALBERCA FAMILIAR</p>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>ALBERCA PARA NIÑOS</p>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>SUN DECK</p>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>ÁREA LOUNGE</p>
+                <div className='flex mt-0 md:mt-2 xl:mt-4 3xl:mt-6'>
+                    <p className='quaternary text-base text-justify md:text-[15px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] pr-3 2xl:px-5 3xl:pr-6'>- ALBERCA FAMILIAR ㅤ - ALBERCA PARA NIÑOS ㅤ - SUN DECK ㅤㅤ - ÁREA LOUNGE</p>
                 </div>
-                <div className='flex mt-0 md:mt-2 2xl:mt-5 3xl:mt-6'>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] pr-3 2xl:px-4 3xl:pr-6'>PISTA JOGGING</p>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>TERRAZA WELLNESS</p>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>SALÓN DE USOS</p>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>GIMNASIO</p>
+                <div className='flex mt-0 md:mt-2 xl:mt-4 3xl:mt-6'>
+                    <p className='quaternary text-base text-justify md:text-[15px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] pr-3 2xl:px-5 3xl:pr-6'>- PISTA JOGGING ㅤㅤ - TERRAZA WELLNESS ㅤㅤ - SALÓN DE USOS ㅤㅤ - GIMNASIO</p>
                 </div>
-                <div className='flex md:mt-2 2xl:mt-5 3xl:mt-6'>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] pr-3 2xl:px-4 3xl:pr-6'>CENTRO DE NEGOCIOS</p>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>KIDS CLUB</p>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>INFINITY POOL</p>
-                    <p className='quaternary text-base md:text-[12px] 2xl:text-[15.5px] 3xl:text-[22px] px-3 2xl:px-4 3xl:px-6'>BAR</p>
+                <div className='flex md:mt-2 xl:mt-4 3xl:mt-6'>
+                    <p className='quaternary text-base text-justify md:text-[15px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] pr-3 2xl:px-5 3xl:pr-6'>- CENTRO DE NEGOCIOS ㅤㅤㅤㅤ - KIDS CLUB ㅤㅤㅤㅤ - INFINITY POOL ㅤㅤㅤ - BAR</p>
                 </div>
-
             </div>
       </section>
 
-      <section className='container md:hidden mt-24'>
+      <section className='container md:hidden mt-20'>
         <div className='py-10'>
             <h2 className='secondary text-brown text-center mx-auto text-[42px]'>TORRE ITZ<a className='secondary text-[45px]'>É</a></h2>
             <h2 className='secondary text-brown -mt-4 text-center mx-auto text-[42px]'>TORRE SAASIL</h2>
@@ -212,7 +193,7 @@ function Amenidades() {
         </div>
       </section>
 
-      <section className='px-4 md:px-10 mt-4 md:mt-14 hidden md:flex'>
+      <section className='px-4 md:px-10 mt-4 md:mt-14 hidden md:grid'>
         <div className='flex w-full'>
             <div className='w-1/3'>
                 <motion.img
@@ -455,7 +436,7 @@ function Amenidades() {
       </section>
       
       <section data-animate-in="up" className='relative md:-mt-2 z-10'>
-        <div className='w-full flex'>
+        <div className='w-full h-full'>
             <img src="/img/roof-top-1.png" alt="INTEREIORES DISTRITO YAAX" />
         </div>
       </section>

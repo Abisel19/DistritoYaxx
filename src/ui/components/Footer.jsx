@@ -38,7 +38,7 @@ function Footer() {
   };
 
   const handleNoDescargarClick = () => {
-    setMensajeError('Por favor, llena el formulario antes de intentar descargar el brochure.');    
+    setMensajeError('Por favor, llena el formulario antes de descargar el brochure.');    
   };
 
   const descargarPDF = () => {
@@ -98,7 +98,7 @@ function Footer() {
                 <button className='text-white text-[20px] md:text-[1.3rem] primary rounded-full border-[1.5px] px-3 mt-8 transition-transform transform hover:scale-90'>Enviar</button>
                 </form>
                 {correoEnviado && (
-                  <p className="text-green-500 mt-2">Correo enviado correctamente</p>
+                  <p className="primary text-green-500 mt-2 text-center md:text-left">Correo enviado correctamente</p>
                 )}
             </div>
 
@@ -147,11 +147,11 @@ function Footer() {
                   className={`text-white text-[20px] md:text-[1.3rem] primary rounded-full border-[1.5px] px-12 pt-2 pb-1 mt-8`}
                   onClick={handleNoDescargarClick}
                   >
-                   NO DESCARGAR BROCHURE
+                   DESCARGAR BROCHURE
                   </button>                  
                   )}
                 </div>
-                {mensajeError && <p className="text-red-500 mt-2">{mensajeError}</p>}
+                {mensajeError && <p className="text-red-500 mt-2 primary text-center md:text-left">{mensajeError}</p>}
             </div>
         </div>
       </section>

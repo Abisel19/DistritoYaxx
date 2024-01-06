@@ -70,25 +70,17 @@ function Header() {
 
             <div className='flex md:hidden'>
               <a href="https://www.facebook.com/distritoyaax.cancun" className='px-[6px]'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="9.487" height="17.712" viewBox="0 0 9.487 17.712">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11.487" height="17.712" viewBox="0 0 9.487 17.712">
                   <path id="Path_539" data-name="Path 539" d="M8.865,9.994l.492-3.205H6.282V4.708A1.6,1.6,0,0,1,8.088,2.977h1.4V.248A17.042,17.042,0,0,0,7,.031c-2.533,0-4.188,1.535-4.188,4.314V6.789H0V9.994H2.816v7.749H6.282V9.994Z" transform="translate(0 -0.031)"/>
                 </svg>
               </a>
 
               <a href="https://www.instagram.com/distritoyaax.cancun/" className='px-[6px]'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="17.712" height="17.712" viewBox="0 0 17.712 17.712">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19.712" height="17.712" viewBox="0 0 17.712 17.712">
                   <g id="Group_264" data-name="Group 264" transform="translate(-373.343 -44.077)">
                     <path id="Path_536" data-name="Path 536" d="M96.237,6.348a1.038,1.038,0,1,0,1.038,1.038,1.039,1.039,0,0,0-1.038-1.038" transform="translate(290.65 40.892)"/>
                     <path id="Path_537" data-name="Path 537" d="M83.7,9.008a4.362,4.362,0,1,0,4.362,4.362A4.367,4.367,0,0,0,83.7,9.008m0,7.156a2.794,2.794,0,1,1,2.794-2.794A2.8,2.8,0,0,1,83.7,16.164" transform="translate(298.572 39.563)"/>
                     <path id="Path_538" data-name="Path 538" d="M82.607,17.742H75.536a5.326,5.326,0,0,1-5.32-5.32V5.35A5.326,5.326,0,0,1,75.536.03h7.072a5.327,5.327,0,0,1,5.32,5.32v7.072a5.327,5.327,0,0,1-5.32,5.32M75.536,1.7A3.658,3.658,0,0,0,71.882,5.35v7.072a3.658,3.658,0,0,0,3.654,3.654h7.072a3.658,3.658,0,0,0,3.654-3.654V5.35A3.658,3.658,0,0,0,82.607,1.7Z" transform="translate(303.127 44.047)"/>
-                  </g>
-                </svg>
-              </a>
-
-              <a href="/" className='px-[6px]'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14.802" height="16.986" viewBox="0 0 14.802 16.986">
-                  <g id="Group_241" data-name="Group 241" transform="translate(0 0)">
-                    <path id="Path_458" data-name="Path 458" d="M-882.914,781.163a4.07,4.07,0,0,1-3.2-3.6v-.375h-2.925v11.61a2.459,2.459,0,0,1-2.468,2.451,2.46,2.46,0,0,1-1.949-.971h0a2.458,2.458,0,0,1,.47-3.445,2.459,2.459,0,0,1,2.233-.385v-2.972a5.374,5.374,0,0,0-6.06,4.588,5.375,5.375,0,0,0,1.479,4.492,5.375,5.375,0,0,0,7.6.087,5.375,5.375,0,0,0,1.618-3.844v-5.932a6.948,6.948,0,0,0,4.053,1.3v-2.907A4.1,4.1,0,0,1-882.914,781.163Z" transform="translate(896.865 -777.184)"/>
                   </g>
                 </svg>
               </a>
@@ -129,7 +121,7 @@ function Header() {
                   </a>
                 </li>
                 <li className='mr-10 transition-transform transform hover:scale-110'>
-                  <a href='#' className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
+                  <a href='/tour' className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
                     TOUR VIRTUAL
                   </a>
                 </li>
@@ -141,14 +133,14 @@ function Header() {
               </ul>
             </div>
 
-            <div className='hidden md:flex w-full justify-end -mt-10'>
-              <a className='hover:scale-110 transition-transform px-2' href="https://www.facebook.com/distritoyaax.cancun">
+            <div className='hidden md:flex w-full justify-end -mt-10 pr-2'>
+              <a className='hover:scale-110 transition-transform px-3' href="https://www.facebook.com/distritoyaax.cancun">
               <svg xmlns="http://www.w3.org/2000/svg" className='w-3' viewBox="0 0 18.178 33.938">
                 <path id="Path_136" data-name="Path 136" d="M16.986,19.121l.943-6.142H12.036V8.993c0-1.681.823-3.318,3.461-3.318h2.681V.446A32.655,32.655,0,0,0,13.42.031C8.567.031,5.4,2.972,5.4,8.3V12.98H0v6.142H5.4V33.969h6.641V19.121Z" transform="translate(0 -0.031)" fill="#fff"/>
               </svg>
               </a>
 
-              <a className='hover:scale-110 transition-transform px-2' href="https://www.instagram.com/distritoyaax.cancun/">    
+              <a className='hover:scale-110 transition-transform px-3' href="https://www.instagram.com/distritoyaax.cancun/">    
               <svg xmlns="http://www.w3.org/2000/svg" className='w-6' viewBox="0 0 33.938 33.938">
                 <g id="Group_265" data-name="Group 265" transform="translate(-944.353 -10501.219)">
                   <path id="Path_137" data-name="Path 137" d="M97.188,6.348a1.989,1.989,0,1,0,1.989,1.989,1.99,1.99,0,0,0-1.989-1.989" transform="translate(873.117 10500.931)" fill="#fff"/>
@@ -158,13 +150,6 @@ function Header() {
               </svg>
               </a>
                   
-              <a className='hover:scale-110 transition-transform px-2' href="">
-              <svg xmlns="http://www.w3.org/2000/svg" className='w-5' viewBox="0 0 28.363 32.547">
-                <g id="Group_201" data-name="Group 201" transform="translate(896.865 -777.184)">
-                  <path id="Path_458" data-name="Path 458" d="M-870.134,784.809a7.8,7.8,0,0,1-6.134-6.907v-.718h-5.605V799.43a4.712,4.712,0,0,1-4.729,4.7,4.712,4.712,0,0,1-3.734-1.859l0,0,0,0a4.71,4.71,0,0,1,.9-6.6,4.711,4.711,0,0,1,4.278-.738v-5.695a10.3,10.3,0,0,0-11.611,8.791,10.3,10.3,0,0,0,2.834,8.606,10.3,10.3,0,0,0,14.565.167,10.3,10.3,0,0,0,3.1-7.365V788.064a13.313,13.313,0,0,0,7.766,2.483v-5.57A7.862,7.862,0,0,1-870.134,784.809Z" transform="translate(0 0)" fill="#fff"/>
-                </g>
-              </svg>
-              </a>
             </div>
 
             <div id="navbar-sticky" className={`fixed top-0 left-0 w-full h-full bg-white z-1000 ${isExpanded ? 'slideInMenu' : 'slideOutMenu'}`} aria-expanded={isExpanded} style={{ display: isExpanded ? 'block' : 'none' }}>
@@ -282,7 +267,7 @@ function Header() {
                   <a href="/ubicacion" class="block md:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">UBICACIÓN</a>
                 </li>
                 <li>
-                  <a href="#" class="block md:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">TOUR VIRTUAL</a>
+                  <a href="/tour" class="block md:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">TOUR VIRTUAL</a>
                 </li>
                 <li>
                   <a href="/contacto" class="block me:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">CONTACTO</a>
