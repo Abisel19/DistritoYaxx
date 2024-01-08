@@ -104,8 +104,8 @@ function Modelos() {
 
     const [background, setBackground] = useState('estudio');
     const [background1, setBackground1] = useState('recamara');
-    const [background2, setBackground2] = useState('look-off');
-    const [background3, setBackground3] = useState('look-off-a');
+    const [background2, setBackground2] = useState('lock-off');
+    const [background3, setBackground3] = useState('lock-off-a');
 
 
     const handleImageClick = (newBackground) => {
@@ -114,6 +114,14 @@ function Modelos() {
 
     const handleImageClick1 = (newBackground1) => {
         setBackground1(newBackground1);
+    };
+
+    const handleImageClick2 = (newBackground2) => {
+      setBackground2(newBackground2);
+    };
+
+    const handleImageClick3 = (newBackground3) => {
+      setBackground3(newBackground3);
     };
 
     const imageVariants = {
@@ -138,90 +146,90 @@ function Modelos() {
       <section className='pt-10 md:pt-20 pb-5 md:pb-5 mt-20 md:mt-24'>
         <h2 className='secondary text-brown text-center mx-auto text-4xl md:text-7xl 2xl:text-[80px] 3xl:text-[90px] pb-4 md:pb-20 3xl:pb-40'>MODELOS</h2>
 
-        <div className='flex px-10 md:px-56 2xl:px-80'>
-        <Swiper
-        modules={[Autoplay, Navigation]}
-        loop={true}
-        spaceBetween={20}
-        slidesPerView={1}
-        navigation={true}        
-        >
-            <SwiperSlide>
-                <div className='w-full'>
-                    <a href='#estudio'><div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
-                    <motion.img
-                    className='mx-auto py-4 w-[200px] md:w-[320px] 3xl:w-[380px]'
-                    src="img/tipologia-room.png"
-                    alt="ESTUDIO"
-                    variants={imageVariants}
-                    initial="normal"
-                    whileHover="hover"
-                    whileTap="hover" 
-                    />
-                    </div></a>
-                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Estudio - 47.80 m2</p>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-            <div className='w-full'>
-                    <a href='#habitacion'><div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
-                    <motion.img
-                    className='mx-auto py-4 w-[550px] 3xl:w-[610px]'
-                    src="img/tipologia-recamara.png"
-                    alt="1 RECÁMARA"
-                    variants={imageVariants}
-                    initial="normal"
-                    whileHover="hover"
-                    whileTap="hover" 
-                    />
-                    </div></a>
-                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>1 Recámara - 65.55 m2</p>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className='w-full'>
-                    <a href='#look-off'><div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
-                    <motion.img
-                    className='mx-auto py-4 w-[600px] 3xl:w-[660px]'
-                    src="img/tipologia-look.png"
-                    alt="LOOK OFF"
-                    variants={imageVariants}
-                    initial="normal"
-                    whileHover="hover"
-                    whileTap="hover" 
-                    />
-                    </div></a>
-                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Lock Off A - 99.60 m2</p>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className='w-full'>
-                    <a href='#look-off-a'><div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
-                    <motion.img
-                    className='mx-auto py-4 w-[660px] 3xl:w-[720px]'
-                    src="img/tipologia-look-a.png"
-                    alt="LOOK OFF A"
-                    variants={imageVariants}
-                    initial="normal"
-                    whileHover="hover"
-                    whileTap="hover" 
-                    />
-                    </div></a>
-                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Lock Off - 95.25 m2</p>
-                </div>
-            </SwiperSlide>
-        </Swiper>
-        </div>
-        
+          <div className='flex px-0 md:px-56 2xl:px-96'>
+          <Swiper
+          modules={[Autoplay, Navigation]}
+          loop={true}
+          spaceBetween={20}
+          slidesPerView={1}
+          navigation={true}                
+          >
+              <SwiperSlide>
+                  <div className='w-full'>
+                  <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
+                  <a href='#estudio'><motion.img
+                      className='mx-auto py-4 w-[200px] md:w-[320px] 3xl:w-[380px]'
+                      src="img/tipologia-room.png"
+                      alt="ESTUDIO"
+                      variants={imageVariants}
+                      initial="normal"
+                      whileHover="hover"
+                      whileTap="hover" 
+                      /></a>
+                      </div>
+                      <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Estudio - 47.80 m2</p>
+                  </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                  <div className='w-full'>
+                  <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
+                  <a href='#habitacion'><motion.img
+                      className='mx-auto py-4 w-[310px] md:w-[550px] 3xl:w-[610px]'
+                      src="img/tipologia-recamara.png"
+                      alt="1 RECÁMARA"
+                      variants={imageVariants}
+                      initial="normal"
+                      whileHover="hover"
+                      whileTap="hover" 
+                      /></a>
+                      </div>
+                      <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>1 Recámara - 65.55 m2</p>
+                  </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                      <div className='w-full'>
+                      <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
+                      <a href='#lock-off'><motion.img
+                      className='mx-auto py-4 w-[310px] md:w-[600px] 3xl:w-[660px]'
+                      src="img/tipologia-look.png"
+                      alt="LOCK OFF"
+                      variants={imageVariants}
+                      initial="normal"
+                      whileHover="hover"
+                      whileTap="hover" 
+                      /></a>
+                      </div>
+                      <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Lock Off - 99.60 m2</p>
+                  </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                  <div className='w-full'>
+                      <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
+                      <a href='#lock-off-a'><motion.img
+                      className='mx-auto py-4 w-[310px] md:w-[660px] 3xl:w-[720px]'
+                      src="img/tipologia-look-a.png"
+                      alt="LOCK OFF A"
+                      variants={imageVariants}
+                      initial="normal"
+                      whileHover="hover"
+                      whileTap="hover" 
+                      /></a>
+                      </div>
+                      <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Lock Off A - 95.25 m2</p>
+                  </div>
+              </SwiperSlide>
+          </Swiper>
+          </div>
+      
       </section>
 
-      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-32 xl:mt-40 2xl:mt-48 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
+      <section className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-32 xl:mt-40 2xl:mt-48 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
         <div className='flex mx-auto justify-center align-item'>
             <h2 className='secondary text-brown mx-auto text-5xl md:text-[110px] xl:text-[158px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center'>ESTUDIO</h2>
         </div>
       </section>
       
-      <section id="estudio" data-animate-in="up" className='relative md:-mt-2 z-10 mb-6'>
+      <section id="estudio" data-animate-in="fadeIn" className='relative md:-mt-2 z-10 mb-6'>
         <div className={`w-full fade ${background}`}>
                 <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
                     <div className='bg-black w-1/3 md:w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
@@ -236,32 +244,53 @@ function Modelos() {
                     </div>
                 </div>
 
-                <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10'>
-                    <div className='w-1/2'>
+                <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10 z-50'>
+                    <div className='w-full'>
                         <div className='flex'>
-                            <div className='w-1/2 px-2'>
-                                <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('recamara')}>
-                                    <img src="img/recamara.png" alt="" />
-                                </div>
-                            </div>
-                            <div className='w-1/2 px-2'>
-                                <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('look-off')}>
-                                    <img src="img/look-off.png" alt="" />
-                                </div>
-                            </div> 
+                          <Swiper
+                                modules={[Autoplay, Pagination, Navigation]}
+                                spaceBetween={0}
+                                slidesPerView={2}
+                                loop={true}
+                                autoplay={{ delay: 2000}}
+                                className='w-[200px] md:w-[750px]'
+                                >
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('estudio-3')}>
+                                          <img src="img/estudio/estudio-3.jpg" alt="" />
+                                      </div>
+                                  </div> 
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('estudio-4')}>
+                                          <img src="img/estudio/estudio-4.jpg" alt="" />
+                                      </div>
+                                  </div> 
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('estudio')}>
+                                          <img src="img/estudio/estudio-1.jpg" alt="" />
+                                      </div>
+                                  </div> 
+                                </SwiperSlide>
+                                
+                          </Swiper>    
                         </div>
                     </div>
                 </div>
         </div>
       </section>
 
-      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-24 xl:mt-40 2xl:mt-48 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
+      <section className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-24 xl:mt-40 2xl:mt-48 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
         <div className='flex mx-auto justify-center align-item'>
             <h2 className='secondary text-brown mx-auto text-5xl md:text-[110px] xl:text-[158px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center'>1 RECÁMARA</h2>
         </div>
       </section>
       
-      <section id="habitacion" data-animate-in="up" className='relative md:-mt-2 z-10 mb-6'>
+      <section id="habitacion" className='relative md:-mt-2 z-10 mb-6'>
         <div className={`w-full fade ${background1}`}>
                       <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
                         <div className='bg-black w-1/3 md:w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
@@ -276,32 +305,60 @@ function Modelos() {
                         </div>
                       </div>
 
-                      <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10'>
-                          <div className='w-1/2'>
+                      <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10 z-50'>
+                          <div className='w-full'>
                               <div className='flex'>
-                                  <div className='w-1/2 px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('recamara')}>
-                                          <img src="img/recamara.png" alt="" />
+                                <Swiper
+                                modules={[Autoplay, Pagination, Navigation]}
+                                spaceBetween={0}
+                                slidesPerView={2}
+                                loop={true}
+                                autoplay={{ delay: 2000}}
+                                className='w-[200px] md:w-[750px]'
+                                >
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick1('recamara-2')}>
+                                          <img src="img/recamara/recamara-2.jpg" alt="" />
                                       </div>
                                   </div>
-                                  <div className='w-1/2 px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('look-off')}>
-                                          <img src="img/look-off.png" alt="" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick1('recamara-3')}>
+                                          <img src="img/recamara/recamara-3.jpg" alt="" />
                                       </div>
                                   </div> 
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick1('recamara-5')}>
+                                          <img src="img/recamara/recamara-5.jpg" alt="" />
+                                      </div>
+                                  </div> 
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick1('recamara')}>
+                                          <img src="img/recamara/recamara-1.jpg" alt="" />
+                                      </div>
+                                  </div> 
+                                </SwiperSlide>
+                                
+                              </Swiper>    
                               </div>
                           </div>
                       </div>
         </div>
       </section>
 
-      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-24 xl:mt-42 2xl:mt-48 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
+      <section className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-24 xl:mt-42 2xl:mt-48 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
         <div className='flex mx-auto justify-center align-item'>
             <h2 className='secondary text-brown mx-auto text-5xl md:text-[110px] xl:text-[158px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center'>LOCK OFF</h2>
         </div>
       </section>
       
-      <section id="look-off" data-animate-in="up" className='relative md:-mt-2 z-10 mb-6'>
+      <section id="lock-off" className='relative md:-mt-2 z-10 mb-6'>
         <div className={`w-full fade ${background2}`}>
                       <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
                         <div className='bg-black w-1/3 md:w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
@@ -316,32 +373,67 @@ function Modelos() {
                         </div>
                       </div>
 
-                      <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10'>
-                          <div className='w-1/2'>
+                      <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10 z-50'>
+                          <div className='w-full'>
                               <div className='flex'>
-                                  <div className='w-1/2 px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('recamara')}>
-                                          <img src="img/recamara.png" alt="" />
+                                <Swiper
+                                modules={[Autoplay, Pagination, Navigation]}
+                                spaceBetween={0}
+                                slidesPerView={2}
+                                loop={true}
+                                autoplay={{ delay: 2000}}
+                                className='w-[200px] md:w-[750px]'
+                                >
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-4')}>
+                                          <img src="img/lock-off/lock-off-4.jpg" alt="" />
                                       </div>
                                   </div>
-                                  <div className='w-1/2 px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('look-off')}>
-                                          <img src="img/look-off.png" alt="" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-3')}>
+                                          <img src="img/lock-off/lock-off-3.jpg" alt="" />
                                       </div>
                                   </div> 
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-5')}>
+                                          <img src="img/lock-off/lock-off-5.jpg" alt="" />
+                                      </div>
+                                  </div> 
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-6')}>
+                                          <img src="img/lock-off/lock-off-6.jpg" alt="" />
+                                      </div>
+                                  </div> 
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off')}>
+                                          <img src="img/lock-off/lock-off-1.jpg" alt="" />
+                                      </div>
+                                  </div> 
+                                </SwiperSlide>
+                                
+                              </Swiper>    
                               </div>
                           </div>
                       </div>
         </div>    
       </section>
 
-      <section data-animate-in="fadeIn" className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-24 xl:mt-42 2xl:mt-48 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
+      <section className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-24 xl:mt-42 2xl:mt-48 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
         <div className='flex mx-auto justify-center align-item'>
             <h2 className='secondary text-brown mx-auto text-5xl md:text-[110px] xl:text-[158px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center'>LOCK OFF A</h2>
         </div>
       </section>
       
-      <section id="look-off-a" data-animate-in="up" className='relative md:-mt-2 z-10 mb-6'>
+      <section id="lock-off-a" className='relative md:-mt-2 z-10 mb-6'>
         <div className={`w-full fade ${background3}`}>
                       <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
                         <div className='bg-black w-1/3 md:w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>
@@ -356,19 +448,54 @@ function Modelos() {
                         </div>
                       </div>
 
-                      <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10'>
-                          <div className='w-1/2'>
+                      <div className='flex cards-bg pb-4 md:pb-8 2xl:pb-10 z-50'>
+                          <div className='w-full'>
                               <div className='flex'>
-                                  <div className='w-1/2 px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('recamara')}>
-                                          <img src="img/recamara.png" alt="" />
+                                <Swiper
+                                modules={[Autoplay, Pagination, Navigation]}
+                                spaceBetween={0}
+                                slidesPerView={2}
+                                loop={true}
+                                autoplay={{ delay: 2000}}
+                                className='w-[200px] md:w-[750px]'
+                                >
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick3('lock-off-a-4')}>
+                                          <img src="img/lock-off-a/lock-off-a-4.jpg" alt="" />
                                       </div>
                                   </div>
-                                  <div className='w-1/2 px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('look-off')}>
-                                          <img src="img/look-off.png" alt="" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick3('lock-off-a-2')}>
+                                          <img src="img/lock-off-a/lock-off-a-2.jpg" alt="" />
                                       </div>
                                   </div> 
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick3('lock-off-a-5')}>
+                                          <img src="img/lock-off-a/lock-off-a-5.jpg" alt="" />
+                                      </div>
+                                  </div> 
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick3('lock-off-a-6')}>
+                                          <img src="img/lock-off-a/lock-off-a-6.jpg" alt="" />
+                                      </div>
+                                  </div> 
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick3('lock-off-a')}>
+                                          <img src="img/lock-off-a/lock-off-a-1.jpg" alt="" />
+                                      </div>
+                                  </div> 
+                                </SwiperSlide>
+                                
+                              </Swiper>    
                               </div>
                           </div>
                       </div>

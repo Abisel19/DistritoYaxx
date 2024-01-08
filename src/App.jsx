@@ -7,6 +7,7 @@ import Modelos from '@pages/Modelos'
 import Amenidades from '@pages/Amenidades'
 import Contacto from '@pages/Contacto'
 import Ubicacion from '@pages/Ubicacion'
+import Tour from '@pages/TourVirtual'
 import NotFound from '@pages/NotFound'
 
 import Footer from '@components/Footer';
@@ -23,6 +24,7 @@ function App() {
           <Route path="/modelos" element={<Modelos />} />
           <Route path="/amenidades" element={<Amenidades />} />
           <Route path="/ubicacion" element={<Ubicacion />} />
+          <Route path="/tour" element={<Tour />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       <Footer/>
