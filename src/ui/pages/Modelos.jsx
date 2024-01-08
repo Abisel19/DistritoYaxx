@@ -136,7 +136,7 @@ function Modelos() {
     <>
 
       <section className='pt-10 md:pt-20 pb-5 md:pb-5 mt-20 md:mt-24'>
-        <h2 className='secondary text-brown text-center mx-auto text-4xl md:text-7xl 2xl:text-[80px] 3xl:text-[90px] pb-4 md:pb-20 3xl:pb-40'>TIPOLOGÍAS</h2>
+        <h2 className='secondary text-brown text-center mx-auto text-4xl md:text-7xl 2xl:text-[80px] 3xl:text-[90px] pb-4 md:pb-20 3xl:pb-40'>MODELOS</h2>
 
         <div className='flex px-10 md:px-56 2xl:px-80'>
         <Swiper
