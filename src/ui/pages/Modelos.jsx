@@ -143,8 +143,20 @@ function Modelos() {
   return (
     <>
 
-      <section className='pt-10 md:pt-20 pb-5 md:pb-5 mt-20 md:mt-24'>
-        <h2 className='secondary text-brown text-center mx-auto text-4xl md:text-7xl 2xl:text-[80px] 3xl:text-[90px] pb-4 md:pb-20 3xl:pb-40'>TIPOLOGÍAS</h2>
+    <section className='hidden md:flex w-full mt-40 md:mt-60 3xl:mt-80 pb-0 md:pb-20 3xl:pb-28'>
+            <div className='w-full md:w-5/12 2xl:w-5/12 3xl:w-6/12 pl-0 md:pl-14 grid justify-center content-center'>
+              <h2 className='secondary text-brown text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>AMENIDADES</h2>
+            </div>
+            <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-0 md:-mt-6 xl:-mt-2 2xl:-mt-14 ml-0 md:ml-10 2xl:ml-14'>
+                <div className='GRID mt-0 md:mt-0 2xl:mt-12 3xl:mt-16 md:ml-4'>
+                    <p className='quaternary text-base text-justify md:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>En Distrito Yaax, contamos con 4 modelos de departamentos diseñados con todas las comodidades para una vida plena y armoniosa. Contamos con una gama de opciones que se adaptan a tus preferencias y crean el escenario ideal para tu vida.</p>
+                    <p className='quaternary mt-4 text-base text-justify md:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>Descubre la comodidad en su máxima expresión en cualquiera de nuestros 4 modelos de departamentos que han sido meticulosamente diseñados para abrazar las necesidades y gustos de aquellos que buscan la comodidad en su forma más exclusiva. </p>
+                </div>
+            </div>
+      </section>
+
+      <section className='pt-2 md:pt-5 pb-5 md:pb-5 mt-20 md:mt-24'>
+        <h2 className='secondary text-brown text-center mx-auto text-4xl md:text-7xl 2xl:text-[80px] 3xl:text-[90px] pb-4 md:pb-20 3xl:pb-40'>MODELOS</h2>
 
           <div className='flex px-0 md:px-56 2xl:px-96'>
           <Swiper
@@ -223,7 +235,7 @@ function Modelos() {
       
       </section>
 
-      <section className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-32 xl:mt-40 2xl:mt-48 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
+      <section className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-32 xl:mt-20 2xl:mt-48 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
         <div className='flex mx-auto justify-center align-item'>
             <h2 className='secondary text-brown mx-auto text-5xl md:text-[110px] xl:text-[158px] 2xl:text-[190px] md:tracking-widest absolute z-10 text-center'>ESTUDIO</h2>
         </div>
