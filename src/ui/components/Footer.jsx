@@ -61,7 +61,7 @@ function Footer() {
 
   return (
     <>
-      <section className='bg-gray-1 py-28 mt-0 md:mt-0'>
+      <section className='bg-gray-1 py-32 mt-0 md:mt-0'>
         <div className='container mx-auto md:flex'>
 
             <div className='w-full md:w-2/5 px-4 md:px-16'>

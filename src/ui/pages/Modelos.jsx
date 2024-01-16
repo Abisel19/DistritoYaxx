@@ -142,12 +142,11 @@ function Modelos() {
 
   return (
     <>
-
-    <section className='hidden md:flex w-full mt-40 md:mt-60 3xl:mt-80 pb-0 md:pb-20 3xl:pb-28'>
+    <section className='grid md:flex w-full mt-40 md:mt-60 3xl:mt-80 pb-0 md:pb-20 3xl:pb-28 px-5 md:px-0'>
             <div className='w-full md:w-5/12 2xl:w-5/12 3xl:w-6/12 pl-0 md:pl-14 grid justify-center content-center'>
-              <h2 className='secondary text-brown text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>AMENIDADES</h2>
+              <h2 className='secondary text-brown text-4xl md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>MODELOS</h2>
             </div>
-            <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-0 md:-mt-6 xl:-mt-2 2xl:-mt-14 ml-0 md:ml-10 2xl:ml-14'>
+            <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-5 md:-mt-6 xl:-mt-2 2xl:-mt-14 ml-0 md:ml-10 2xl:ml-14'>
                 <div className='GRID mt-0 md:mt-0 2xl:mt-12 3xl:mt-16 md:ml-4'>
                     <p className='quaternary text-base text-justify md:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>En Distrito Yaax, contamos con 4 modelos de departamentos diseñados con todas las comodidades para una vida plena y armoniosa. Contamos con una gama de opciones que se adaptan a tus preferencias y crean el escenario ideal para tu vida.</p>
                     <p className='quaternary mt-4 text-base text-justify md:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>Descubre la comodidad en su máxima expresión en cualquiera de nuestros 4 modelos de departamentos que han sido meticulosamente diseñados para abrazar las necesidades y gustos de aquellos que buscan la comodidad en su forma más exclusiva. </p>
@@ -155,84 +154,150 @@ function Modelos() {
             </div>
       </section>
 
-      <section className='pt-2 md:pt-5 pb-5 md:pb-5 mt-20 md:mt-24'>
-        <h2 className='secondary text-brown text-center mx-auto text-4xl md:text-7xl 2xl:text-[80px] 3xl:text-[90px] pb-4 md:pb-20 3xl:pb-40'>MODELOS</h2>
-
-          <div className='flex px-0 md:px-56 2xl:px-96'>
-          <Swiper
-          modules={[Autoplay, Navigation]}
-          loop={true}
-          spaceBetween={20}
-          slidesPerView={1}
-          navigation={true}                
-          >
-              <SwiperSlide>
-                  <div className='w-full'>
-                  <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
-                  <a href='#estudio'><motion.img
-                      className='mx-auto py-4 w-[200px] md:w-[320px] 3xl:w-[380px]'
-                      src="img/tipologia-room.png"
-                      alt="ESTUDIO"
-                      variants={imageVariants}
-                      initial="normal"
-                      whileHover="hover"
-                      whileTap="hover" 
-                      /></a>
-                      </div>
-                      <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Estudio - 47.80 m2</p>
+      <section className='pt-10 md:pt-0 pb-5 md:pb-5'>
+        <div className='flex px-0 md:px-56 2xl:px-96'>
+        <Swiper
+        modules={[Autoplay, Navigation]}
+        loop={true}
+        spaceBetween={20}
+        slidesPerView={1}
+        navigation={true}                
+        >
+            <SwiperSlide>
+                <div className='w-full'>
+                <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
+                <a href='#estudio'><motion.img
+                    className='mx-auto py-4 w-[200px] md:w-[320px] 3xl:w-[380px]'
+                    src="img/tipologia-room.png"
+                    alt="ESTUDIO"
+                    variants={imageVariants}
+                    initial="normal"
+                    whileHover="hover"
+                    whileTap="hover" 
+                    /></a>
                   </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                  <div className='w-full'>
-                  <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
-                  <a href='#habitacion'><motion.img
-                      className='mx-auto py-4 w-[310px] md:w-[550px] 3xl:w-[610px]'
-                      src="img/tipologia-recamara.png"
-                      alt="1 RECÁMARA"
-                      variants={imageVariants}
-                      initial="normal"
-                      whileHover="hover"
-                      whileTap="hover" 
-                      /></a>
+                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>ESTUDIO</p>
+                    <div className='flex mt-6 md:mt-10'>
+                      <div className='w-5/12'>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 39.95 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 7.85 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 47.80 m2</p>
                       </div>
-                      <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>1 Recámara - 65.55 m2</p>
-                  </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                      <div className='w-full'>
-                      <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
-                      <a href='#lock-off'><motion.img
-                      className='mx-auto py-4 w-[310px] md:w-[600px] 3xl:w-[660px]'
-                      src="img/tipologia-look.png"
-                      alt="LOCK OFF"
-                      variants={imageVariants}
-                      initial="normal"
-                      whileHover="hover"
-                      whileTap="hover" 
-                      /></a>
+                      <div className='w-2/12 flex justify-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
+                          <path id="Trazado_644" data-name="Trazado 644" d="M-7421,4973.607v103.481" transform="translate(7422.5 -4973.607)" fill="none" stroke="#000" stroke-width="3"/>
+                        </svg>
                       </div>
-                      <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Lock Off - 99.60 m2</p>
-                  </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                  <div className='w-full'>
-                      <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
-                      <a href='#lock-off-a'><motion.img
-                      className='mx-auto py-4 w-[310px] md:w-[660px] 3xl:w-[720px]'
-                      src="img/tipologia-look-a.png"
-                      alt="LOCK OFF A"
-                      variants={imageVariants}
-                      initial="normal"
-                      whileHover="hover"
-                      whileTap="hover" 
-                      /></a>
+                      <div className='w-5/12'>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 430.02 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 84.50 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 514.52 sqft</p>
                       </div>
-                      <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Lock Off A - 95.25 m2</p>
-                  </div>
-              </SwiperSlide>
-          </Swiper>
-          </div>
-      
+                    </div>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className='w-full'>
+                <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
+                <a href='#recamara'><motion.img
+                    className='mx-auto py-4 w-[310px] md:w-[550px] 3xl:w-[610px]'
+                    src="img/tipologia-recamara.png"
+                    alt="1 RECÁMARA"
+                    variants={imageVariants}
+                    initial="normal"
+                    whileHover="hover"
+                    whileTap="hover" 
+                    /></a>
+                    </div>
+                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>1 RECÁMARA</p>
+                    <div className='flex mt-6 md:mt-10'>
+                      <div className='w-5/12'>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 53.85 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 11.70 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 65.55 m2</p>
+                      </div>
+                      <div className='w-2/12 flex justify-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
+                          <path id="Trazado_644" data-name="Trazado 644" d="M-7421,4973.607v103.481" transform="translate(7422.5 -4973.607)" fill="none" stroke="#000" stroke-width="3"/>
+                        </svg>
+                      </div>
+                      <div className='w-5/12'>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>IINTERIOR: 579.64 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 125.94 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 705.57 sqft</p>
+                      </div>
+                    </div>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                    <div className='w-full'>
+                    <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
+                    <a href='#lock-off'><motion.img
+                    className='mx-auto py-4 w-[310px] md:w-[600px] 3xl:w-[660px]'
+                    src="img/tipologia-look.png"
+                    alt="LOCK OFF"
+                    variants={imageVariants}
+                    initial="normal"
+                    whileHover="hover"
+                    whileTap="hover" 
+                    /></a>
+                    </div>
+                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>LOCK OFF</p>
+                    <div className='flex mt-6 md:mt-10'>
+                      <div className='w-5/12'>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 85.30 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 14.30 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 99.60 m2</p>
+                      </div>
+                      <div className='w-2/12 flex justify-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
+                          <path id="Trazado_644" data-name="Trazado 644" d="M-7421,4973.607v103.481" transform="translate(7422.5 -4973.607)" fill="none" stroke="#000" stroke-width="3"/>
+                        </svg>
+                      </div>
+                      <div className='w-5/12'>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 918.16 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 153.92 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 1,072.08 sqft</p>
+                      </div>
+                    </div>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className='w-full'>
+                    <div className='mt-10 h-[320px] md:h-[600px] 3xl:h-[700px]'>
+                    <a href='#lock-off-a'><motion.img
+                    className='mx-auto py-4 w-[310px] md:w-[660px] 3xl:w-[720px]'
+                    src="img/tipologia-look-a.png"
+                    alt="LOCK OFF A"
+                    variants={imageVariants}
+                    initial="normal"
+                    whileHover="hover"
+                    whileTap="hover" 
+                    /></a>
+                    </div>
+                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>LOCK OFF A</p>
+                    <div className='flex mt-6 md:mt-10'>
+                      <div className='w-5/12'>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 78.25 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-2'>EXTERIOR: 17.00 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-2'>TOTAL: 95.25 m2</p>
+                      </div>
+                      <div className='w-2/12 flex justify-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
+                          <path id="Trazado_644" data-name="Trazado 644" d="M-7421,4973.607v103.481" transform="translate(7422.5 -4973.607)" fill="none" stroke="#000" stroke-width="3"/>
+                        </svg>
+                      </div>
+                      <div className='w-5/12'>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 842.28 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-2'>EXTERIOR: 182.99 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-2'>TOTAL: 1,025.27 sqft</p>
+                      </div>
+                    </div>
+                </div>
+            </SwiperSlide>
+        </Swiper>
+        </div>
+        
       </section>
 
       <section className='flex container mx-auto px-0 md:px-10 2xl:px-10 mt-5 md:mt-32 xl:mt-20 2xl:mt-48 pb-8 md:mb-12 xl:mb-20 2xl:mb-32'>
@@ -302,7 +367,7 @@ function Modelos() {
         </div>
       </section>
       
-      <section id="habitacion" className='relative md:-mt-2 z-10 mb-6'>
+      <section id="recamara" className='relative md:-mt-2 z-10 mb-6'>
         <div className={`w-full fade ${background1}`}>
                       <div className='flex justify-end w-[100%] h-[35%] md:h-[200px]'>
                         <div className='bg-black w-1/3 md:w-3/12 mt-12 md:mt-28 lg:mt-32 hover:scale-110 transition-transform py-2'>

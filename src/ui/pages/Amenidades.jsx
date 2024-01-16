@@ -140,19 +140,10 @@ function Amenidades() {
               <h2 className='secondary text-brown text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>AMENIDADES</h2>
             </div>
             <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-0 md:-mt-6 xl:-mt-2 2xl:-mt-14 ml-0 md:ml-10 2xl:ml-14'>
-                <div className='flex mt-0 md:mt-0 2xl:mt-12 3xl:mt-16 md:ml-4'>
+                <div className='grid mt-0 md:mt-0 2xl:mt-12 3xl:mt-16 md:ml-4'>
                     <p className='quaternary text-base text-justify md:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>Con 35 amenidades excepcionales, Distrito Yaax es un ecosistema cuidadosamente diseñado que ofrece una vida completa y apetecible. Hemos creado un entorno donde la sofisticación, la sostenibilidad y la innovación convergen para definir una experiencia residencial única.</p>
+                    <p className='quaternary text-base text-justify d:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug md:mt-8'>Cancha de pádel, área de bbq, juegos infantiles, fire pits, alberca familiar, alberca para niños, sun deck, área lounge, pista jogging, terraza wellness, salón de usos, gimnasio, centro de negocios, kids club, infinity pool, bar.</p>
                 </div>
-            </div>
-      </section>
-
-      <section className='hidden md:flex w-full mt-20 md:mt-20 3xl:mt-80 pb-0 md:pb-20 3xl:pb-28'>
-            <div className='w-full md:w-5/12 2xl:w-5/12 3xl:w-6/12 pl-0 md:pl-14 grid justify-center content-center'>
-                <h2 className='secondary text-brown text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE ITZ<a className='text-base md:text-[61px] xl:text-[68px] 2xl:text-[73px] 3xl:text-[106px]'>É</a></h2>
-                <h2 className='secondary text-brown mt-12 md:mt-10 xl:mt-12 2xl:mt-14 3xl:mt-20 text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE SAASIL</h2>
-            </div>
-            <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-0 md:-mt-4 xl:-mt-4 2xl:-mt-6 ml-0 md:ml-10 2xl:ml-14'>
-            <p className='quaternary text-base text-justify d:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>Cancha de pádel, área de bbq, juegos infantiles, fire pits, alberca familiar, alberca para niños, sun deck, área lounge, pista jogging, terraza wellness, salón de usos, gimnasio, centro de negocios, kids club, infinity pool, bar.</p>
             </div>
       </section>
 

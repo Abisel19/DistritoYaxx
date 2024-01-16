@@ -240,7 +240,7 @@ function Home() {
       </section>
       
       <section data-animate-in="fadeIn" className='pt-10 md:pt-20 pb-5 md:pb-5'>
-        <h2 className='secondary text-brown text-center mx-auto text-4xl md:text-7xl 2xl:text-[80px] 3xl:text-[90px] pb-4 md:pb-20 3xl:pb-40'>TIPOLOGÍAS</h2>
+        <h2 className='secondary text-brown text-center mx-auto text-4xl md:text-7xl 2xl:text-[80px] 3xl:text-[90px] pb-4 md:pb-20 3xl:pb-40'>MODELOS</h2>
 
         <div className='flex px-0 md:px-56 2xl:px-96'>
         <Swiper
@@ -262,8 +262,25 @@ function Home() {
                     whileHover="hover"
                     whileTap="hover" 
                     /></a>
+                  </div>
+                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>ESTUDIO</p>
+                    <div className='flex mt-6 md:mt-10'>
+                      <div className='w-5/12'>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 39.95 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 7.85 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 47.80 m2</p>
+                      </div>
+                      <div className='w-2/12 flex justify-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
+                          <path id="Trazado_644" data-name="Trazado 644" d="M-7421,4973.607v103.481" transform="translate(7422.5 -4973.607)" fill="none" stroke="#000" stroke-width="3"/>
+                        </svg>
+                      </div>
+                      <div className='w-5/12'>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 430.02 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 84.50 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 514.52 sqft</p>
+                      </div>
                     </div>
-                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Estudio - 47.80 m2</p>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -279,7 +296,24 @@ function Home() {
                     whileTap="hover" 
                     /></a>
                     </div>
-                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>1 Recámara - 65.55 m2</p>
+                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>1 RECÁMARA</p>
+                    <div className='flex mt-6 md:mt-10'>
+                      <div className='w-5/12'>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 53.85 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 11.70 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 65.55 m2</p>
+                      </div>
+                      <div className='w-2/12 flex justify-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
+                          <path id="Trazado_644" data-name="Trazado 644" d="M-7421,4973.607v103.481" transform="translate(7422.5 -4973.607)" fill="none" stroke="#000" stroke-width="3"/>
+                        </svg>
+                      </div>
+                      <div className='w-5/12'>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>IINTERIOR: 579.64 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 125.94 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 705.57 sqft</p>
+                      </div>
+                    </div>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -295,12 +329,29 @@ function Home() {
                     whileTap="hover" 
                     /></a>
                     </div>
-                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Lock Off - 99.60 m2</p>
+                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>LOCK OFF</p>
+                    <div className='flex mt-6 md:mt-10'>
+                      <div className='w-5/12'>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 85.30 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 14.30 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 99.60 m2</p>
+                      </div>
+                      <div className='w-2/12 flex justify-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
+                          <path id="Trazado_644" data-name="Trazado 644" d="M-7421,4973.607v103.481" transform="translate(7422.5 -4973.607)" fill="none" stroke="#000" stroke-width="3"/>
+                        </svg>
+                      </div>
+                      <div className='w-5/12'>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 918.16 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 153.92 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 1,072.08 sqft</p>
+                      </div>
+                    </div>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className='w-full'>
-                    <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
+                    <div className='mt-10 h-[320px] md:h-[600px] 3xl:h-[700px]'>
                     <a href='#lock-off-a'><motion.img
                     className='mx-auto py-4 w-[310px] md:w-[660px] 3xl:w-[720px]'
                     src="img/tipologia-look-a.png"
@@ -311,7 +362,24 @@ function Home() {
                     whileTap="hover" 
                     /></a>
                     </div>
-                    <p className='primary text-lg text-center 2xl:text-xl 3xl:text-2xl'>Lock Off A - 95.25 m2</p>
+                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>LOCK OFF A</p>
+                    <div className='flex mt-6 md:mt-10'>
+                      <div className='w-5/12'>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 78.25 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-2'>EXTERIOR: 17.00 m2</p>
+                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-2'>TOTAL: 95.25 m2</p>
+                      </div>
+                      <div className='w-2/12 flex justify-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
+                          <path id="Trazado_644" data-name="Trazado 644" d="M-7421,4973.607v103.481" transform="translate(7422.5 -4973.607)" fill="none" stroke="#000" stroke-width="3"/>
+                        </svg>
+                      </div>
+                      <div className='w-5/12'>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 842.28 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-2'>EXTERIOR: 182.99 sqft</p>
+                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-2'>TOTAL: 1,025.27 sqft</p>
+                      </div>
+                    </div>
                 </div>
             </SwiperSlide>
         </Swiper>
@@ -331,6 +399,7 @@ function Home() {
         spaceBetween={0}
         slidesPerView={1}
         loop={true}
+        autoplay={{ delay: 5000}}
         >
         <SwiperSlide  id="estudio">
             <div className={`w-full fade ${background}`}>
@@ -587,25 +656,16 @@ function Home() {
       </section>
 
       <section data-animate-in="up" className='hidden md:flex w-full mx-auto pt-0 md:pt-20 pb-0 md:pb-2 my-0 md:my-10 2xl:my-14'>
-        <div className='w-full md:w-5/12 2xl:w-5/12 3xl:w-6/12 pl-0 md:pl-14 grid justify-center content-center'>
-                <h2 className='septimary text-brown text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE ITZ<a className='text-base md:text-[61px] xl:text-[68px] 2xl:text-[73px] 3xl:text-[106px]'>É</a></h2>
-                <h2 className='septimary text-brown mt-12 md:mt-10 xl:mt-12 2xl:mt-14 3xl:mt-20 text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE SAASIL</h2>
+        <div className='hidden md:flex w-full mt-20 md:mt-20 3xl:mt-80 pb-0 md:pb-20 3xl:pb-28'>
+              <div className='w-full md:w-5/12 2xl:w-5/12 3xl:w-6/12 pl-0 md:pl-14 grid justify-center content-center'>
+                  <h2 className='secondary text-brown text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE ITZ<a className='text-base md:text-[61px] xl:text-[68px] 2xl:text-[73px] 3xl:text-[106px]'>É</a></h2>
+                  <h2 className='secondary text-brown mt-12 md:mt-10 xl:mt-12 2xl:mt-14 3xl:mt-20 text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE SAASIL</h2>
+              </div>
+              <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-0 md:-mt-4 xl:-mt-4 2xl:-mt-6 ml-0 md:ml-10 2xl:ml-14'>
+              <h3 className='secondary text-brown text-base md:text-[38px] xl:text-[45px] 2xl:text-[50px] 3xl:text-[60px]'>AMENIDADES</h3>
+              <p className='quaternary text-base text-justify mt-4 md:mt-6 md:text-[20px] xl:text-[22px] 2xl:text-[28px] 3xl:text-[34px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>Cancha de pádel, área de BBQ, juegos infantiles, fire pits, alberca familiar, alberca para niños, sun deck, área lounge, pista jogging, terraza wellness, salón de usos, gimnasio, centro de negocios, kids club, infinity pool, bar.</p>
+              </div>
         </div>
-            <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-0 md:-mt-6 xl:-mt-2 2xl:-mt-14 ml-0 md:ml-10 2xl:ml-14'>
-                <h3 className='septimary text-brown text-base md:text-[34px] 2xl:text-[45px] 3xl:text-[80px] 2xl:ml-4 md:mt-1 xl:mt-0 2xl:mt-0'>AMENIDADES</h3>
-                <div className='flex mt-0 md:mt-6 2xl:mt-12 3xl:mt-16'>
-                    <p className='quaternary text-base text-justify md:text-[15px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] pr-3 2xl:px-5 3xl:pr-6'>- CANCHA DE PADEL ㅤㅤ - ÁREA DE BBQ ㅤㅤ - JUEGOS INFANTILES ㅤㅤ - FIRE PITS<br/></p>
-                </div>
-                <div className='flex mt-0 md:mt-2 xl:mt-4 3xl:mt-6'>
-                    <p className='quaternary text-base text-justify md:text-[15px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] pr-3 2xl:px-5 3xl:pr-6'>- ALBERCA FAMILIAR ㅤ - ALBERCA PARA NIÑOS ㅤ - SUN DECK ㅤㅤ - ÁREA LOUNGE</p>
-                </div>
-                <div className='flex mt-0 md:mt-2 xl:mt-4 3xl:mt-6'>
-                    <p className='quaternary text-base text-justify md:text-[15px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] pr-3 2xl:px-5 3xl:pr-6'>- PISTA JOGGING ㅤㅤ - TERRAZA WELLNESS ㅤㅤ - SALÓN DE USOS ㅤㅤ - GIMNASIO</p>
-                </div>
-                <div className='flex md:mt-2 xl:mt-4 3xl:mt-6'>
-                    <p className='quaternary text-base text-justify md:text-[15px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] pr-3 2xl:px-5 3xl:pr-6'>- CENTRO DE NEGOCIOS ㅤㅤㅤㅤ - KIDS CLUB ㅤㅤㅤㅤ - INFINITY POOL ㅤㅤㅤ - BAR</p>
-                </div>
-            </div>
       </section>
 
       <section data-animate-in="fadeIn" className='container md:hidden'>
