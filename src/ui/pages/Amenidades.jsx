@@ -137,22 +137,12 @@ function Amenidades() {
     <>
       <section className='hidden md:flex w-full mt-40 md:mt-60 3xl:mt-80 pb-0 md:pb-20 3xl:pb-28'>
             <div className='w-full md:w-5/12 2xl:w-5/12 3xl:w-6/12 pl-0 md:pl-14 grid justify-center content-center'>
-                    <h2 className='septimary text-brown text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE ITZ<a className='text-base md:text-[61px] xl:text-[68px] 2xl:text-[73px] 3xl:text-[106px]'>É</a></h2>
-                    <h2 className='septimary text-brown mt-12 md:mt-10 xl:mt-12 2xl:mt-14 3xl:mt-20 text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE SAASIL</h2>
+              <h2 className='secondary text-brown text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>AMENIDADES</h2>
             </div>
             <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-0 md:-mt-6 xl:-mt-2 2xl:-mt-14 ml-0 md:ml-10 2xl:ml-14'>
-                <h3 className='septimary text-brown text-base md:text-[34px] 2xl:text-[45px] 3xl:text-[80px] 2xl:ml-4 md:mt-1 xl:mt-0 2xl:mt-0'>AMENIDADES</h3>
-                <div className='flex mt-0 md:mt-6 2xl:mt-12 3xl:mt-16'>
-                    <p className='quaternary text-base text-justify md:text-[15px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] pr-3 2xl:px-5 3xl:pr-6'>- CANCHA DE PADEL ㅤㅤ - ÁREA DE BBQ ㅤㅤ - JUEGOS INFANTILES ㅤㅤ - FIRE PITS<br/></p>
-                </div>
-                <div className='flex mt-0 md:mt-2 xl:mt-4 3xl:mt-6'>
-                    <p className='quaternary text-base text-justify md:text-[15px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] pr-3 2xl:px-5 3xl:pr-6'>- ALBERCA FAMILIAR ㅤ - ALBERCA PARA NIÑOS ㅤ - SUN DECK ㅤㅤ - ÁREA LOUNGE</p>
-                </div>
-                <div className='flex mt-0 md:mt-2 xl:mt-4 3xl:mt-6'>
-                    <p className='quaternary text-base text-justify md:text-[15px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] pr-3 2xl:px-5 3xl:pr-6'>- PISTA JOGGING ㅤㅤ - TERRAZA WELLNESS ㅤㅤ - SALÓN DE USOS ㅤㅤ - GIMNASIO</p>
-                </div>
-                <div className='flex md:mt-2 xl:mt-4 3xl:mt-6'>
-                    <p className='quaternary text-base text-justify md:text-[15px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] pr-3 2xl:px-5 3xl:pr-6'>- CENTRO DE NEGOCIOS ㅤㅤㅤㅤ - KIDS CLUB ㅤㅤㅤㅤ - INFINITY POOL ㅤㅤㅤ - BAR</p>
+                <div className='grid mt-0 md:mt-0 2xl:mt-12 3xl:mt-16 md:ml-4'>
+                    <p className='quaternary text-base text-justify md:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>Con 35 amenidades excepcionales, Distrito Yaax es un ecosistema cuidadosamente diseñado que ofrece una vida completa y apetecible. Hemos creado un entorno donde la sofisticación, la sostenibilidad y la innovación convergen para definir una experiencia residencial única.</p>
+                    <p className='quaternary text-base text-justify d:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug md:mt-8'>Cancha de pádel, área de bbq, juegos infantiles, fire pits, alberca familiar, alberca para niños, sun deck, área lounge, pista jogging, terraza wellness, salón de usos, gimnasio, centro de negocios, kids club, infinity pool, bar.</p>
                 </div>
             </div>
       </section>
