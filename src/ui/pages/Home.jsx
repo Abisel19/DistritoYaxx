@@ -263,24 +263,7 @@ function Home() {
                     whileTap="hover" 
                     /></a>
                   </div>
-                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>ESTUDIO</p>
-                    <div className='flex mt-6 md:mt-10'>
-                      <div className='w-5/12'>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 39.95 m2</p>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 7.85 m2</p>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 47.80 m2</p>
-                      </div>
-                      <div className='w-2/12 flex justify-center'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
-                          <path id="Trazado_644" data-name="Trazado 644" d="M-7421,4973.607v103.481" transform="translate(7422.5 -4973.607)" fill="none" stroke="#000" stroke-width="3"/>
-                        </svg>
-                      </div>
-                      <div className='w-5/12'>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 430.02 sqft</p>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 84.50 sqft</p>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 514.52 sqft</p>
-                      </div>
-                    </div>
+                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>ESTUDIO - 47.80 m2</p>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -296,24 +279,7 @@ function Home() {
                     whileTap="hover" 
                     /></a>
                     </div>
-                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>1 RECÁMARA</p>
-                    <div className='flex mt-6 md:mt-10'>
-                      <div className='w-5/12'>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 53.85 m2</p>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 11.70 m2</p>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 65.55 m2</p>
-                      </div>
-                      <div className='w-2/12 flex justify-center'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
-                          <path id="Trazado_644" data-name="Trazado 644" d="M-7421,4973.607v103.481" transform="translate(7422.5 -4973.607)" fill="none" stroke="#000" stroke-width="3"/>
-                        </svg>
-                      </div>
-                      <div className='w-5/12'>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>IINTERIOR: 579.64 sqft</p>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 125.94 sqft</p>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 705.57 sqft</p>
-                      </div>
-                    </div>
+                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>1 RECÁMARA -  65.55 m2</p>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -329,24 +295,7 @@ function Home() {
                     whileTap="hover" 
                     /></a>
                     </div>
-                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>LOCK OFF</p>
-                    <div className='flex mt-6 md:mt-10'>
-                      <div className='w-5/12'>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 85.30 m2</p>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 14.30 m2</p>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 99.60 m2</p>
-                      </div>
-                      <div className='w-2/12 flex justify-center'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
-                          <path id="Trazado_644" data-name="Trazado 644" d="M-7421,4973.607v103.481" transform="translate(7422.5 -4973.607)" fill="none" stroke="#000" stroke-width="3"/>
-                        </svg>
-                      </div>
-                      <div className='w-5/12'>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 918.16 sqft</p>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 153.92 sqft</p>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 1,072.08 sqft</p>
-                      </div>
-                    </div>
+                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>LOCK OFF - 99.60 m2</p>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -362,24 +311,7 @@ function Home() {
                     whileTap="hover" 
                     /></a>
                     </div>
-                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>LOCK OFF A</p>
-                    <div className='flex mt-6 md:mt-10'>
-                      <div className='w-5/12'>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 78.25 m2</p>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-2'>EXTERIOR: 17.00 m2</p>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-2'>TOTAL: 95.25 m2</p>
-                      </div>
-                      <div className='w-2/12 flex justify-center'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
-                          <path id="Trazado_644" data-name="Trazado 644" d="M-7421,4973.607v103.481" transform="translate(7422.5 -4973.607)" fill="none" stroke="#000" stroke-width="3"/>
-                        </svg>
-                      </div>
-                      <div className='w-5/12'>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 842.28 sqft</p>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-2'>EXTERIOR: 182.99 sqft</p>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-2'>TOTAL: 1,025.27 sqft</p>
-                      </div>
-                    </div>
+                    <p className='primary text-lg text-center 2xl:text-2xl 3xl:text-3xl'>LOCK OFF A - 95.25 m2</p>
                 </div>
             </SwiperSlide>
         </Swiper>
@@ -663,7 +595,7 @@ function Home() {
               </div>
               <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-0 md:-mt-4 xl:-mt-4 2xl:-mt-6 ml-0 md:ml-10 2xl:ml-14'>
               <h3 className='secondary text-brown text-base md:text-[38px] xl:text-[45px] 2xl:text-[50px] 3xl:text-[60px]'>AMENIDADES</h3>
-              <p className='quaternary text-base text-justify mt-4 md:mt-6 md:text-[20px] xl:text-[22px] 2xl:text-[28px] 3xl:text-[34px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>Cancha de pádel, área de BBQ, juegos infantiles, fire pits, alberca familiar, alberca para niños, sun deck, área lounge, pista jogging, terraza wellness, salón de usos, gimnasio, centro de negocios, kids club, infinity pool, bar.</p>
+              <p className='quaternary text-base text-justify mt-4 md:mt-6 md:text-[20px] xl:text-[22px] 2xl:text-[28px] 3xl:text-[34px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>Cancha de pádel, área de bbq, juegos infantiles, fire pits, alberca familiar, alberca para niños, sun deck, área lounge, pista jogging, terraza wellness, salón de usos múltiples, gimnasio, coworking, kids club, infinity pool, bar.</p>
               </div>
         </div>
       </section>
@@ -692,9 +624,9 @@ function Home() {
                 <p className='quaternary text-center text-brown text-[11px] px-2'>TERRAZA WELLNESS</p>
             </div>
             <div className='flex justify-center mx-auto px-2 m-2'>
-                <p className='quaternary text-center text-brown text-[11px] pr-1'>SALÓN DE USOS</p>
+                <p className='quaternary text-center text-brown text-[11px] pr-1'>SALÓN DE USOS MÙLTIPLES</p>
                 <p className='quaternary text-center text-brown text-[11px] px-2'>PISTA JOGGING </p>
-                <p className='quaternary text-center text-brown text-[11px] px-2'>CENTRO DE NEGOCIOS</p>
+                <p className='quaternary text-center text-brown text-[11px] px-2'>COWORKING</p>
             </div>
             <div className='flex justify-center mx-auto px-2 m-2'>
                 <p className='quaternary text-center text-brown text-[11px] pr-1'>KIDS CLUB</p>

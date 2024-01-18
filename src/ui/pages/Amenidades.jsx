@@ -142,7 +142,7 @@ function Amenidades() {
             <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-0 md:-mt-6 xl:-mt-2 2xl:-mt-14 ml-0 md:ml-10 2xl:ml-14'>
                 <div className='grid mt-0 md:mt-0 2xl:mt-12 3xl:mt-16 md:ml-4'>
                     <p className='quaternary text-base text-justify md:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>Con 35 amenidades excepcionales, Distrito Yaax es un ecosistema cuidadosamente diseñado que ofrece una vida completa y apetecible. Hemos creado un entorno donde la sofisticación, la sostenibilidad y la innovación convergen para definir una experiencia residencial única.</p>
-                    <p className='quaternary text-base text-justify d:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug md:mt-8'>Cancha de pádel, área de bbq, juegos infantiles, fire pits, alberca familiar, alberca para niños, sun deck, área lounge, pista jogging, terraza wellness, salón de usos, gimnasio, centro de negocios, kids club, infinity pool, bar.</p>
+                    <p className='quaternary text-base text-justify d:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug md:mt-8'>Cancha de pádel, área de bbq, juegos infantiles, fire pits, alberca familiar, alberca para niños, sun deck, área lounge, pista jogging, terraza wellness, salón de usos múltiples, gimnasio, coworking, kids club, infinity pool, bar.</p>
                 </div>
             </div>
       </section>
@@ -171,9 +171,9 @@ function Amenidades() {
                 <p className='quaternary text-center text-brown text-[11px] px-2'>TERRAZA WELLNESS</p>
             </div>
             <div className='flex justify-center mx-auto px-2 m-2'>
-                <p className='quaternary text-center text-brown text-[11px] pr-1'>SALÓN DE USOS</p>
+                <p className='quaternary text-center text-brown text-[11px] pr-1'>SALÓN DE USOS MÙLTIPLES</p>
                 <p className='quaternary text-center text-brown text-[11px] px-2'>PISTA JOGGING </p>
-                <p className='quaternary text-center text-brown text-[11px] px-2'>CENTRO DE NEGOCIOS</p>
+                <p className='quaternary text-center text-brown text-[11px] px-2'>COWORKING</p>
             </div>
             <div className='flex justify-center mx-auto px-2 m-2'>
                 <p className='quaternary text-center text-brown text-[11px] pr-1'>KIDS CLUB</p>

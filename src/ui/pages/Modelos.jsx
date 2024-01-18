@@ -148,8 +148,8 @@ function Modelos() {
             </div>
             <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-5 md:-mt-6 xl:-mt-2 2xl:-mt-14 ml-0 md:ml-10 2xl:ml-14'>
                 <div className='GRID mt-0 md:mt-0 2xl:mt-12 3xl:mt-16 md:ml-4'>
-                    <p className='quaternary text-base text-justify md:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>En Distrito Yaax, contamos con 4 modelos de departamentos diseñados con todas las comodidades para una vida plena y armoniosa. Contamos con una gama de opciones que se adaptan a tus preferencias y crean el escenario ideal para tu vida.</p>
-                    <p className='quaternary mt-4 text-base text-justify md:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>Descubre la comodidad en su máxima expresión en cualquiera de nuestros 4 modelos de departamentos que han sido meticulosamente diseñados para abrazar las necesidades y gustos de aquellos que buscan la comodidad en su forma más exclusiva. </p>
+                    <p className='quaternary text-base text-justify md:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>En Distrito Yaax, contamos con 4 modelos de departamentos diseñados con todas las comodidades para una vida plena y armoniosa. Nuestra gama de opciones se adaptan a tus preferencias y crean el escenario ideal para tu vida.</p>
+                    <p className='quaternary mt-4 text-base text-justify md:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>Descubre la comodidad en su máxima expresión en cualquiera de nuestros departamentos que han sido meticulosamente concebidos para abrazar las necesidades y gustos de aquellos que buscan la comodidad en su forma más exclusiva.</p>
                 </div>
             </div>
       </section>
@@ -181,7 +181,7 @@ function Modelos() {
                       <div className='w-5/12'>
                       <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 39.95 m2</p>
                       <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 7.85 m2</p>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 47.80 m2</p>
+                      <p className='sextary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 47.80 m2</p>
                       </div>
                       <div className='w-2/12 flex justify-center'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
@@ -191,7 +191,7 @@ function Modelos() {
                       <div className='w-5/12'>
                       <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 430.02 sqft</p>
                       <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 84.50 sqft</p>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 514.52 sqft</p>
+                      <p className='sextary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 514.52 sqft</p>
                       </div>
                     </div>
                 </div>
@@ -214,7 +214,7 @@ function Modelos() {
                       <div className='w-5/12'>
                       <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 53.85 m2</p>
                       <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 11.70 m2</p>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 65.55 m2</p>
+                      <p className='sextary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 65.55 m2</p>
                       </div>
                       <div className='w-2/12 flex justify-center'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
@@ -224,7 +224,7 @@ function Modelos() {
                       <div className='w-5/12'>
                       <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>IINTERIOR: 579.64 sqft</p>
                       <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 125.94 sqft</p>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 705.57 sqft</p>
+                      <p className='sextary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 705.57 sqft</p>
                       </div>
                     </div>
                 </div>
@@ -247,7 +247,7 @@ function Modelos() {
                       <div className='w-5/12'>
                       <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 85.30 m2</p>
                       <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 14.30 m2</p>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 99.60 m2</p>
+                      <p className='sextary text-right text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 99.60 m2</p>
                       </div>
                       <div className='w-2/12 flex justify-center'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
@@ -257,7 +257,7 @@ function Modelos() {
                       <div className='w-5/12'>
                       <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 918.16 sqft</p>
                       <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 153.92 sqft</p>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 1,072.08 sqft</p>
+                      <p className='sextary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 1,072.08 sqft</p>
                       </div>
                     </div>
                 </div>
@@ -280,7 +280,7 @@ function Modelos() {
                       <div className='w-5/12'>
                       <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 78.25 m2</p>
                       <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-2'>EXTERIOR: 17.00 m2</p>
-                      <p className='primary text-right text-base 2xl:text-xl 3xl:text-2xl mt-2'>TOTAL: 95.25 m2</p>
+                      <p className='sextary text-right text-base 2xl:text-xl 3xl:text-2xl mt-2'>TOTAL: 95.25 m2</p>
                       </div>
                       <div className='w-2/12 flex justify-center'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
@@ -290,7 +290,7 @@ function Modelos() {
                       <div className='w-5/12'>
                       <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>INTERIOR: 842.28 sqft</p>
                       <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-2'>EXTERIOR: 182.99 sqft</p>
-                      <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-2'>TOTAL: 1,025.27 sqft</p>
+                      <p className='sextary text-left text-base 2xl:text-xl 3xl:text-2xl mt-2'>TOTAL: 1,025.27 sqft</p>
                       </div>
                     </div>
                 </div>
