@@ -108,7 +108,7 @@ function Header() {
                 <li className='pr-20 pl-12 transition-transform transform hover:scale-110'>
                   <a href='/' className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
                     <img
-                      src='img/logo-header.png'  
+                      src='/img/logo-header.png'  
                       alt='Logo'
                       className='w-48'
                     />

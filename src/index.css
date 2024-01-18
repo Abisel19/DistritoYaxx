@@ -119,6 +119,20 @@
   background-repeat: no-repeat;
 }
 
+.cuadro{
+  background-image: url(/img/cuadro-texto.png);
+  width: 480px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.cuadro2{
+  background-image: url(/img/cuadro-2.png);
+  width: 180px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 .bg-location{
   background-image: url(/img/ubicacion.png);
   background-size: 100%;

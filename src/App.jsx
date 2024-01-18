@@ -8,6 +8,7 @@ import Amenidades from '@pages/Amenidades'
 import Contacto from '@pages/Contacto'
 import Ubicacion from '@pages/Ubicacion'
 import Tour from '@pages/TourVirtual'
+import Nivel from '@pages/Nivel'
 import NotFound from '@pages/NotFound'
 
 import Footer from '@components/Footer';
@@ -25,6 +26,7 @@ function App() {
           <Route path="/amenidades" element={<Amenidades />} />
           <Route path="/ubicacion" element={<Ubicacion />} />
           <Route path="/tour" element={<Tour />} />
+          <Route path="/nivel/:nivelUrl/:departamentoUrl" element={<Nivel />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       <Footer/>
