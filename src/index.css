@@ -134,7 +134,7 @@
 }
 
 .bg-location{
-  background-image: url(/img/ubicacion.png);
+  background-image: url(/img/ubicacion.jpg);
   background-size: 100%;
   width: auto;
   background-repeat: no-repeat;
@@ -504,7 +504,7 @@
     background-repeat: no-repeat;
   }
   .bg-location{
-    background-image: url(/img/ubicacion.png);
+    background-image: url(/img/ubicacion.jpg);
     width: 100%;
     height: 215px;
     background-repeat: no-repeat;
