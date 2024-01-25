@@ -149,13 +149,13 @@ function Modelos() {
             <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-5 md:-mt-6 xl:-mt-2 2xl:-mt-14 ml-0 md:ml-10 2xl:ml-14'>
                 <div className='GRID mt-0 md:mt-0 2xl:mt-12 3xl:mt-16 md:ml-4'>
                     <p className='quaternary text-base text-justify md:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>En Distrito Yaax, contamos con 4 modelos de departamentos diseñados con todas las comodidades para una vida plena y armoniosa. Nuestra gama de opciones se adaptan a tus preferencias y crean el escenario ideal para tu vida.</p>
-                    <p className='quaternary mt-4 text-base text-justify md:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>Descubre la comodidad en su máxima expresión en cualquiera de nuestros departamentos que han sido meticulosamente concebidos para abrazar las necesidades y gustos de aquellos que buscan la comodidad en su forma más exclusiva.</p>
+                    <p className='quaternary mt-4 text-base text-justify md:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[24px] pr-3 md:pr-36 2xl:pr-40 3xl:pr-44 md:leading-snug'>Descubre la comodidad en su máxima expresión en cualquiera de nuestras unidades que han sido meticulosamente concebidas para abrazar las necesidades y gustos de aquellos que buscan el comfort en su forma más exclusiva.</p>
                 </div>
             </div>
       </section>
 
       <section className='pt-10 md:pt-0 pb-5 md:pb-5'>
-        <div className='flex px-0 md:px-56 2xl:px-96'>
+        <div className='flex px-0 md:px-56 2xl:72 3xl:px-96'>
         <Swiper
         modules={[Autoplay, Navigation]}
         loop={true}
@@ -165,9 +165,9 @@ function Modelos() {
         >
             <SwiperSlide>
                 <div className='w-full'>
-                <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
+                <div className='h-[380px] md:h-[750px] 3xl:h-[780px]'>
                 <a href='#estudio'><motion.img
-                    className='mx-auto py-4 w-[200px] md:w-[320px] 3xl:w-[380px]'
+                    className='mx-auto py-4 w-[200px] md:w-[420px] 3xl:w-[450px]'
                     src="img/tipologia-room.png"
                     alt="ESTUDIO"
                     variants={imageVariants}
@@ -198,9 +198,9 @@ function Modelos() {
             </SwiperSlide>
             <SwiperSlide>
                 <div className='w-full'>
-                <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
+                <div className='h-[380px] md:h-[720px] 3xl:h-[750px]'>
                 <a href='#recamara'><motion.img
-                    className='mx-auto py-4 w-[310px] md:w-[550px] 3xl:w-[610px]'
+                    className='mx-auto py-4 w-[310px] md:w-[640px] 3xl:w-[670px]'
                     src="img/tipologia-recamara.png"
                     alt="1 RECÁMARA"
                     variants={imageVariants}
@@ -224,16 +224,16 @@ function Modelos() {
                       <div className='w-5/12'>
                       <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl'>IINTERIOR: 579.64 sqft</p>
                       <p className='primary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>EXTERIOR: 125.94 sqft</p>
-                      <p className='sextary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 705.57 sqft</p>
+                      <p className='sextary text-left text-base 2xl:text-xl 3xl:text-2xl mt-3 md:mt-2'>TOTAL: 705.58 sqft</p>
                       </div>
                     </div>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                     <div className='w-full'>
-                    <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
+                    <div className='h-[380px] md:h-[710px] 3xl:h-[740px]'>
                     <a href='#lock-off'><motion.img
-                    className='mx-auto py-4 w-[310px] md:w-[600px] 3xl:w-[660px]'
+                    className='mx-auto py-4 w-[310px] md:w-[680px] 3xl:w-[710px]'
                     src="img/tipologia-look.png"
                     alt="LOCK OFF"
                     variants={imageVariants}
@@ -264,9 +264,9 @@ function Modelos() {
             </SwiperSlide>
             <SwiperSlide>
                 <div className='w-full'>
-                    <div className='mt-10 h-[320px] md:h-[600px] 3xl:h-[700px]'>
+                    <div className='mt-10 h-[320px] md:h-[620px] 3xl:h-[650px]'>
                     <a href='#lock-off-a'><motion.img
-                    className='mx-auto py-4 w-[310px] md:w-[660px] 3xl:w-[720px]'
+                    className='mx-auto py-4 w-[310px] md:w-[720px] 3xl:w-[750px]'
                     src="img/tipologia-look-a.png"
                     alt="LOCK OFF A"
                     variants={imageVariants}

@@ -123,6 +123,7 @@
   background-image: url(/img/ubicacion.jpg);
   background-size: 100%;
   width: auto;
+  height: 150vh;
   background-repeat: no-repeat;
 }
 
@@ -492,7 +493,7 @@
   .bg-location{
     background-image: url(/img/ubicacion.jpg);
     width: 100%;
-    height: 215px;
+    height: 235px;
     background-repeat: no-repeat;
   }
   .bg-render-1{
@@ -730,6 +731,14 @@
   opacity: 1;
   transition: none;
   transform: none
+}
+
+.letter-comma::after {
+  content: '´';
+  position: absolute;
+  margin-top: -12px;
+  margin-left: -0.4em;
+  font-size: 1.4em; 
 }
 
 /* START BOTON DE WHATSAPP */
