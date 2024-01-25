@@ -152,7 +152,7 @@ function Home() {
             <div className='w-full md:w-1/3 xl:w-1/3 3xl:w-5/12'>
                 <div className="flex justify-center md:justify-start">
                     <div className="text-brown text-4xl md:text-5xl xl:text-[55px] 3xl:text-[80px] tracking-wider mt-0 md:-mt-2 ml-0 md:-ml-10">
-                        <h1 className='secondary tracking-normal md:tracking-wide xl:leading-[68px] 3xl:xl:leading-[88px]'><a className='primary'>¿</a>QUI<span className="">É</span>NES<br/><a className='pl-4'>SOMOS</a><a className='primary'>?</a></h1>
+                        <h1 className='secondary tracking-normal md:tracking-wide xl:leading-[68px] 3xl:xl:leading-[88px]'><a className='primary'>¿</a>QUI<span className="letter-comma">E</span>NES<br/><a className='pl-4'>SOMOS</a><a className='primary'>?</a></h1>
                     </div>
                 </div>
             </div>
@@ -242,7 +242,7 @@ function Home() {
       <section data-animate-in="fadeIn" className='pt-10 md:pt-20 pb-5 md:pb-5'>
         <h2 className='secondary text-brown text-center mx-auto text-4xl md:text-7xl 2xl:text-[80px] 3xl:text-[90px] pb-4 md:pb-20 3xl:pb-40'>MODELOS</h2>
 
-        <div className='flex px-0 md:px-56 2xl:px-96'>
+        <div className='flex px-0 md:px-56 2xl:72 3xl:px-96'>
         <Swiper
         modules={[Autoplay, Navigation]}
         loop={true}
@@ -252,9 +252,9 @@ function Home() {
         >
             <SwiperSlide>
                 <div className='w-full'>
-                <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
+                <div className='h-[380px] md:h-[750px] 3xl:h-[780px]'>
                 <a href='#estudio'><motion.img
-                    className='mx-auto py-4 w-[200px] md:w-[320px] 3xl:w-[380px]'
+                    className='mx-auto py-4 w-[200px] md:w-[420px] 3xl:w-[450px]'
                     src="img/tipologia-room.png"
                     alt="ESTUDIO"
                     variants={imageVariants}
@@ -268,9 +268,9 @@ function Home() {
             </SwiperSlide>
             <SwiperSlide>
                 <div className='w-full'>
-                <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
+                <div className='h-[380px] md:h-[720px] 3xl:h-[750px]'>
                 <a href='#recamara'><motion.img
-                    className='mx-auto py-4 w-[310px] md:w-[550px] 3xl:w-[610px]'
+                    className='mx-auto py-4 w-[310px] md:w-[640px] 3xl:w-[670px]'
                     src="img/tipologia-recamara.png"
                     alt="1 RECÁMARA"
                     variants={imageVariants}
@@ -284,9 +284,9 @@ function Home() {
             </SwiperSlide>
             <SwiperSlide>
                     <div className='w-full'>
-                    <div className='h-[380px] md:h-[600px] 3xl:h-[700px]'>
+                    <div className='h-[380px] md:h-[710px] 3xl:h-[740px]'>
                     <a href='#lock-off'><motion.img
-                    className='mx-auto py-4 w-[310px] md:w-[600px] 3xl:w-[660px]'
+                    className='mx-auto py-4 w-[310px] md:w-[680px] 3xl:w-[710px]'
                     src="img/tipologia-look.png"
                     alt="LOCK OFF"
                     variants={imageVariants}
@@ -300,9 +300,9 @@ function Home() {
             </SwiperSlide>
             <SwiperSlide>
                 <div className='w-full'>
-                    <div className='mt-10 h-[320px] md:h-[600px] 3xl:h-[700px]'>
+                    <div className='mt-10 h-[320px] md:h-[620px] 3xl:h-[650px]'>
                     <a href='#lock-off-a'><motion.img
-                    className='mx-auto py-4 w-[310px] md:w-[660px] 3xl:w-[720px]'
+                    className='mx-auto py-4 w-[310px] md:w-[720px] 3xl:w-[750px]'
                     src="img/tipologia-look-a.png"
                     alt="LOCK OFF A"
                     variants={imageVariants}
@@ -590,7 +590,7 @@ function Home() {
       <section data-animate-in="up" className='hidden md:flex w-full mx-auto pt-0 md:pt-20 pb-0 md:pb-2 my-0 md:my-10 2xl:my-14'>
         <div className='hidden md:flex w-full mt-20 md:mt-20 3xl:mt-80 pb-0 md:pb-20 3xl:pb-28'>
               <div className='w-full md:w-5/12 2xl:w-5/12 3xl:w-6/12 pl-0 md:pl-14 grid justify-center content-center'>
-                  <h2 className='secondary text-brown text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE ITZ<a className='text-base md:text-[61px] xl:text-[68px] 2xl:text-[73px] 3xl:text-[106px]'>É</a></h2>
+                  <h2 className='secondary text-brown text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE ITZ<a className='letter-comma'>E</a></h2>
                   <h2 className='secondary text-brown mt-12 md:mt-10 xl:mt-12 2xl:mt-14 3xl:mt-20 text-base md:text-[58px] xl:text-[65px] 2xl:text-[70px] 3xl:text-[100px]'>TORRE SAASIL</h2>
               </div>
               <div className='w-full md:w-7/12 2xl:w-7/12 3xl:w-6/12 mt-0 md:-mt-4 xl:-mt-4 2xl:-mt-6 ml-0 md:ml-10 2xl:ml-14'>
@@ -696,7 +696,7 @@ function Home() {
         </Swiper>    
       </section>
 
-      <section className='bg-location md:h-[120vh] 2xl:h-[110vh] 3xl:h-[100vh] md:mt-36'></section>
+      <section className='bg-location md:h-[120vh] 2xl:h-[122vh] 3xl:h-[125vh] md:mt-36'></section>
 
       <section data-animate-in="up" className='bg-black-1 -mt-1 md:mt-0 3xl:-mt-4 py-2 md:py-4 xl:py-10 2xl:py-12'>
         <div className='flex container mx-auto px-0 md:px-40 2xl:px-40 pb-8 md:mb-12 xl:mb-20'>
@@ -776,8 +776,8 @@ function Home() {
                     <div className='mx-auto mt-5 3xl:mt-8'>
                         <img className="mx-auto w-32 md:w-64" src="img/4S.png" alt="4S" />
                     </div>
-                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px]  mt-0 md:mt-11 md:leading-relaxed'>4S es una de las empresas lideres en <br/>Latinoamerica en ingenieria de mercado <br/>y consultoría inmobiliaria.</p>
-                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px]  mt-5'>4S es una de las empresas lideres en Latinoamerica en ingenieria de mercado y consultoría inmobiliaria.</p>
+                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px]  mt-0 md:mt-11 md:leading-relaxed'>4S es una de las empresas líderes en <br/>Latinoamérica en ingenieréa de mercado <br/>y consultoría inmobiliaria.</p>
+                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px]  mt-5'>4S es una de las empresas líderes en Latinoamérica en ingeniería de mercado y consultoría inmobiliaria.</p>
                 </div>
             </div>
         </motion.div>
@@ -794,8 +794,8 @@ function Home() {
                     <div className='mx-auto mt-5 3xl:mt-8'>
                         <img className="mx-auto w-80 mt-2 md:mt-8" src="img/banca-mifel.png" alt="banca-mifel" />
                     </div>
-                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px]  mt-0 md:mt-12 md:leading-relaxed'>Brindamos seguridad jurídica a nuestros <br/> clientes, partiendo de un predio propio <br/> aportado a un fideicomiso de administración <br/> inmobiliaria con Banco MIFEL, cuyo único <br/> fines el desarrollo del proyecto.</p>
-                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px]  mt-5'>Brindamos seguridad jurídica a nuestros clientes, partiendo de un predio propio aportado a un fideicomiso de administración inmobiliaria con Banco MIFEL, cuyo único fines el desarrollo del proyecto.</p>
+                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px]  mt-0 md:mt-12 md:leading-relaxed'>Brindamos seguridad jurídica a nuestros <br/> clientes, partiendo de un predio propio <br/> aportado a un fideicomiso de administración <br/> inmobiliaria con Banco MIFEL.</p>
+                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px]  mt-5'>Brindamos seguridad jurídica a nuestros clientes, partiendo de un predio propio aportado a un fideicomiso de administración inmobiliaria con Banco MIFEL.</p>
                 </div>
             </div>
         </motion.div>

@@ -11,6 +11,7 @@ function Footer() {
   const [mensajeError, setMensajeError] = useState('');
   const [correoEnviado, setCorreoEnviado] = useState(false);
 
+
   useEffect(() => {
   const formularioEnviado = localStorage.getItem('formularioEnviado');
     if (formularioEnviado) {
@@ -68,37 +69,42 @@ function Footer() {
                 <h3 className='secondary text-center md:text-left text-4xl md:text-5xl text-white'>COTIZA</h3>
                 <h4 className='primary text-center md:text-left text-base md:text-lg text-white mt-1 md:mt-1'>HAGAMOS TU SUEÑO REALIDAD</h4>
                 <form className='flex flex-col md:items-start items-center mt-4' onSubmit={handleSubmit}>
+
+                <label className='text-white primary text-[15px] md:text-[1.1rem] mt-8 md:mt-6' htmlFor="nombre">Nombre Completo:</label>
+
                 <input
-                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none pr-12 md:pr-32 primary text-[15px] md:text-[1.1rem] py-1 ${!formularioValido && nombre.trim() === '' ? 'border-red-500' : ''}`}
+                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none pr-12 md:pr-32 primary text-[15px] md:text-[1.1rem] ${!formularioValido && nombre.trim() === '' ? 'border-red-500' : ''}`}
                   type='text'
                   name='nombre'
                   value={nombre}
                   onChange={(e) => setNombre(e.target.value)}
                 />
-                <label className='text-white primary mt-2 text-[15px] md:text-[1.1rem]' htmlFor="nombre">Nombre Completo</label>
+
+                <label className='text-white primary text-[15px] md:text-[1.1rem] mt-8 md:mt-6' htmlFor="email">Correo Electrónico:</label>
 
                 <input
-                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none pr-12 md:pr-32 primary text-[15px] md:text-[1.1rem] py-1 ${!formularioValido && mail.trim() === '' ? 'border-red-500' : ''}`}
+                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none pr-12 md:pr-32 primary text-[15px] md:text-[1.1rem] ${!formularioValido && mail.trim() === '' ? 'border-red-500' : ''}`}
                   type="email"
                   name='mail'
                   value={mail}
                   onChange={(e) => setMail(e.target.value)}
                 />
-                <label className='text-white primary mt-2 text-[15px] md:text-[1.1rem]' htmlFor="email">Correo Electrónico</label>
+
+                <label className='text-white text-center md:text-left primary text-[15px] md:text-[1.1rem] mt-8 md:mt-6' htmlFor="tel" pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{4}" step="any">Celular <br className='block md:hidden'/>(código de país + número de teléfono):</label>
 
                 <input
-                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none pr-12 md:pr-32 primary text-[15px] md:text-[1.1rem] py-1 ${!formularioValido && tel.trim() === '' ? 'border-red-500' : ''}`}
-                  type="number"
+                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none pr-12 md:pr-32 primary text-[15px] md:text-[1.1rem] ${!formularioValido && tel.trim() === '' ? 'border-red-500' : ''}`}
+                  type="tel"
                   name='tel'
                   value={tel}
                   onChange={(e) => setTel(e.target.value)}
                 />
-                <label className='text-white primary mt-2 text-[15px] md:text-[1.1rem]' htmlFor="tel">WhatsApp</label>
+
 
                 <button className='text-white text-[20px] md:text-[1.3rem] primary rounded-full border-[1.5px] px-3 mt-8 transition-transform transform hover:scale-90'>Enviar</button>
                 </form>
                 {correoEnviado && (
-                  <p className="primary text-green-500 mt-2 text-center md:text-left">Correo enviado correctamente</p>
+                  <p className="sextary text-[20px] text-white mt-5 text-center md:text-left">Correo enviado correctamente</p>
                 )}
             </div>
 
@@ -130,8 +136,18 @@ function Footer() {
                           <path id="Trazado_429" data-name="Trazado 429" d="M-3198.273-295.737a11.688,11.688,0,0,1,2.666-7.192,3.312,3.312,0,0,1,1.976-1.106,16.5,16.5,0,0,1,2.174-.353.933.933,0,0,1,.666.36,5.759,5.759,0,0,1,.6,1.025c1.024,1.965,2.031,3.941,3.067,5.9.569,1.073.573,1.568-.23,2.453-.625.689-1.326,1.291-1.989,1.937-.287.28-.576.559-.844.861a1.593,1.593,0,0,0-.262,2.263c.473.932.959,1.856,1.472,2.761a23.189,23.189,0,0,0,7.866,8.287c.582.368,1.165.735,1.757,1.083a.983.983,0,0,0,1.363-.27c.553-.667,1.075-1.366,1.616-2.045.385-.482.753-.984,1.175-1.423.789-.82,1.177-.828,2.106-.213,1.57,1.039,3.147,2.063,4.723,3.091.442.288.892.563,1.331.856a1.18,1.18,0,0,1,.526,1.142,9.933,9.933,0,0,1-.752,3.486,4.373,4.373,0,0,1-1.127,1.439,8.671,8.671,0,0,1-6.141,2.439,10.6,10.6,0,0,1-3.591-.936,32.065,32.065,0,0,1-5.188-2.426,32.938,32.938,0,0,1-6.713-5.953,33.126,33.126,0,0,1-5.167-7.306,37.525,37.525,0,0,1-2.923-8.614A12.285,12.285,0,0,1-3198.273-295.737Z" fill="#fff"/>
                       </g>
                   </svg>
-                    <a href="tel:+52 9981828289" className='primary text-center md:text-left text-[14px] md:text-lg text-white ml-2 md:ml-5'>+52 9981828289</a>
+                    <a href="tel:+52 9987589361" className='primary text-center md:text-left text-[14px] md:text-lg text-white ml-2 md:ml-5'>+52 9987589361</a>
                 </div>
+
+                <div className='mt-[8px] md:mt-4 flex justify-center md:justify-start'>
+                  <svg xmlns="http://www.w3.org/2000/svg" className='w-3 md:w-5' viewBox="0 0 31.766 35.438">
+                      <g id="Grupo_185" data-name="Grupo 185" transform="translate(3198.273 304.39)">
+                          <path id="Trazado_429" data-name="Trazado 429" d="M-3198.273-295.737a11.688,11.688,0,0,1,2.666-7.192,3.312,3.312,0,0,1,1.976-1.106,16.5,16.5,0,0,1,2.174-.353.933.933,0,0,1,.666.36,5.759,5.759,0,0,1,.6,1.025c1.024,1.965,2.031,3.941,3.067,5.9.569,1.073.573,1.568-.23,2.453-.625.689-1.326,1.291-1.989,1.937-.287.28-.576.559-.844.861a1.593,1.593,0,0,0-.262,2.263c.473.932.959,1.856,1.472,2.761a23.189,23.189,0,0,0,7.866,8.287c.582.368,1.165.735,1.757,1.083a.983.983,0,0,0,1.363-.27c.553-.667,1.075-1.366,1.616-2.045.385-.482.753-.984,1.175-1.423.789-.82,1.177-.828,2.106-.213,1.57,1.039,3.147,2.063,4.723,3.091.442.288.892.563,1.331.856a1.18,1.18,0,0,1,.526,1.142,9.933,9.933,0,0,1-.752,3.486,4.373,4.373,0,0,1-1.127,1.439,8.671,8.671,0,0,1-6.141,2.439,10.6,10.6,0,0,1-3.591-.936,32.065,32.065,0,0,1-5.188-2.426,32.938,32.938,0,0,1-6.713-5.953,33.126,33.126,0,0,1-5.167-7.306,37.525,37.525,0,0,1-2.923-8.614A12.285,12.285,0,0,1-3198.273-295.737Z" fill="#fff"/>
+                      </g>
+                  </svg>
+                    <a href="tel:+52 9987593669" className='primary text-center md:text-left text-[14px] md:text-lg text-white ml-2 md:ml-5'>+52 9987593669</a>
+                </div>
+
                 <div className='flex justify-center md:justify-start'>
                   {formularioEnviado === 'true' ? (
                   <button
@@ -174,29 +190,40 @@ function Footer() {
       </div>
 
       <div className="md:hidden flex items-center justify-center space-x-8 pt-6 pb-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="10.303" height="19.235" viewBox="0 0 10.303 19.235">
-          <path id="Path_547" data-name="Path 547" d="M9.627,10.851l.534-3.481H6.822V5.11A1.74,1.74,0,0,1,8.783,3.23H10.3V.266a18.508,18.508,0,0,0-2.7-.235C4.855.031,3.058,1.7,3.058,4.716V7.37H0v3.481H3.058v8.415H6.822V10.851Z" transform="translate(0 -0.031)" fill="#fff"/>
-        </svg>
+        <a href="https://www.facebook.com/distritoyaax.cancun">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10.303" height="19.235" viewBox="0 0 10.303 19.235">
+            <path id="Path_547" data-name="Path 547" d="M9.627,10.851l.534-3.481H6.822V5.11A1.74,1.74,0,0,1,8.783,3.23H10.3V.266a18.508,18.508,0,0,0-2.7-.235C4.855.031,3.058,1.7,3.058,4.716V7.37H0v3.481H3.058v8.415H6.822V10.851Z" transform="translate(0 -0.031)" fill="#fff"/>
+          </svg>
+        </a>
             
-        <svg xmlns="http://www.w3.org/2000/svg" width="19.235" height="19.236" viewBox="0 0 19.235 19.236">
-          <g id="Group_264" data-name="Group 264" transform="translate(-202.445 -4951.921)">
-            <path id="Path_544" data-name="Path 544" d="M96.327,6.348a1.128,1.128,0,1,0,1.128,1.128,1.128,1.128,0,0,0-1.128-1.128" transform="translate(120.828 4949.009)" fill="#fff"/>
-            <path id="Path_545" data-name="Path 545" d="M84.074,9.008a4.737,4.737,0,1,0,4.737,4.737,4.743,4.743,0,0,0-4.737-4.737m0,7.772a3.034,3.034,0,1,1,3.034-3.034,3.038,3.038,0,0,1-3.034,3.034" transform="translate(128.066 4947.795)" fill="#fff"/>
-            <path id="Path_546" data-name="Path 546" d="M83.673,19.266h-7.68a5.784,5.784,0,0,1-5.777-5.778V5.808A5.784,5.784,0,0,1,75.993.03h7.68a5.785,5.785,0,0,1,5.778,5.778v7.68a5.785,5.785,0,0,1-5.778,5.778M75.993,1.84a3.972,3.972,0,0,0-3.968,3.968v7.68a3.972,3.972,0,0,0,3.968,3.968h7.68a3.972,3.972,0,0,0,3.968-3.968V5.808A3.972,3.972,0,0,0,83.673,1.84Z" transform="translate(132.229 4951.892)" fill="#fff"/>
-          </g>
-        </svg>
+        <a href="https://www.instagram.com/distritoyaax.cancun/">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19.235" height="19.236" viewBox="0 0 19.235 19.236">
+            <g id="Group_264" data-name="Group 264" transform="translate(-202.445 -4951.921)">
+              <path id="Path_544" data-name="Path 544" d="M96.327,6.348a1.128,1.128,0,1,0,1.128,1.128,1.128,1.128,0,0,0-1.128-1.128" transform="translate(120.828 4949.009)" fill="#fff"/>
+              <path id="Path_545" data-name="Path 545" d="M84.074,9.008a4.737,4.737,0,1,0,4.737,4.737,4.743,4.743,0,0,0-4.737-4.737m0,7.772a3.034,3.034,0,1,1,3.034-3.034,3.038,3.038,0,0,1-3.034,3.034" transform="translate(128.066 4947.795)" fill="#fff"/>
+              <path id="Path_546" data-name="Path 546" d="M83.673,19.266h-7.68a5.784,5.784,0,0,1-5.777-5.778V5.808A5.784,5.784,0,0,1,75.993.03h7.68a5.785,5.785,0,0,1,5.778,5.778v7.68a5.785,5.785,0,0,1-5.778,5.778M75.993,1.84a3.972,3.972,0,0,0-3.968,3.968v7.68a3.972,3.972,0,0,0,3.968,3.968h7.68a3.972,3.972,0,0,0,3.968-3.968V5.808A3.972,3.972,0,0,0,83.673,1.84Z" transform="translate(132.229 4951.892)" fill="#fff"/>
+            </g>
+          </svg>
+        </a>
             
-        <svg xmlns="http://www.w3.org/2000/svg" width="16.076" height="18.446" viewBox="0 0 16.076 18.446">
-          <g id="Group_244" data-name="Group 244" transform="translate(0)">
-            <path id="Path_458" data-name="Path 458" d="M-881.714,781.505a4.42,4.42,0,0,1-3.477-3.915v-.407h-3.177v12.608a2.671,2.671,0,0,1-2.68,2.661,2.671,2.671,0,0,1-2.116-1.054h0a2.67,2.67,0,0,1,.511-3.741,2.67,2.67,0,0,1,2.425-.418v-3.228A5.837,5.837,0,0,0-896.81,789a5.837,5.837,0,0,0,1.607,4.878,5.838,5.838,0,0,0,8.255.095,5.838,5.838,0,0,0,1.757-4.174v-6.443a7.545,7.545,0,0,0,4.4,1.407V781.6A4.46,4.46,0,0,1-881.714,781.505Z" transform="translate(896.865 -777.184)" fill="#fff"/>
-          </g>
+        <a href="https://www.tiktok.com/@distritoyaax?_t=8jAcgT8orUT&_r=1">    
+        <svg xmlns="http://www.w3.org/2000/svg" width="19.235" height="19.236" viewBox="0 0 22.382 25.683">
+          <g id="Grupo_286" data-name="Grupo 286" transform="translate(0 0)">
+            <path id="Trazado_458" data-name="Trazado 458" d="M-875.771,783.2a6.154,6.154,0,0,1-4.841-5.45v-.566h-4.423v17.554a3.718,3.718,0,0,1-3.731,3.705,3.718,3.718,0,0,1-2.946-1.467h0a3.717,3.717,0,0,1,.711-5.208,3.717,3.717,0,0,1,3.376-.582v-4.494a8.126,8.126,0,0,0-9.162,6.937,8.126,8.126,0,0,0,2.237,6.791,8.128,8.128,0,0,0,11.493.132,8.128,8.128,0,0,0,2.447-5.812v-8.97a10.5,10.5,0,0,0,6.128,1.959v-4.4A6.2,6.2,0,0,1-875.771,783.2Z" transform="translate(896.865 -777.184)" fill="#fff"/>
+              </g>
         </svg>
+        </a>
+
       </div>
 
-      <div div className="flex flex-col items-center pt-4 md:pt-8 md:flex-row md:justify-center">
-        <a className="text-white primary text-[13px] md:text-[17px] xl:text-[17px] 2xl:text-[18px] md:order-last hover:scale-105 transition-transform" href="tel:+52 9981828289">+52 998 8705400</a>
-        <a className="hidden primary sm:inline-flex text-white text-[18px] px-3" href="#">|</a>
-        <a className="text-white primary text-[13px] md:text-[17px] xl:text-[17px] 2xl:text-[18px] md:order-first mt-1 md:mt-0 hover:scale-105 transition-transform" href="#">informes@distritoyaax.com</a>
+      <div div className="grid flex-col items-center pt-4 md:pt-8 md:flex-row md:justify-center">
+        
+        <div className='flex flex-col items-center'>
+          <a className="text-white text-center mt-1 md:mt-4 primary text-[13px] md:text-[17px] xl:text-[17px] 2xl:text-[18px] md:order-last hover:scale-105 transition-transform px-2" href="tel:+52 9987589361">+52 998 7589361</a>
+          <a className="text-white text-center mt-1 md:mt-4 primary text-[13px] md:text-[17px] xl:text-[17px] 2xl:text-[18px] md:order-last hover:scale-105 transition-transform px-2" href="tel:+52 9987593669">+52 998 7593669</a>
+        </div>
+
+        <a className="text-white text-center mt-2 mb-4 md:mb-0 primary text-[13px] md:text-[17px] xl:text-[17px] 2xl:text-[18px] md:order-first md:mt-0 hover:scale-105 transition-transform" href="mailto:informes@distritoyaax.com">informes@distritoyaax.com</a>
       </div>
 
       <div className="hidden md:flex justify-center md:space-x-10 md:pt-8 md:pb-0">
@@ -215,14 +242,15 @@ function Footer() {
           </g>
         </svg>
         </a>
-            
-        <a className='hover:scale-125 transition-transform' href="">
-        <svg xmlns="http://www.w3.org/2000/svg" className='w-5' viewBox="0 0 28.363 32.547">
-          <g id="Group_201" data-name="Group 201" transform="translate(896.865 -777.184)">
-            <path id="Path_458" data-name="Path 458" d="M-870.134,784.809a7.8,7.8,0,0,1-6.134-6.907v-.718h-5.605V799.43a4.712,4.712,0,0,1-4.729,4.7,4.712,4.712,0,0,1-3.734-1.859l0,0,0,0a4.71,4.71,0,0,1,.9-6.6,4.711,4.711,0,0,1,4.278-.738v-5.695a10.3,10.3,0,0,0-11.611,8.791,10.3,10.3,0,0,0,2.834,8.606,10.3,10.3,0,0,0,14.565.167,10.3,10.3,0,0,0,3.1-7.365V788.064a13.313,13.313,0,0,0,7.766,2.483v-5.57A7.862,7.862,0,0,1-870.134,784.809Z" transform="translate(0 0)" fill="#fff"/>
-          </g>
+
+        <a className='hover:scale-110 transition-transform px-3' href="https://www.tiktok.com/@distritoyaax?_t=8jAcgT8orUT&_r=1">    
+        <svg xmlns="http://www.w3.org/2000/svg" className='w-5' viewBox="0 0 22.382 25.683">
+          <g id="Grupo_286" data-name="Grupo 286" transform="translate(0 0)">
+            <path id="Trazado_458" data-name="Trazado 458" d="M-875.771,783.2a6.154,6.154,0,0,1-4.841-5.45v-.566h-4.423v17.554a3.718,3.718,0,0,1-3.731,3.705,3.718,3.718,0,0,1-2.946-1.467h0a3.717,3.717,0,0,1,.711-5.208,3.717,3.717,0,0,1,3.376-.582v-4.494a8.126,8.126,0,0,0-9.162,6.937,8.126,8.126,0,0,0,2.237,6.791,8.128,8.128,0,0,0,11.493.132,8.128,8.128,0,0,0,2.447-5.812v-8.97a10.5,10.5,0,0,0,6.128,1.959v-4.4A6.2,6.2,0,0,1-875.771,783.2Z" transform="translate(896.865 -777.184)" fill="#fff"/>
+              </g>
         </svg>
         </a>
+
       </div>
 
       <div className="flex items-center justify-center pb-9 md:p-10">
@@ -231,7 +259,7 @@ function Footer() {
 
       <div className="phone-call cbh-phone cbh-green cbh-show cbh-static" id="clbh_phone_div" style={{}}>
         <a id="WhatsApp-button"
-          href="https://api.whatsapp.com/send?phone=+529988705400&text=Hola%quiero%saber%más%de%Distrito%Yaax%"
+          href="https://api.whatsapp.com/send?phone=+529987589361&text=Hola, quiero saber más de Distrito Yaax "
           target="_blank" className="phoneJs" title="WhatsApp Distrito Yaax">
           <div className="cbh-ph-circle"></div>
           <div className="cbh-ph-circle-fill"></div>

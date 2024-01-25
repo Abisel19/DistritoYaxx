@@ -85,6 +85,14 @@ function Header() {
                 </svg>
               </a>
 
+              <a href='https://www.tiktok.com/@distritoyaax?_t=8jAcgT8orUT&_r=1' className='px-[6px]'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14.802" height="16.986" viewBox="0 0 14.802 16.986">
+                  <g id="Grupo_241" data-name="Grupo 241" transform="translate(0 0)">
+                    <path id="Trazado_458" data-name="Trazado 458" d="M-882.914,781.163a4.07,4.07,0,0,1-3.2-3.6v-.375h-2.925v11.61a2.459,2.459,0,0,1-2.468,2.451,2.46,2.46,0,0,1-1.949-.971h0a2.458,2.458,0,0,1,.47-3.445,2.459,2.459,0,0,1,2.233-.385v-2.972a5.374,5.374,0,0,0-6.06,4.588,5.375,5.375,0,0,0,1.479,4.492,5.375,5.375,0,0,0,7.6.087,5.375,5.375,0,0,0,1.618-3.844v-5.932a6.948,6.948,0,0,0,4.053,1.3v-2.907A4.1,4.1,0,0,1-882.914,781.163Z" transform="translate(896.865 -777.184)"/>
+                  </g>
+                </svg>
+              </a>
+
             </div>
 
             <div className='hidden md:flex md:justify-center w-full'>
@@ -149,6 +157,14 @@ function Header() {
                 </g>
               </svg>
               </a>
+
+              <a className='hover:scale-110 transition-transform px-3' href="https://www.tiktok.com/@distritoyaax?_t=8jAcgT8orUT&_r=1">    
+              <svg xmlns="http://www.w3.org/2000/svg" className='w-5' viewBox="0 0 22.382 25.683">
+                <g id="Grupo_286" data-name="Grupo 286" transform="translate(0 0)">
+                  <path id="Trazado_458" data-name="Trazado 458" d="M-875.771,783.2a6.154,6.154,0,0,1-4.841-5.45v-.566h-4.423v17.554a3.718,3.718,0,0,1-3.731,3.705,3.718,3.718,0,0,1-2.946-1.467h0a3.717,3.717,0,0,1,.711-5.208,3.717,3.717,0,0,1,3.376-.582v-4.494a8.126,8.126,0,0,0-9.162,6.937,8.126,8.126,0,0,0,2.237,6.791,8.128,8.128,0,0,0,11.493.132,8.128,8.128,0,0,0,2.447-5.812v-8.97a10.5,10.5,0,0,0,6.128,1.959v-4.4A6.2,6.2,0,0,1-875.771,783.2Z" transform="translate(896.865 -777.184)" fill="#fff"/>
+                </g>
+              </svg>
+              </a>
                   
             </div>
 
@@ -206,6 +222,9 @@ function Header() {
                   </g>
                 </svg>
                 </a>
+                </li>
+                <li>
+                  <a href="/" class="block md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">INICIO</a>
                 </li>
                 <li>
                   <a href="/acerca" class="block md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">QUIÉNES SOMOS</a>
