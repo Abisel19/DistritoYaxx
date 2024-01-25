@@ -26,7 +26,7 @@ function App() {
           <Route path="/amenidades" element={<Amenidades />} />
           <Route path="/ubicacion" element={<Ubicacion />} />
           <Route path="/tour" element={<Tour />} />
-          <Route path="/nivel/:nivelUrl/:departamentoUrl" element={<Nivel />} />
+          <Route path="/nivel/:nivelUrl/" element={<Nivel />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       <Footer/>

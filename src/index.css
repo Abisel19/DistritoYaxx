@@ -245,7 +245,6 @@
   flex-wrap: wrap;
 }
 
-
 .lock-off{
   background-image: url(/img/lock-off/lock-off-1.jpg);
   background-size: 100%;
@@ -422,7 +421,31 @@
   display: none; /* Inicialmente oculto */
 }
 
+.image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg{
+  height: 80px;
+  width: 40;
+}
 
+.image-gallery-icon:hover{
+  color: #000;
+}
+
+.image-gallery-bullets .image-gallery-bullet:hover{
+  background: #000;
+  border: 1px solid #000;
+}
+
+.image-gallery-bullets .image-gallery-bullet.active:hover{
+  background: #000 !important;
+}
+
+.image-gallery-thumbnail:hover{
+  border: 2px solid #000;
+}
+
+.image-gallery-thumbnail.active{
+  border: 2px solid #000;
+}
 
 /* Animación de entrada del menú */
 @keyframes slideInMenuAnimation {
@@ -744,6 +767,14 @@
   opacity: 1;
   transition: none;
   transform: none
+}
+
+.letter-comma::after {
+  content: '´';
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -0.4em;
+  font-size: 1.4em; 
 }
 
 /* START BOTON DE WHATSAPP */
