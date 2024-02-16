@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.12.1",
     "autoprefixer": "^10.4.16",
     "framer-motion": "^10.16.4",
     "pdf-lib": "^1.17.1",

@@ -408,13 +408,13 @@ function Amenidades() {
       <section data-animate-in="up" className='relative md:-mt-2 z-10 mb-6'>
         <div className='w-full flex'>
             <div className='w-1/3 mx-1 md:mx-2'>
-                <img src="/img/interiores-1.png" alt="INTEREIORES DISTRITO YAAX" />
+                <img className='w-full' src="/img/interiores-1.png" alt="INTEREIORES DISTRITO YAAX" />
             </div>
             <div className='w-1/3 mx-1 md:mx-2'>
-                <img src="/img/interiores-2.png" alt="INTEREIORES DISTRITO YAAX" />
+                <img className='w-full' src="/img/interiores-2.png" alt="INTEREIORES DISTRITO YAAX" />
             </div>
             <div className='w-1/3 mx-1 md:mx-2'>
-                <img src="/img/interiores-3.png" alt="INTEREIORES DISTRITO YAAX" />
+                <img className='w-full' src="/img/interiores-3.png" alt="INTEREIORES DISTRITO YAAX" />
             </div>
         </div>
       </section>
@@ -426,21 +426,21 @@ function Amenidades() {
       </section>
       
       <section data-animate-in="up" className='relative md:-mt-2 z-10'>
-        <div className='w-full h-full'>
-            <img src="/img/roof-top-1.png" alt="INTEREIORES DISTRITO YAAX" />
+        <div className='w-[100vw] '>
+            <img className='w-full' src="/img/roof-top-1.png" alt="INTEREIORES DISTRITO YAAX" />
         </div>
       </section>
 
       <section data-animate-in="up" className='relative md:-mt-4 z-10 mb-6'>
         <div className='w-full flex'>
             <div className='w-1/3 mx-1 md:mx-2'>
-                <img src="/img/roof-1.png" alt="INTEREIORES DISTRITO YAAX" />
+                <img className='w-full' src="/img/roof-1.png" alt="INTEREIORES DISTRITO YAAX" />
             </div>
             <div className='w-1/3 mx-1 md:mx-2'>
-                <img src="/img/roof-2.png" alt="INTEREIORES DISTRITO YAAX" />
+                <img className='w-full' src="/img/roof-2.png" alt="INTEREIORES DISTRITO YAAX" />
             </div>
             <div className='w-1/3 mx-1 md:mx-2'>
-                <img src="/img/roof-3.png" alt="INTEREIORES DISTRITO YAAX" />
+                <img className='w-full' src="/img/roof-3.png" alt="INTEREIORES DISTRITO YAAX" />
             </div>
         </div>
       </section>

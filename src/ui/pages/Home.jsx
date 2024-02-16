@@ -361,15 +361,15 @@ function Home() {
                                 >
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('estudio-3')}>
-                                          <img src="img/estudio/estudio-3.jpg" alt="" />
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('estudio-2')}>
+                                          <img src="img/estudio/estudio-2.jpg" alt="" />
                                       </div>
                                   </div> 
                                 </SwiperSlide>
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('estudio-4')}>
-                                          <img src="img/estudio/estudio-4.jpg" alt="" />
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('estudio-3')}>
+                                          <img src="img/estudio/estudio-3.jpg" alt="" />
                                       </div>
                                   </div> 
                                 </SwiperSlide>
@@ -429,8 +429,8 @@ function Home() {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick1('recamara-5')}>
-                                          <img src="img/recamara/recamara-5.jpg" alt="" />
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick1('recamara-4')}>
+                                          <img src="img/recamara/recamara-4.jpg" alt="" />
                                       </div>
                                   </div> 
                                 </SwiperSlide>
@@ -476,17 +476,10 @@ function Home() {
                                 >
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-4')}>
-                                          <img src="img/lock-off/lock-off-4.jpg" alt="" />
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-2')}>
+                                          <img src="img/lock-off/lock-off-2.jpg" alt="" />
                                       </div>
                                   </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                  <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-3')}>
-                                          <img src="img/lock-off/lock-off-3.jpg" alt="" />
-                                      </div>
-                                  </div> 
                                 </SwiperSlide>
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
@@ -497,8 +490,15 @@ function Home() {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-6')}>
-                                          <img src="img/lock-off/lock-off-6.jpg" alt="" />
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-3')}>
+                                          <img src="img/lock-off/lock-off-3.jpg" alt="" />
+                                      </div>
+                                  </div> 
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-4')}>
+                                          <img src="img/lock-off/lock-off-4.jpg" alt="" />
                                       </div>
                                   </div> 
                                 </SwiperSlide>
@@ -558,15 +558,15 @@ function Home() {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick3('lock-off-a-5')}>
-                                          <img src="img/lock-off-a/lock-off-a-5.jpg" alt="" />
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick3('lock-off-a-3')}>
+                                          <img src="img/lock-off-a/lock-off-a-3.jpg" alt="" />
                                       </div>
                                   </div> 
                                 </SwiperSlide>
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick3('lock-off-a-6')}>
-                                          <img src="img/lock-off-a/lock-off-a-6.jpg" alt="" />
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick3('lock-off-a-5')}>
+                                          <img src="img/lock-off-a/lock-off-a-5.jpg" alt="" />
                                       </div>
                                   </div> 
                                 </SwiperSlide>
@@ -602,7 +602,7 @@ function Home() {
 
       <section data-animate-in="fadeIn" className='container md:hidden'>
         <div className='py-10'>
-            <h2 className='secondary text-brown text-center mx-auto text-[42px]'>TORRE ITZ<a className='secondary text-[45px]'>É</a></h2>
+            <h2 className='secondary text-brown text-center mx-auto text-[42px]'>TORRE ITZ<a className='letter-comma2'>E</a></h2>
             <h2 className='secondary text-brown -mt-4 text-center mx-auto text-[42px]'>TORRE SAASIL</h2>
         </div>
         <div>
@@ -814,6 +814,84 @@ function Home() {
                     </div>
                     <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px]  mt-8 md:mt-0 md:leading-relaxed'>Cal y Mayor es la empresa de mayor <br/>reconocimiento en ingenierías y consultoría <br/>especializada en movilidad y transporte.</p>
                     <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px]  mt-0'>Cal y Mayor es la empresa de mayor reconocimiento en ingenierías y consultoría especializada en movilidad y transporte.</p>
+                </div>
+            </div>
+        </motion.div>
+        </SwiperSlide>
+
+      </Swiper>    
+      </section>
+
+      <section data-animate-in="up" className='bg-black-1 -mt-1 md:mt-0 3xl:-mt-4 py-2 md:py-4 xl:py-10 2xl:py-12'>
+        <div className='flex container mx-auto px-0 md:px-40 2xl:px-40 pb-8 md:mb-12 xl:mb-20'>
+            <div className='flex mx-auto justify-center align-item'>
+                <h2 className='secondary text-white mx-auto text-5xl md:text-[110px] xl:text-[140px] 2xl:text-[170px] md:tracking-widest absolute z-10 text-center mt-0 md:mt-8 xl:mt-8 2xl:mt-4'>M E D I O S</h2>
+            </div>
+        </div>
+      </section>
+
+      <section data-animate-in="fadeIn" className='py-10 md:my-16 px-4 md:px-10'>
+      <Swiper
+        modules={[Autoplay, Pagination, Navigation]}
+        spaceBetween={10}
+        slidesPerView={slidesPerView}
+        loop={true}
+        autoplay={{ delay: 4000}}
+        className='alianzas py-5'
+        >
+        <SwiperSlide>
+        <motion.div
+        variants={cardVariants}
+        whileHover="hover"
+        whileTap="hover"
+        >
+                <a href='https://obras.expansion.mx/inmobiliario/2024/02/05/el-caribe-mexicano-se-fortalece-como-una-oportunidad-de-inversion'>
+                    <div className='px-0 md:px-4 xl:px-6 3xl:px-6 py-0 md:py-5 2xl:py-6'>
+                        <div className='h-[200px] md:h-[340px] 3xl:h-[800px] border border-solid rounded-3xl border-gray-1 px-2 md:px-4 py-0 2xl:py-5 3xl:py-10'>
+                            <div className='mx-auto mt-5 3xl:mt-8'>
+                                <img className="mx-auto w-32 md:w-40" src="img/expansion.png" alt="EXPANSIÓN" />
+                            </div>
+                            <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px] mt-0 md:mt-4 md:leading-relaxed'>“El Caribe Mexicano: La opción favorita<br></br> para vivir e invertir”</p>
+                            <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px] mt-3'>“El Caribe Mexicano: La opción favorita para vivir e invertir”</p>
+                        </div>
+                    </div>
+                </a>
+        </motion.div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <motion.div
+        variants={cardVariants}
+        whileHover="hover"
+        whileTap="hover" // Para dispositivos táctiles
+        >
+        <a href='https://mundoejecutivo.com.mx/empresas/distrito-yaax-un-tesoro-verde-en-cancun-quintana-roo/'>
+            <div className='px-0 md:px-4 xl:px-6 3xl:px-6 py-0 md:py-5 2xl:py-6'>
+                <div className='h-[200px] md:h-[340px] 3xl:h-[800px] border border-solid rounded-3xl border-gray-1 px-2 md:px-4 py-0 2xl:py-5 3xl:py-10'>
+                    <div className='mx-auto mt-5 3xl:mt-8'>
+                        <img className="mx-auto w-32 md:w-40" src="img/ejecutivo.png" alt="Ejecutivo" />
+                    </div>
+                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px]  mt-0 md:mt-8 md:leading-relaxed'>“Distrito Yaax: un tesoro verde en<br></br> Cancún, Quintana Roo”</p>
+                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px]  mt-5'>“Distrito Yaax: un tesoro verde en Cancún, Quintana Roo”</p>
+                </div>
+            </div>
+        </a>
+        </motion.div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <motion.div
+        variants={cardVariants}
+        whileHover="hover"
+        whileTap="hover" // Para dispositivos táctiles
+        >
+            <div className='px-0 md:px-4 xl:px-6 3xl:px-6 py-0 md:py-5 2xl:py-6'>
+                <div className='h-[200px] md:h-[340px] 3xl:h-[800px] border border-solid rounded-3xl border-gray-1 px-2 md:px-4 py-0 2xl:py-5 3xl:py-10'>
+                    <div className='mx-auto mt-5 3xl:mt-8'>
+                        <img className="mx-auto w-32 md:w-40" src="img/forbes.png" alt="FORBES" />
+                    </div>
+                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px]  mt-0 md:mt-10 md:leading-relaxed'>“Investing in real estate in Mexico’s<br></br> Riviera Maya offers affordable living <br></br>in paradise”</p>
+                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px]  mt-5'>“Investing in real estate in Mexico’s Riviera Maya offers affordable living in paradise”</p>
                 </div>
             </div>
         </motion.div>

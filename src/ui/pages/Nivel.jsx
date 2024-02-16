@@ -19,33 +19,41 @@ function Nivel() {
   const [seccionVisible, setSeccionVisible] = useState(false);
 
 
-    useEffect(() => {
-      // Construir la URL completa según el nivel proporcionado
-      const dynamicImageURL = `/img/nivel-${nivelUrl}.png`;
-      const departamentoimg=`/img/departamento-${departamentoUrl}.png`
-      const departamentoicons=`/img/icons-${departamentoUrl}.png`
-
-      // Cargar la imagen dinámica
-      const image = new Image();
-      image.src = dynamicImageURL;
-      image.onload = () => {
-        setDynamicImageSrc(dynamicImageURL);
-      };
-       setDepartamentoimg(departamentoimg);
-       setDepartamentoicons(departamentoicons);
-
-       if (departamentoUrl === 'recamara') {
-        setDepartamentoname('1 Recámara');
-      } else if (departamentoUrl === 'lock-off') {
+  useEffect(() => {
+    // Construir la URL completa según el nivel proporcionado
+    console.log(departamentoUrl);
+    const dynamicImageURL = `/img/nivel-${nivelUrl}.png`;
+  
+    // Cargar la imagen dinámica
+    const image = new Image();
+    image.src = dynamicImageURL;
+    image.onload = () => {
+      setDynamicImageSrc(dynamicImageURL);
+    };
+  
+    let departamentoimg;
+    let departamentoicons;
+    if (departamentoUrl === '1 Recámara') {
+      departamentoimg = '/img/departamento-recamara.png';
+      departamentoicons = '/img/icons-recamara.png';
+      setDepartamentoname('1 Recámara');
+    } else {
+      departamentoimg = `/img/departamento-${departamentoUrl}.png`;
+      departamentoicons = `/img/icons-${departamentoUrl}.png`;
+      if (departamentoUrl === 'lock-off') {
         setDepartamentoname('Lock Off');
       } else if (departamentoUrl === 'lock-off-a') {
         setDepartamentoname('Lock Off A');
       } else {
         setDepartamentoname(departamentoUrl);
       }
-
-    }, [nivelUrl, departamentoUrl]);  
-
+    }
+  
+    setDepartamentoimg(departamentoimg);
+    setDepartamentoicons(departamentoicons);
+  
+  }, [nivelUrl, departamentoUrl]);
+  
     const createMap = (nivel) => {
       const map = {
         name: "my-map",
@@ -100,8 +108,8 @@ function Nivel() {
           { name: "Lock Off", shape: "poly", coords: [74,80,  75,195,  170,195,  170,85,], fillColor: "rgba(73, 190, 227, 0.5)" },
           { name: "Lock Off", shape: "poly", coords: [310,85,  310,195,  405,195,  405,80,], fillColor: "rgba(73, 190, 227, 0.5)" },
           { name: "Lock Off", shape: "poly", coords: [310,280,  310,390,  405,395,  408,280,], fillColor: "rgba(73, 190, 227, 0.5)" },
-          { name: "1 recámara", shape: "poly", coords: [79,195,  79,280,  170,280,  170,195,], fillColor: "rgba(73, 190, 227, 0.5)" },
-          { name: "1 recámara", shape: "poly", coords: [310,195,  310,280,  400,280,  400,195,], fillColor: "rgba(73, 190, 227, 0.5)" },        
+          { name: "1 Recámara", shape: "poly", coords: [79,195,  79,280,  170,280,  170,195,], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "1 Recámara", shape: "poly", coords: [310,195,  310,280,  400,280,  400,195,], fillColor: "rgba(73, 190, 227, 0.5)" },        
         ]
       };
   
@@ -128,8 +136,61 @@ function Nivel() {
           { name: "Lock Off", shape: "poly", coords: [225,204, 225,285, 300,288, 300,204], fillColor: "rgba(73, 190, 227, 0.5)" },
           { name: "Lock Off", shape: "poly", coords: [52,204, 52,288, 125,285, 125,204], fillColor: "rgba(73, 190, 227, 0.5)" },
 
-          { name: "1 recámara", shape: "poly", coords: [58,143, 58,205, 125,205, 125,143], fillColor: "rgba(73, 190, 227, 0.5)" },
-          { name: "1 recámara", shape: "poly", coords: [225,143, 225,205, 290,205, 290,143], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "1 Recámara", shape: "poly", coords: [58,143, 58,205, 125,205, 125,143], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "1 Recámara", shape: "poly", coords: [225,143, 225,205, 290,205, 290,143], fillColor: "rgba(73, 190, 227, 0.5)" },
+
+        ]
+      };
+  
+      roomMovil.areas.forEach((area) => {
+        if (area.name === habitacion) {
+          area.preFillColor = "rgba(73, 190, 227, 0.4)";
+        }
+      });
+  
+      return roomMovil;
+    };
+
+    const createMapNivel12 = (habitacion) => {
+      const room = {
+        name: "my-nivel",
+        areas: [
+          { name: "estudio", shape: "poly", coords: [187,85,  187,192,  240,192,  240,85,], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "estudio", shape: "poly", coords: [240,85,  240,192,  292,192,  292,85,], fillColor: "rgba(73, 190, 227, 0.5)" },  
+          { name: "estudio", shape: "poly", coords: [187,282,  187,390,  240,390,  240,282,], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "estudio", shape: "poly", coords: [240,282,  240,390,  292,390,  292,282,], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "Lock Off", shape: "poly", coords: [70,280,  75,395,  170,390,  170,280,], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "Lock Off", shape: "poly", coords: [310,85,  310,195,  405,195,  405,80,], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "Lock Off", shape: "poly", coords: [310,280,  310,390,  405,395,  408,280,], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "Lock Off A", shape: "poly", coords: [75,158,  79,280,  170,280,  170,158,], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "1 Recámara", shape: "poly", coords: [310,195,  310,280,  400,280,  400,195,], fillColor: "rgba(73, 190, 227, 0.5)" },        
+        ]
+      };
+  
+      room.areas.forEach((area) => {
+        if (area.name === habitacion) {
+          area.preFillColor = "rgba(73, 190, 227, 0.4)";
+        }
+      });
+  
+      return room;
+    };
+
+    const createMapNivelMovil12 = (habitacion) => {
+      const roomMovil = {
+        name: "my-nivel-movil",
+        areas: [
+          { name: "estudio", shape: "poly", coords: [138,62,  138,140,  174,140,  174,62,], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "estudio", shape: "poly", coords: [174,62,  174,140,  212,140,  212,62,], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "estudio", shape: "poly", coords: [138,205,  138,284,  174,284,  174,205,], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "estudio", shape: "poly", coords: [174,205,  174,284,  212,284,  212,205,], fillColor: "rgba(73, 190, 227, 0.5)" },
+
+          { name: "Lock Off", shape: "poly", coords: [225,62, 225,143, 300,143, 300,58], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "Lock Off", shape: "poly", coords: [225,204, 225,285, 300,288, 300,204], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "Lock Off", shape: "poly", coords: [52,204, 52,288, 125,285, 125,204], fillColor: "rgba(73, 190, 227, 0.5)" },
+
+          { name: "Lock Off A", shape: "poly", coords: [55,114, 58,205, 125,205, 125,114], fillColor: "rgba(73, 190, 227, 0.5)" },
+          { name: "1 Recámara", shape: "poly", coords: [225,143, 225,205, 290,205, 290,143], fillColor: "rgba(73, 190, 227, 0.5)" },
 
         ]
       };
@@ -171,7 +232,7 @@ function Nivel() {
     useEffect(() => {
       if (departamentoname === 'Lock Off') {
         setDepartamentoGallery('lock-off');
-      }else if (departamentoname === '1 recámara') {
+      }else if (departamentoname === '1 Recámara') {
         setDepartamentoGallery('recamara');
       }else if (departamentoname === 'Lock Off A') {
         setDepartamentoGallery('lock-off-a');
@@ -189,10 +250,10 @@ function Nivel() {
     const mapConfig = createMap(nivelUrl);
 
     const mapNivel = createMapNivel(departamentoname);
-
-    console.log(departamentoname);
-
     const mapNivelMovil = createMapNivelMovil(departamentoname);
+
+    const mapNivel12 = createMapNivel12(departamentoname);
+    const mapNivelMovil12 = createMapNivelMovil12(departamentoname);
 
     const initialy = mapConfig.areas[0].coords[1];
 
@@ -277,37 +338,67 @@ function Nivel() {
     <section id="nivel" className='bg-black py-1'></section>
 
     <section>
-        <div className='w-full md:flex px-0 md:px-16 py-10 mt-8 md:py-36'>
+        <div className='w-full md:flex px-0 md:pl-0 2xl:pl-40 3xl:pl-80 py-16 mt-8 md:py-36'>
           <div className='w-full md:w-5/12 md:flex md:pl-20 items-center'>
                 <div className='w-full'>
                     <p className='sextary text-[15px] text-center md:text-left md:text-2xl md:text-[25px] mt-3 md:mt-0 md:ml-2'>NIVEL {nivelUrl}</p>
                     <h3 className='tertiary text-center md:text-left text-[50px] md:text-[80px] leading-[55px] md:leading-[80px] tracking-wider mt-0 md:mt-0'>VISTA<span className='block'></span> GENERAL</h3>
                     <p className='primary text-center md:text-left text-2xl md:text-[60px] mt-3 md:mt-8'>DEL PROYECTO</p>
                     <h4 className='primary text-center md:text-left text-[18px] md:text-[24px] mt-3 md:mt-8 md:ml-2'>Elige el modelo de departamento<span className='block md:hidden'></span> que <span className='hidden md:block'></span>quieras explorar.</h4>
+                    <a href='/tour' className='justify-center md:justify-normal flex'><button className='Poppins border mt-4 md:mt-6 mb-10 border-black text-base md:text-[16px] text-black py-3 md:py-3 px-7 rounded-3xl transition-transform transform hover:scale-90'>Ir atrás</button></a>
                 </div>
           </div>
-          <div className='w-full md:w-7/12 hidden md:flex justify-center'>
-                <ImageMapper
-                  src={dynamicImageSrc}
-                  map={mapNivel}
-                  width={480}
-                  alt={`Nivel ${nivelUrl}`}
-                  onLoad={load}
-                  onMouseEnter={handleHover}
-                  onClick={handleRoomClic}
-                />
-          </div>
-          <div className='w-full flex md:hidden justify-center'>
-                <ImageMapper
-                  src={dynamicImageSrc}
-                  map={mapNivelMovil}
-                  width={350}
-                  alt={`Nivel ${nivelUrl}`}
-                  onLoad={load}
-                  onMouseEnter={handleHover}
-                  onClick={handleRoomClic}
-                />
-          </div>
+          {(nivelUrl === '12' || nivelUrl === '13') ? (
+            <div className='w-full md:w-7/12 hidden md:flex justify-center'>
+                    <ImageMapper
+                      src={dynamicImageSrc}
+                      map={mapNivel12}
+                      width={480}
+                      alt={`Nivel ${nivelUrl}`}
+                      onLoad={load}
+                      onMouseEnter={handleHover}
+                      onClick={handleRoomClic}
+                    />
+            </div>
+          ) : (
+            <div className='w-full md:w-7/12 hidden md:flex justify-center'>
+                    <ImageMapper
+                      src={dynamicImageSrc}
+                      map={mapNivel}
+                      width={480}
+                      alt={`Nivel ${nivelUrl}`}
+                      onLoad={load}
+                      onMouseEnter={handleHover}
+                      onClick={handleRoomClic}
+                    />
+            </div>
+          )}
+
+          {(nivelUrl === '12' || nivelUrl === '13') ? (
+              <div className='w-full flex md:hidden justify-center'>
+              <ImageMapper
+              src={dynamicImageSrc}
+              map={mapNivelMovil12}
+              width={350}
+              alt={`Nivel ${nivelUrl}`}
+              onLoad={load}
+              onMouseEnter={handleHover}
+              onClick={handleRoomClic}
+              />
+            </div>
+          ) : (
+            <div className='w-full flex md:hidden justify-center'>
+              <ImageMapper
+              src={dynamicImageSrc}
+              map={mapNivelMovil}
+              width={350}
+              alt={`Nivel ${nivelUrl}`}
+              onLoad={load}
+              onMouseEnter={handleHover}
+              onClick={handleRoomClic}
+              />
+            </div>
+          )}
         </div>
     </section>
 
@@ -315,15 +406,21 @@ function Nivel() {
 
     <section>
     {departamentoname !== null && (
-
-        <div className='w-full md:flex px-0 md:pl-16 md:pr-0 py-10 md:py-36'>
-            <div className='w-full md:w-1/2 flex pl-10 md:pl-20 items-center pb-8'>
+      <div className='w-full md:flex px-0 md:pl-16 xl:28 2xl:pl-32 3xl:pl-80 md:pr-0 mt-7 md:mt-0 py-10 md:py-36'>
+            <div className='w-full md:w-1/2 3xl:w-5/12 pl-10 md:pl-20 items-center pb-8'>
                 <div className='w-full'>
-                <button className='Poppins text-white md:text-[16px] bg-black py-2 px-5 rounded-3xl	transition-transform transform hover:scale-95' onClick={mostrarSeccion}>Galería</button>
                    <img className='w-[300px] md:w-[500px]' src={departamentoimg} alt="" />
                 </div>
+                <div className='w-full flex mt-6 mt:mt-2'>
+                  <div className='w-7/12 md:w-8/12'>
+                  <a href='#nivel'><button className='Poppins border border-black md:text-[16px] text-black py-3 md:py-3 px-7 rounded-3xl transition-transform transform hover:scale-90'>Ir atrás</button></a>
+                  </div>
+                  <div className='w-5/12 md:w-4/12'>
+                  <button className='Poppins text-white md:text-[16px] bg-black py-3 md:py-3 px-7 rounded-3xl	transition-transform transform hover:scale-90' onClick={mostrarSeccion}>Galería</button>
+                  </div>
+                </div>
             </div>
-            <div className='w-full md:w-1/2 md:flex md:ml-14 pl-2'>
+            <div className='w-full md:w-1/2 3xl:w-7/12 md:flex md:ml-14 pl-2'>
               <div className='w-full'>
                 <div className='bg-black py-0 rounded-l-3xl'>
                   <p className='text-white uppercase tertiary ml-4 text-[40px] md:text-[70px] tracking-wider'>{departamentoname}</p>
@@ -340,7 +437,7 @@ function Nivel() {
                   </div>
                 )}
 
-                {departamentoname === '1 recámara' && (
+                {departamentoname === '1 Recámara' && (
                   <div>
                     <p className='primary text-base md:text-[22px]'>SALA - COMEDOR</p>
                     <p className='primary text-base md:text-[22px] mt-2'>COCINA EQUIPADA</p>
@@ -366,11 +463,24 @@ function Nivel() {
                   </div>
                 )}
 
+                {departamentoname === 'Lock Off A' && (
+                  <div>
+                    <p className='primary text-base md:text-[22px]'>SALA - COMEDOR</p>
+                    <p className='primary text-base md:text-[22px] mt-2'>COCINA EQUIPADA</p>
+                    <p className='primary text-base md:text-[22px] mt-2'>ÁREA DE LAVADO</p>
+                    <p className='primary text-base md:text-[22px] mt-2'>02 RECÁMARAS</p>
+                    <p className='primary text-base md:text-[22px] mt-2'>2.5 BAÑOS</p>
+                    <p className='primary text-base md:text-[22px] mt-2'>BALCÓN</p>
+                    <p className='primary text-base md:text-[22px] mt-2'>01 CAJÓN DE ESTACIONAMIENTO</p>
+
+                  </div>
+                )}
+
                   <div className='md:flex mr-8 md:mr-20 mt-6 mb-6 md:mt-8 md:mb-8'>
                     <img className="w-[400px]" src={departamentoicons} alt="" />
                   </div>
 
-                  {departamentoname === 'estudio' && (
+                    {departamentoname === 'estudio' && (
                     <div className='flex mt-8 md:mt-4'>
                         <div className='w-5/12 md:w-3/12'>
                         <p className='primary text-right text-[15px] 2xl:text-lg'>INTERIOR: 39.95 m2</p>
@@ -383,16 +493,16 @@ function Nivel() {
                           </svg>
                         </div>
                         <div className='w-6/12 md:w-4/12'>
-                        <p className='primary text-left text-[15px] 2xl:text-lg'>INTERIOR: 430.02 sqft</p>
+                        <p className='primary text-left text-[15px] 2xl:text-lg'>INTERIOR: 430.01 sqft</p>
                         <p className='primary text-left text-[15px] 2xl:text-lg mt-1 md:mt-1'>EXTERIOR: 84.50 sqft</p>
-                        <p className='sextary text-left text-[15px] 2xl:text-lg mt-1 md:mt-1'>TOTAL: 514.52 sqft</p>
+                        <p className='sextary text-left text-[15px] 2xl:text-lg mt-1 md:mt-1'>TOTAL: 514.51 sqft</p>
                         </div>
                         <div className='md:w-4/12'>
                         </div>
                     </div>
                     )}
 
-                    {departamentoname === '1 recámara' && (
+                    {departamentoname === '1 Recámara' && (
                     <div className='flex mt-8 md:mt-4'>
                         <div className='w-5/12 md:w-3/12'>
                         <p className='primary text-right text-[15px] 2xl:text-lg'>INTERIOR: 53.85 m2</p>
@@ -405,7 +515,7 @@ function Nivel() {
                           </svg>
                         </div>
                         <div className='w-6/12 md:w-4/12'>
-                        <p className='primary text-left text-[15px] 2xl:text-lg'>INTERIOR: 579.65 sqft</p>
+                        <p className='primary text-left text-[15px] 2xl:text-lg'>INTERIOR: 579.64 sqft</p>
                         <p className='primary text-left text-[15px] 2xl:text-lg mt-1 md:mt-1'>EXTERIOR: 125.94 sqft</p>
                         <p className='sextary text-left text-[15px] 2xl:text-lg mt-1 md:mt-1'>TOTAL: 705.58 sqft</p>
                         </div>
@@ -436,15 +546,37 @@ function Nivel() {
                     </div>
                     )}
 
+                    {departamentoname === 'Lock Off A' && (
+                    <div className='flex mt-8 md:mt-4'>
+                        <div className='w-5/12 md:w-3/12'>
+                        <p className='primary text-right text-[15px] 2xl:text-lg'>INTERIOR: 78.25 m2</p>
+                        <p className='primary text-right text-[15px] 2xl:text-lg mt-1 md:mt-1'>EXTERIOR: 17.00 m2</p>
+                        <p className='sextary text-right text-[15px] 2xl:text-lg mt-1 md:mt-1'>TOTAL: 95.25 m2</p>
+                        </div>
+                        <div className='w-1/12 md:w-1/12 flex justify-center'>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="3" height="103.481" viewBox="0 0 3 103.481">
+                            <path id="Trazado_644" data-name="Trazado 644" d="M-7421,4973.607v103.481" transform="translate(7422.5 -4973.607)" fill="none" stroke="#000" stroke-width="3"/>
+                          </svg>
+                        </div>
+                        <div className='w-6/12 md:w-4/12'>
+                        <p className='primary text-left text-[15px] 2xl:text-lg'>INTERIOR: 842.28 sqft</p>
+                        <p className='primary text-left text-[15px] 2xl:text-lg mt-1 md:mt-1'>EXTERIOR: 182.99 sqft</p>
+                        <p className='sextary text-left text-[15px] 2xl:text-lg mt-1 md:mt-1'>TOTAL: 1025.27 sqft</p>
+                        </div>
+                        <div className='md:w-4/12'>
+                        </div>
+                    </div>
+                    )}
+
                 </div>
               </div>
             </div>
-        </div>
+      </div>
     )}
     </section>
 
     {seccionVisible && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center z-10">
+      <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center z-10">
           <div className="w-[100vw] relative">
             <section className="flex justify-center">
               <div className="w-[100vw]">
@@ -467,7 +599,7 @@ function Nivel() {
             >
               X
           </button>
-        </div>
+      </div>
     )}
     </>
   );

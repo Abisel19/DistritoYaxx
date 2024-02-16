@@ -235,8 +235,8 @@
   background-repeat: no-repeat;
   flex-wrap: wrap;
 }
-.recamara-5{
-  background-image: url(/img/recamara/recamara-5.jpg);
+.recamara-4{
+  background-image: url(/img/recamara/recamara-4.jpg);
   background-size: 100%;
   margin: 0 auto !important;
   display: flex;
@@ -256,8 +256,8 @@
   background-repeat: no-repeat;
   flex-wrap: wrap;
 }
-.lock-off-4{
-  background-image: url(/img/lock-off/lock-off-4.jpg);
+.lock-off-2{
+  background-image: url(/img/lock-off/lock-off-2.jpg);
   background-size: 100%;
   margin: 0 auto !important;
   display: flex;
@@ -276,8 +276,8 @@
   background-repeat: no-repeat;
   flex-wrap: wrap;
 }
-.lock-off-5{
-  background-image: url(/img/lock-off/lock-off-5.jpg);
+.lock-off-4{
+  background-image: url(/img/lock-off/lock-off-4.jpg);
   background-size: 100%;
   margin: 0 auto !important;
   display: flex;
@@ -286,8 +286,8 @@
   background-repeat: no-repeat;
   flex-wrap: wrap;
 }
-.lock-off-6{
-  background-image: url(/img/lock-off/lock-off-6.jpg);
+.lock-off-5{
+  background-image: url(/img/lock-off/lock-off-5.jpg);
   background-size: 100%;
   margin: 0 auto !important;
   display: flex;
@@ -320,8 +320,8 @@
   background-repeat: no-repeat;
   flex-wrap: wrap;
 }
-.lock-off-a-5{
-  background-image: url(/img/lock-off-a/lock-off-a-5.jpg);
+.lock-off-a-3{
+  background-image: url(/img/lock-off-a/lock-off-a-3.jpg);
   background-size: 100%;
   margin: 0 auto !important;
   display: flex;
@@ -341,8 +341,8 @@
   flex-wrap: wrap;
 }
 
-.lock-off-a-6{
-  background-image: url(/img/lock-off-a/lock-off-a-6.jpg);
+.lock-off-a-5{
+  background-image: url(/img/lock-off-a/lock-off-a-5.jpg);
   background-size: 100%;
   margin: 0 auto !important;
   display: flex;
@@ -564,11 +564,11 @@
     background-repeat: no-repeat;
   }
   .estudio-4{
-    background-image: url(/img/estudio/estudio-4.jpg);
+    background-image: url(/img/estudio/estudio-2.jpg);
     background-size: 100%;
     margin: 0 auto !important;
     display: flex;
-    height: 218px;
+    height: 218px;  
     width: 100vw;
     background-repeat: no-repeat;
   }
@@ -609,8 +609,8 @@
     width: 100vw;
     background-repeat: no-repeat;
   }
-  .recamara-5{
-    background-image: url(/img/recamara/recamara-5.jpg);
+  .recamara-4{
+    background-image: url(/img/recamara/recamara-4.jpg);
     background-size: 100%;
     margin: 0 auto !important;
     display: flex;
@@ -628,17 +628,8 @@
     width: 100vw;
     background-repeat: no-repeat;
   }
-  .lock-off-5{
-    background-image: url(/img/lock-off/lock-off-5.jpg);
-    background-size: 100%;
-    margin: 0 auto !important;
-    display: flex;
-    height: 218px;
-    width: 100vw;
-    background-repeat: no-repeat;
-  }
-  .lock-off-4{
-    background-image: url(/img/lock-off/lock-off-4.jpg);
+  .lock-off-2{
+    background-image: url(/img/lock-off/lock-off-2.jpg);
     background-size: 100%;
     margin: 0 auto !important;
     display: flex;
@@ -655,8 +646,17 @@
     width: 100vw;
     background-repeat: no-repeat;
   }
-  .lock-off-6{
-    background-image: url(/img/lock-off/lock-off-6.jpg);
+  .lock-off-4{
+    background-image: url(/img/lock-off/lock-off-4.jpg);
+    background-size: 100%;
+    margin: 0 auto !important;
+    display: flex;
+    height: 218px;
+    width: 100vw;
+    background-repeat: no-repeat;
+  }
+  .lock-off-5{
+    background-image: url(/img/lock-off/lock-off-5.jpg);
     background-size: 100%;
     margin: 0 auto !important;
     display: flex;
@@ -683,8 +683,8 @@
     width: 100vw;
     background-repeat: no-repeat;
   }
-  .lock-off-a-5{
-    background-image: url(/img/lock-off-a/lock-off-a-5.jpg);
+  .lock-off-a-3{
+    background-image: url(/img/lock-off-a/lock-off-a-3.jpg);
     background-size: 100%;
     margin: 0 auto !important;
     display: flex;
@@ -701,8 +701,8 @@
     width: 100vw;
     background-repeat: no-repeat;
   }
-  .lock-off-a-6{
-    background-image: url(/img/lock-off-a/lock-off-a-6.jpg);
+  .lock-off-a-5{
+    background-image: url(/img/lock-off-a/lock-off-a-5.jpg);
     background-size: 100%;
     margin: 0 auto !important;
     display: flex;

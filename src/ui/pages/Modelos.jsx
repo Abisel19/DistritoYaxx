@@ -334,15 +334,15 @@ function Modelos() {
                                 >
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('estudio-3')}>
-                                          <img src="img/estudio/estudio-3.jpg" alt="" />
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('estudio-2')}>
+                                          <img src="img/estudio/estudio-2.jpg" alt="" />
                                       </div>
                                   </div> 
                                 </SwiperSlide>
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('estudio-4')}>
-                                          <img src="img/estudio/estudio-4.jpg" alt="" />
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick('estudio-3')}>
+                                          <img src="img/estudio/estudio-3.jpg" alt="" />
                                       </div>
                                   </div> 
                                 </SwiperSlide>
@@ -409,8 +409,8 @@ function Modelos() {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick1('recamara-5')}>
-                                          <img src="img/recamara/recamara-5.jpg" alt="" />
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick1('recamara-4')}>
+                                          <img src="img/recamara/recamara-4.jpg" alt="" />
                                       </div>
                                   </div> 
                                 </SwiperSlide>
@@ -463,17 +463,10 @@ function Modelos() {
                                 >
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-4')}>
-                                          <img src="img/lock-off/lock-off-4.jpg" alt="" />
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-2')}>
+                                          <img src="img/lock-off/lock-off-2.jpg" alt="" />
                                       </div>
                                   </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                  <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-3')}>
-                                          <img src="img/lock-off/lock-off-3.jpg" alt="" />
-                                      </div>
-                                  </div> 
                                 </SwiperSlide>
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
@@ -484,8 +477,15 @@ function Modelos() {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-6')}>
-                                          <img src="img/lock-off/lock-off-6.jpg" alt="" />
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-3')}>
+                                          <img src="img/lock-off/lock-off-3.jpg" alt="" />
+                                      </div>
+                                  </div> 
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                  <div className='w-full px-2'>
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick2('lock-off-4')}>
+                                          <img src="img/lock-off/lock-off-4.jpg" alt="" />
                                       </div>
                                   </div> 
                                 </SwiperSlide>
@@ -552,15 +552,15 @@ function Modelos() {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick3('lock-off-a-5')}>
-                                          <img src="img/lock-off-a/lock-off-a-5.jpg" alt="" />
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick3('lock-off-a-3')}>
+                                          <img src="img/lock-off-a/lock-off-a-3.jpg" alt="" />
                                       </div>
                                   </div> 
                                 </SwiperSlide>
                                 <SwiperSlide>
                                   <div className='w-full px-2'>
-                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick3('lock-off-a-6')}>
-                                          <img src="img/lock-off-a/lock-off-a-6.jpg" alt="" />
+                                      <div className='border-2 md:border-8	border-black hover:scale-95 transition-transform' onClick={() => handleImageClick3('lock-off-a-5')}>
+                                          <img src="img/lock-off-a/lock-off-a-5.jpg" alt="" />
                                       </div>
                                   </div> 
                                 </SwiperSlide>

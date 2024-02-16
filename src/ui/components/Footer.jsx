@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function Footer() {
-
+  const form = useRef();
   const [nombre, setNombre] = useState('');
   const [mail, setMail] = useState('');
   const [tel, setTel] = useState('');
+  const [client, setClient] = useState('');
   const [formularioValido, setFormularioValido] = useState(true);
   const [botonVisible, setBotonVisible] = useState(true);
   const formularioEnviado = localStorage.getItem('formularioEnviado');
@@ -22,14 +24,22 @@ function Footer() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (nombre.trim() === '' || mail.trim() === '' || tel.trim() === '') {
+    if (nombre.trim() === '' || mail.trim() === '' || tel.trim() === ''|| client.trim() === '') {
       setFormularioValido(false);
       return;
     }
 
+    emailjs.sendForm('service_vpxxofv', 'template_4rctu8h', form.current, 'U1ZlmQ7-WTphzwWkj')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
     setNombre('');
     setMail('');
     setTel('');
+    setClient('');
 
     localStorage.setItem('formularioEnviado', 'true');
 
@@ -68,14 +78,14 @@ function Footer() {
             <div className='w-full md:w-2/5 px-4 md:px-16'>
                 <h3 className='secondary text-center md:text-left text-4xl md:text-5xl text-white'>COTIZA</h3>
                 <h4 className='primary text-center md:text-left text-base md:text-lg text-white mt-1 md:mt-1'>HAGAMOS TU SUEÑO REALIDAD</h4>
-                <form className='flex flex-col md:items-start items-center mt-4' onSubmit={handleSubmit}>
+                <form className='flex flex-col md:items-start items-center mt-4' ref={form} onSubmit={handleSubmit}>
 
                 <label className='text-white primary text-[15px] md:text-[1.1rem] mt-8 md:mt-6' htmlFor="nombre">Nombre Completo:</label>
 
                 <input
-                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none pr-12 md:pr-32 primary text-[15px] md:text-[1.1rem] ${!formularioValido && nombre.trim() === '' ? 'border-red-500' : ''}`}
+                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none  w-full pr-12 md:pr-32 primary text-[15px] md:text-[1.1rem] ${!formularioValido && nombre.trim() === '' ? 'border-red-500' : ''}`}
                   type='text'
-                  name='nombre'
+                  name='user_name'
                   value={nombre}
                   onChange={(e) => setNombre(e.target.value)}
                 />
@@ -83,9 +93,9 @@ function Footer() {
                 <label className='text-white primary text-[15px] md:text-[1.1rem] mt-8 md:mt-6' htmlFor="email">Correo Electrónico:</label>
 
                 <input
-                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none pr-12 md:pr-32 primary text-[15px] md:text-[1.1rem] ${!formularioValido && mail.trim() === '' ? 'border-red-500' : ''}`}
+                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none w-full pr-12 md:pr-32 primary text-[15px] md:text-[1.1rem] ${!formularioValido && mail.trim() === '' ? 'border-red-500' : ''}`}
                   type="email"
-                  name='mail'
+                  name='user_email'
                   value={mail}
                   onChange={(e) => setMail(e.target.value)}
                 />
@@ -93,13 +103,25 @@ function Footer() {
                 <label className='text-white text-center md:text-left primary text-[15px] md:text-[1.1rem] mt-8 md:mt-6' htmlFor="tel" pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{4}" step="any">Celular <br className='block md:hidden'/>(código de país + número de teléfono):</label>
 
                 <input
-                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none pr-12 md:pr-32 primary text-[15px] md:text-[1.1rem] ${!formularioValido && tel.trim() === '' ? 'border-red-500' : ''}`}
+                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none w-full pr-12 md:pr-32 primary text-[15px] md:text-[1.1rem] ${!formularioValido && tel.trim() === '' ? 'border-red-500' : ''}`}
                   type="tel"
-                  name='tel'
+                  name='user_phone'
                   value={tel}
                   onChange={(e) => setTel(e.target.value)}
                 />
 
+                <label className='text-white text-center md:text-left primary text-[15px] md:text-[1.1rem] mt-8 md:mt-6' htmlFor="tel" pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{4}" step="any">Te identificas como:</label>
+
+                <select
+                  className={`bg-gray-1 text-white border-b-2 border-white focus:outline-none w-full primary md:mt-6 text-[15px] md:text-[1.1rem] ${!formularioValido && tel.trim() === '' ? 'border-red-500' : ''}`}
+                  name='user_client'
+                  value={client}
+                  onChange={(e) => setClient(e.target.value)}
+                >
+                  <option value='broker'>Broker</option>
+                  <option value='inversionista'>Inversionista</option>
+                  <option value='cliente'>Cliente</option>
+                </select>
 
                 <button className='text-white text-[20px] md:text-[1.3rem] primary rounded-full border-[1.5px] px-3 mt-8 transition-transform transform hover:scale-90'>Enviar</button>
                 </form>
