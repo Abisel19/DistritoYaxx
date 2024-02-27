@@ -159,10 +159,10 @@ function Home() {
             <div className='w-full md:w-2/3 lg:w-2/3 2xl:w-2/3 px-2 md:px-0'>
                 <div className="flex items-center justify-center">
                     <div className="text-brown text-center md:text-left text-[11px] md:text-lg xl:text-[23px] 3xl:text-[28px] px-0 md:px-0 xl:px-0 ml-0 md:ml-14 hidden md:grid">
-                        <p className='primary leading-none md:leading-7 3xl:leading-9 py-4 md:py-0 text-justify'><a className='sextary'>Distrito Yaax® </a>es un proyecto conceptualizado y desarrollado por ALMIRA DESARRROLLOS. Empresa 100 % Mexicana comprometida con el desarrollo económico y social de la región. YAAX palabra maya que significa VERDE. Indica el origen y el principio, además de significar la naturaleza en crecimiento.</p>
+                        <p className='primary leading-none md:leading-7 3xl:leading-9 py-4 md:py-0 text-justify'><a className='sextary'>Distrito Yaax® </a>es un proyecto conceptualizado y desarrollado por ALMIRA DESARROLLOS. Empresa 100 % Mexicana comprometida con el desarrollo económico y social de la región. YAAX palabra maya que significa VERDE. Indica el origen y el principio, además de significar la naturaleza en crecimiento.</p>
                     </div>
                     <div className="text-brown text-center md:text-left text-[12px] md:text-lg xl:text-[23px] px-0 md:px-0 xl:px-0 ml-0 md:ml-14 grid md:hidden">
-                        <p className='primary leading-4 md:leading-7 py-4 md:py-0 text-justify px-4 md:px-0'><a className='sextary'>Distrito Yaax®</a> es un proyecto conceptualizado y desarrollado por ALMIRA DESARRROLLOS. Empresa 100 % Mexicana comprometida con el desarrollo económico y social de la región.</p>
+                        <p className='primary leading-4 md:leading-7 py-4 md:py-0 text-justify px-4 md:px-0'><a className='sextary'>Distrito Yaax®</a> es un proyecto conceptualizado y desarrollado por ALMIRA DESARROLLOS. Empresa 100 % Mexicana comprometida con el desarrollo económico y social de la región.</p>
                         <p className='primary leading-4 md:leading-7 mt-0 md:mt-2 text-justify px-4 md:px-0'><a className='sextary'>YAAX</a> palabra maya que significa <a className='sextary'>VERDE.</a> Indica el origen y el principio, además de significar la naturaleza en  crecimiento.</p>
                     </div>
                 </div>
@@ -758,8 +758,8 @@ function Home() {
                         </g>
                         </svg>
                     </div>
-                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px] mt-0 md:mt-8 md:leading-relaxed'>Distrito Yaax® es un proyecto conceptualizado<br/> y desarrollado por ALMIRA DESARRROLLOS.<br/> Empresa 100 % Mexicana comprometida<br/> con el desarrollo económico y social <br/>de la región.</p>
-                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px] mt-3'>Distrito Yaax® es un proyecto conceptualizado y desarrollado por ALMIRA DESARRROLLOS. Empresa 100% Mexicana comprometida con el desarrollo económico y social de la región.</p>
+                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px] mt-0 md:mt-8 md:leading-relaxed'>Distrito Yaax® es un proyecto conceptualizado<br/> y desarrollado por ALMIRA DESARROLLOS.<br/> Empresa 100 % Mexicana comprometida<br/> con el desarrollo económico y social <br/>de la región.</p>
+                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px] mt-3'>Distrito Yaax® es un proyecto conceptualizado y desarrollado por ALMIRA DESARROLLOS. Empresa 100% Mexicana comprometida con el desarrollo económico y social de la región.</p>
                 </div>
             </div>
         </motion.div>
@@ -885,15 +885,17 @@ function Home() {
         whileHover="hover"
         whileTap="hover" // Para dispositivos táctiles
         >
+          <a href="https://forbescity.com/distrito-yaax-strengthens-real-estate-sustainability-in-cancun/">
             <div className='px-0 md:px-4 xl:px-6 3xl:px-6 py-0 md:py-5 2xl:py-6'>
                 <div className='h-[200px] md:h-[340px] 3xl:h-[800px] border border-solid rounded-3xl border-gray-1 px-2 md:px-4 py-0 2xl:py-5 3xl:py-10'>
                     <div className='mx-auto mt-5 3xl:mt-8'>
                         <img className="mx-auto w-32 md:w-40" src="img/forbes.png" alt="FORBES" />
                     </div>
-                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px]  mt-0 md:mt-10 md:leading-relaxed'>“Investing in real estate in Mexico’s<br></br> Riviera Maya offers affordable living <br></br>in paradise”</p>
-                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px]  mt-5'>“Investing in real estate in Mexico’s Riviera Maya offers affordable living in paradise”</p>
+                    <p className='hidden md:grid primary text-brown text-center text-[10px] md:text-[12px] xl:text-[15px] 3xl:text-[22px]  mt-0 md:mt-10 md:leading-relaxed'>"Distrito Yaax Strengthens Real<br></br> Estate Sustainability in Cancún"</p>
+                    <p className='grid md:hidden primary text-brown text-center text-[10px] xl:text-[15px] 3xl:text-[22px] md:mt-5 mt-10'>“Distrito Yaax Strengthens Real Estate Sustainability in Cancún”</p>
                 </div>
             </div>
+          </a>
         </motion.div>
         </SwiperSlide>
 

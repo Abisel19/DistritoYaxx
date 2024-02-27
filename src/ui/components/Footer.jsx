@@ -205,9 +205,9 @@ function Footer() {
       <div className="flex items-center flex-col justify-center md:flex-row md:space-x-16">
         <a className="text-white text-[14px] primary md:text-[14px] xl:text-[15px] 2xl:text-[18px] pt-1 hover:scale-110 transition-transform" href="/">QUIÉNES SOMOS</a>
         <a className="text-white text-[14px] primary md:text-[14px] xl:text-[15px] 2xl:text-[18px] pt-1 hover:scale-110 transition-transform" href="/acerca">MODELOS</a>
-        <a className="text-white text-[14px] primary md:text-[14px] xl:text-[15px] 2xl:text-[18px] pt-1 hover:scale-110 transition-transform" href="/proyecto">AMENIDADES</a>
-        <a className="text-white text-[14px] primary md:text-[14px] xl:text-[15px] 2xl:text-[18px] pt-1 hover:scale-110 transition-transform" href="#">UBICACIÓN</a>
-        <a className="text-white text-[14px] primary md:text-[14px] xl:text-[15px] 2xl:text-[18px] pt-1 hover:scale-110 transition-transform" href="#">TOUR VIRTUAL</a>
+        <a className="text-white text-[14px] primary md:text-[14px] xl:text-[15px] 2xl:text-[18px] pt-1 hover:scale-110 transition-transform" href="/amenidades">AMENIDADES</a>
+        <a className="text-white text-[14px] primary md:text-[14px] xl:text-[15px] 2xl:text-[18px] pt-1 hover:scale-110 transition-transform" href="/ubicacion">UBICACIÓN</a>
+        <a className="text-white text-[14px] primary md:text-[14px] xl:text-[15px] 2xl:text-[18px] pt-1 hover:scale-110 transition-transform" href="tour">TOUR VIRTUAL</a>
         <a className="text-white text-[14px] primary md:text-[14px] xl:text-[15px] 2xl:text-[18px] pt-1 hover:scale-110 transition-transform" href="/contacto">CONTACTO</a>
       </div>
 
