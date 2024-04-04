@@ -1,7 +1,26 @@
 import React, { useState } from 'react';
+import sendFacebookEvent from './apiFacebook';
 
 function Header() {
   const [isExpanded, setExpanded] = useState(false);
+  const accessToken = 'EAAPZB5gS6GGQBOxjc84KgXqu0YZABUtF2HbDfjiDkZA5vRqqTsSmZB4B7CgmH23cd1nkc1HjpluTHfcUUk2KekdR5t8Snrw2AXLKQuQk8wKKzZAJPhxmDXKPOE8nNFKFwhWoLfwdk4xVdjLMx3h9kceNps7hWPnuZAfvZCF9k5HFmZBSZC7PaWQX6rPO4gxUzHgJIcgZDZD';
+  const pixelId = '2138276436505071';
+
+  const handleClick = () => {
+    sendFacebookEvent('FindLocation', accessToken, pixelId, '/ubicacion');
+  };
+
+  const handleClick2 = () => {
+    sendFacebookEvent('Contact', accessToken, pixelId, '/contacto');
+  };
+
+  const handleClick3 = () => {
+    sendFacebookEvent('ViewContent', accessToken, pixelId, '/acerca');
+  };
+
+  const handleClick4 = () => {
+    sendFacebookEvent('Search', accessToken, pixelId, '/modelos');
+  };
 
   const handleToggle = () => {
     setExpanded(!isExpanded);
@@ -98,12 +117,12 @@ function Header() {
             <div className='hidden md:flex md:justify-center w-full'>
               <ul className='flex mx-auto items-center py-1 md:py-0 mt-4 font-light border md:mt-0 md:border-0'>
                 <li className='mr-10 transition-transform transform hover:scale-110'>
-                  <a href='/acerca' className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
+                  <a onClick={handleClick3} className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
                     QUIÉNES SOMOS
                   </a>
                 </li>
                 <li className='mr-10 transition-transform transform hover:scale-110'>
-                  <a href='/modelos' className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
+                  <a onClick={handleClick4} className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
                     MODELOS
                   </a>
                 </li>
@@ -124,7 +143,7 @@ function Header() {
                 </li>
 
                 <li className='mr-10 transition-transform transform hover:scale-110'>
-                  <a href='/ubicacion' className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
+                  <a onClick={handleClick} className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
                     UBICACIÓN
                   </a>
                 </li>
@@ -134,7 +153,7 @@ function Header() {
                   </a>
                 </li>
                 <li className='transition-transform transform hover:scale-110'>
-                  <a href='/contacto' className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
+                  <a onClick={handleClick2} className='text-white primary text-base md:text-[12px] 2xl:text-[16px]'>
                     CONTACTO
                   </a>
                 </li>
@@ -227,10 +246,10 @@ function Header() {
                   <a href="/" class="block md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">INICIO</a>
                 </li>
                 <li>
-                  <a href="/acerca" class="block md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">QUIÉNES SOMOS</a>
+                  <a onClick={handleClick3} class="block md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">QUIÉNES SOMOS</a>
                 </li>
                 <li>
-                  <a href="/modelos" class="block md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">MODELOS</a>
+                  <a onClick={handleClick4} class="block md:px-8 py-2 pl-3 pr-4 text-black md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">MODELOS</a>
                 </li>
                 <li className='hidden'>
                   <a class="px-[8rem]" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="330.406" height="64.179" viewBox="0 0 330.406 64.179">
@@ -283,13 +302,13 @@ function Header() {
                   <a href="/amenidades" class="block md:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">AMENIDADES</a>
                 </li>
                 <li>
-                  <a href="/ubicacion" class="block md:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">UBICACIÓN</a>
+                  <a onClick={handleClick} class="block md:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">UBICACIÓN</a>
                 </li>
                 <li>
                   <a href="/tour" class="block md:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">TOUR VIRTUAL</a>
                 </li>
                 <li>
-                  <a href="/contacto" class="block me:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">CONTACTO</a>
+                  <a onClick={handleClick2} class="block me:px-8 py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">CONTACTO</a>
                 </li>
               </ul>
 

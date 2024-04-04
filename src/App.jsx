@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ReactPixel from 'react-facebook-pixel';
+ReactPixel.init('2138276436505071');
 
 import Home from '@pages/Home';
 import Acerca from '@pages/Acerca'

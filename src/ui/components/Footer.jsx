@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import HubspotForm from 'react-hubspot-form'
+import sendFacebookEvent from './apiFacebook';
 
 function Footer() {
   const form = useRef();
@@ -12,6 +14,16 @@ function Footer() {
   const formularioEnviado = localStorage.getItem('formularioEnviado');
   const [mensajeError, setMensajeError] = useState('');
   const [correoEnviado, setCorreoEnviado] = useState(false);
+  const accessToken = 'EAAPZB5gS6GGQBOxjc84KgXqu0YZABUtF2HbDfjiDkZA5vRqqTsSmZB4B7CgmH23cd1nkc1HjpluTHfcUUk2KekdR5t8Snrw2AXLKQuQk8wKKzZAJPhxmDXKPOE8nNFKFwhWoLfwdk4xVdjLMx3h9kceNps7hWPnuZAfvZCF9k5HFmZBSZC7PaWQX6rPO4gxUzHgJIcgZDZD';
+  const pixelId = '2138276436505071';
+
+  const handleClick = () => {
+    sendFacebookEvent('Contact', accessToken, pixelId);
+  };
+
+  const handleClick2 = () => {
+    sendFacebookEvent('CompleteRegistration', accessToken, pixelId);
+  };
 
 
   useEffect(() => {
@@ -76,9 +88,9 @@ function Footer() {
         <div className='container mx-auto md:flex'>
 
             <div className='w-full md:w-2/5 px-4 md:px-16'>
-                <h3 className='secondary text-center md:text-left text-4xl md:text-5xl text-white'>COTIZA</h3>
-                <h4 className='primary text-center md:text-left text-base md:text-lg text-white mt-1 md:mt-1'>HAGAMOS TU SUEÑO REALIDAD</h4>
-                <form className='flex flex-col md:items-start items-center mt-4' ref={form} onSubmit={handleSubmit}>
+                <h3 className='secondary text-center md:text-left text-4xl md:text-5xl text-white mb-3'>COTIZA</h3>
+                <h4 className='primary text-center md:text-left text-base md:text-lg text-white md:mt-1 mb-5'>HAGAMOS TU SUEÑO REALIDAD</h4>
+                {/* <form className='flex flex-col md:items-start items-center mt-4' ref={form} onSubmit={handleSubmit}>
 
                 <label className='text-white primary text-[15px] md:text-[1.1rem] mt-8 md:mt-6' htmlFor="nombre">Nombre Completo:</label>
 
@@ -124,10 +136,19 @@ function Footer() {
                 </select>
 
                 <button className='text-white text-[20px] md:text-[1.3rem] primary rounded-full border-[1.5px] px-3 mt-8 transition-transform transform hover:scale-90'>Enviar</button>
-                </form>
-                {correoEnviado && (
+                </form> */}
+                <HubspotForm
+                region= "na1"
+                portalId='23158397'
+                formId='fc8c8b36-6fdd-43f8-a537-0b58cb87ab50'
+                onSubmit={handleClick2}
+                onReady={(form) => console.log('Form ready!')}
+                loading={<div>Loading...</div>}
+                />
+                
+                {/* {correoEnviado && (
                   <p className="sextary text-[20px] text-white mt-5 text-center md:text-left">Correo enviado correctamente</p>
-                )}
+                )} */}
             </div>
 
             <div className='w-full md:w-1/5 mx-auto py-5 md:py-0'>
@@ -149,7 +170,7 @@ function Footer() {
                         <path id="Trazado_428" data-name="Trazado 428" d="M-3446.746,872.094l13.3,11.555-13.3,11.3Z" transform="translate(0 -30.135)" fill="#fff"/>
                     </g>
                 </svg>
-                    <a href="mailto:informes@distritoyaax.com" className='primary text-center md:text-left text-[14px] md:text-lg text-white ml-2 md:ml-5'>informes@distritoyaax.com</a>
+                    <a onClick={handleClick} href="mailto:informes@distritoyaax.com" className='primary text-center md:text-left text-[14px] md:text-lg text-white ml-2 md:ml-5'>informes@distritoyaax.com</a>
                 </div>
 
                 <div className='mt-[8px] md:mt-4 flex justify-center md:justify-start'>

@@ -3,7 +3,7 @@ import ImageMapper from 'react-img-mapper';
 import { useParams } from 'react-router-dom';
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-
+import sendFacebookEvent from '../components/apiFacebook';
 
 function Nivel() {
   const { nivelUrl} = useParams();
@@ -17,7 +17,8 @@ function Nivel() {
   const [popUpPosition, setPopUpPosition] = useState({ x: 0, y: 0 });
   const [showNivel, setShowNivel] = useState(true);
   const [seccionVisible, setSeccionVisible] = useState(false);
-
+  const accessToken = 'EAAPZB5gS6GGQBOxjc84KgXqu0YZABUtF2HbDfjiDkZA5vRqqTsSmZB4B7CgmH23cd1nkc1HjpluTHfcUUk2KekdR5t8Snrw2AXLKQuQk8wKKzZAJPhxmDXKPOE8nNFKFwhWoLfwdk4xVdjLMx3h9kceNps7hWPnuZAfvZCF9k5HFmZBSZC7PaWQX6rPO4gxUzHgJIcgZDZD';
+  const pixelId = '2138276436505071';
 
   useEffect(() => {
     // Construir la URL completa según el nivel proporcionado
@@ -211,6 +212,8 @@ function Nivel() {
     const handleRoomClic = (area, index, event) =>{  
 
       setDepartamentoUrl(area.name);
+
+      sendFacebookEvent('Lead', accessToken, pixelId);
 
       const enlaceNivel = `#room`;
 
