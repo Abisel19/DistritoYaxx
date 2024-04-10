@@ -60,9 +60,9 @@ function Footer() {
     setCorreoEnviado(true);
   };
 
-  const handleNoDescargarClick = () => {
-    setMensajeError('Por favor, llena el formulario antes de descargar el brochure.');    
-  };
+  // const handleNoDescargarClick = () => {
+  //   setMensajeError('Por favor, llena el formulario antes de descargar el brochure.');    
+  // };
 
   const descargarPDF = () => {
     // Reemplaza con la ruta correcta de tu archivo PDF
@@ -192,7 +192,7 @@ function Footer() {
                 </div>
 
                 <div className='flex justify-center md:justify-start'>
-                  {formularioEnviado === 'true' ? (
+                  {/* {formularioEnviado === 'true' ? ( */}
                   <button
                     className={`text-white text-[20px] md:text-[1.3rem] primary rounded-full border-[1.5px] px-12 pt-2 pb-1 mt-8 transition-transform transform hover:scale-90 ${
                     !formularioValido ? 'bg-red-500' : ''
@@ -201,16 +201,16 @@ function Footer() {
                   >
                    DESCARGAR BROCHURE
                   </button>
-                  ) : (                  
+                  {/* ) : (                  
                   <button
                   className={`text-white text-[20px] md:text-[1.3rem] primary rounded-full border-[1.5px] px-12 pt-2 pb-1 mt-8`}
                   onClick={handleNoDescargarClick}
                   >
                    DESCARGAR BROCHURE
                   </button>                  
-                  )}
+                  )} */}
                 </div>
-                {mensajeError && <p className="text-red-500 mt-2 primary text-center md:text-left">{mensajeError}</p>}
+                {/* {mensajeError && <p className="text-red-500 mt-2 primary text-center md:text-left">{mensajeError}</p>} */}
             </div>
         </div>
       </section>
