@@ -302,7 +302,7 @@ function Footer() {
 
       <div className="phone-call cbh-phone cbh-green cbh-show cbh-static" id="clbh_phone_div" style={{}}>
         <a id="WhatsApp-button"
-          href="https://api.whatsapp.com/send?phone=+529987589361&text=Hola, quiero saber más de Distrito Yaax "
+          href="https://api.whatsapp.com/send?phone=+529987589361&text=Hola, visité el sitio web de Distrito Yaax y me gustaría obtener más información"
           target="_blank" className="phoneJs" title="WhatsApp Distrito Yaax">
           <div className="cbh-ph-circle"></div>
           <div className="cbh-ph-circle-fill"></div>
